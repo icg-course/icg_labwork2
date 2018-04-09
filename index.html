@@ -1,13 +1,112 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>  
-    <meta charset="utf-8" />
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
-    <title>Лабораторная работа 3</title>
-    <link rel="stylesheet" href="https://www.x3dom.org/download/x3dom.css" />
-    <script src="https://www.x3dom.org/download/x3dom.js"></script>
-  </head>
-  <body>
-    <h1>Здесь только я. А должна быть твоя лаба!</h1>
-  </body> 
+
+<html>
+	<head>
+		<title>Лабораторная №3</title>
+		<link rel="stylesheet" type="text/css" href="https://x3dom.org/download/dev/x3dom.css"></link>
+		<script type="text/javascript" src="https://x3dom.org/download/dev/x3dom-full.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	<body>
+		
+		<style type="text/css">
+			X3D{left:0px; top:0px; width:100%; height:100%; border:none;}
+		</style>
+<X3D>
+	<Scene>
+
+
+<Transform  rotation='0 0 0 0' scale='1 1 1' translation='-6 -1 -6'>
+<!-- земля -->
+<Shape>
+	<Appearance><ImageTexture url="floor.jpg"></ImageTexture><TextureTransform scale='5 5'></TextureTransform></Appearance>
+	<ElevationGrid xDimension="7" zDimension="7" creaseAngle="0"
+	height="
+	 1.5, 1.0, 1.0, 0.5, 1.0, 1.0, 1.5,
+	 1.0, 0.5, 0.5, 0.5, 0.5, 0.5, 1.0,
+	 0.5, 0.5, 0.0, 0.0, 0.0, 0.5, 0.5,
+	 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5,
+	 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+	 0.0, 0.0, 0.0,-0.5, 0.0, 0.0, 0.0,
+	 0.0, 0.0,-0.5,-1.0,-0.5, 0.0, 0.0,
+	"
+	xSpacing="2.0" zSpacing="2.0" solid="false">
+	</ElevationGrid>
+</Shape>
+</Transform>
+	
+
+<Transform  rotation='0 0 0 0' scale='2 1 2' translation='-2 -0.5 -2'>
+<!-- Рамка вокруг дерева -->
+<Shape>
+	<IndexedLineSet ccw="true" colorPerVertex="true" convex="true"
+	creaseAngle="0" normalPerVertex="true" solid="false"
+	coordIndex="0 1 2 3 0 -1"
+	 colorIndex="0 1 2 3 0 ">
+		<Coordinate point="0 0 0, 2 0 0, 2 0 2, 0 0 2"></Coordinate>
+		<Color color="0 0 1, 0 1 0, 0 1 1, 1 0 0, 1 0 1, 1 1 0, 1 1 1"></Color>
+	</IndexedLineSet>
+</Shape>
+</Transform>
+
+
+<Transform  rotation='0 0 0 0' scale='1 1 1' translation='0 0 0' >
+	<!-- 1 уровень листьев -->
+	<Shape DEF="tree_part">
+		<Appearance><material emissiveColor='#0f0'></material></Appearance>
+		<IndexedFaceSet ccw="true" colorPerVertex="false" convex="true"
+		creaseAngle="0" normalPerVertex="true" solid="false" coordIndex="0 1 2 3 4 5 6 7 8 1 ">
+		<Coordinate point="0 1 0, -1 0 0, -2 0 -2, 0 0 -1, 2 0 -2, 1 0 0, 2 0 2, 0 0 1, -2 0 2"></Coordinate>
+		</IndexedFaceSet>
+	</Shape>
+		<Shape DEF="points">
+	<PointSet>
+		<Color color='1 0 0, 1 0 1, 0 0 1'></Color>
+		<Coordinate point='1.0 0.3 1.5, -0.8 0.5 1.1, 0.5 0.7 0.8 '></Coordinate>
+	</PointSet>
+	</Shape>
+	<Transform  rotation='0 0 0 0' scale='0.8 0.8 0.8' translation='0 0.9 0' >
+	<!-- 2 уровень листьев --><Shape USE="tree_part"></Shape><Shape USE="points"></Shape>
+		<Transform  rotation='0 0 0 0' scale='0.8 0.8 0.8' translation='0 0.9 0' >
+		<!-- 3 уровень листьев --><Shape USE="tree_part"></Shape><Shape USE="points"></Shape>
+			<Transform  rotation='0 0 0 0' scale='0.8 0.8 0.8' translation='0 0.9 0' >
+			<!-- 4 уровень листьев --><Shape USE="tree_part"></Shape><Shape USE="points"></Shape>
+			</Transform>
+		</Transform>
+	</Transform>
+
+	<Transform  rotation='0 0 0 0' scale='0.5 1 0.5' translation='-0.25 -1 -0.25' >
+		<!-- ствол дерева -->
+		<Shape>
+			<Appearance><material diffuseColor='#331a00'></material></Appearance>
+			<IndexedTriangleStripSet index='0 1 2 3 4 5 6 7 0 1' solid='false'>
+				<Coordinate point='0 0 0, 0 1 0, 1 0 0, 1 1 0, 1 0 1, 1 1 1, 0 0 1, 0 1 1'></Coordinate>
+			</IndexedTriangleStripSet>
+		</Shape>
+	</Transform>
+	
+</Transform>
+
+<Transform  rotation='0 0 0 0' scale='2 4 2' translation='0 -0.5 -2' >
+	<!-- Задний фон -->
+	<Shape>
+		<Appearance><material diffuseColor='#42aaff'></material></Appearance>
+		<IndexedTriangleStripSet index='0 1 2 3 4 5 6 7 8 9 7' solid='false'>
+		<Coordinate point='-3 0 0, -3 2 0, -2 0 -1, -2 2 -1, 0 0 -2, 0 2 -2, 2 0 -1, 2 2 -1, 3 0 0, 3 2 0'></Coordinate>
+		</IndexedTriangleStripSet>
+	</Shape>
+</Transform>
+
+<Transform  rotation='0 0 0 0' scale='0.7 0.7 1' translation='0 2.7 0' >
+	<!-- Украшеине сверху --><Shape>
+	<Appearance><material diffuseColor='#ff0'></material></Appearance>
+	<IndexedTriangleSet index='0 1 2 0 1 3' solid='false'>
+	<Coordinate point='0 0 0, 0 1 0, -0.7 -0.2 0, 0.7 -0.2 0'></Coordinate>
+	</IndexedTriangleSet>
+	</Shape>
+</Transform>
+
+	</Scene>
+</X3D>
+
+	</body>
 </html>
