@@ -1,13 +1,90 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>  
+  <head>
     <meta charset="utf-8" />
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
     <title>Лабораторная работа 3</title>
     <link rel="stylesheet" href="https://www.x3dom.org/download/x3dom.css" />
     <script src="https://www.x3dom.org/download/x3dom.js"></script>
   </head>
-  <body>
-    <h1>Здесь только я. А должна быть твоя лаба!</h1>
-  </body> 
+<body>
+  <h1>Лабораторная работа №3</h1>
+    <x3d width='640px' height='480px'>
+      <scene>
+        <Transform translation="-7 5 3" scale="3
+  3 3">
+          <shape>
+            <!--форма-->
+            <IndexedLineSet coordIndex="0 1 2 3 0 -1
+  4 5 6 7 4 -1 0 4 -1 1 5 -1 2 6 -1 3 7 -1 " colorPerVertex='false'>
+              <Coordinate point="0 0 0, 0 0
+  2, 1 0 2, 1 0 0, 0 1 0, 0 1 2, 1 1 2, 1 1 0"></Coordinate>
+              <Color color='1 0 0   3 0 0   1 0 1
+  0 1 4   4 0 1   0 0.9 0.9 0.9   0 1 0   '></Color>
+            </IndexedLineSet>
+          </shape>
+        </Transform>
+        <shape>
+          <!--форма-->
+          <Appearance>
+            <Material diffuseColor='#7a0205' />
+          </Appearance>
+          <IndexedFaceSet ccw="true" colorPerVertex="false" convex="false" сreaseAngle="0" normalPerVertex="true" solid="false" coordIndex="0  1 2 3 4 5 6 7 8 9 0 -1 10 11 2 12  13 14 15 7 16 17 -1  ">
+            <Coordinate point="-9 2 0, -3 3 0, 0 8 0, 3 3 0, 9 2 0, 5 -3 0, 6 -9 0, 0 -7 0, -6 -9 0,
+            -5 -3 0, 0 2 -9, 0 3 -3, 0 3 3, 0 2 9, 0 -3 5, 0 -9 6, 0 -9 -6, 0 -3 -5 "></Coordinate>
+          </IndexedFaceSet>
+        </shape>
+        <Transform translation="6 10 0" scale="2 2 2">
+          <shape>
+            <PointSet>
+              <Color color='1 0 0, 0 1 0, 0
+  0 1, 0.8 0.8 0.8'></Color>
+              <Coordinate point='-4 0 -2, 0
+  5 5, 4 0 -2'></Coordinate>
+            </PointSet>
+          </shape>
+        </Transform >
+        <Transform translation="3 0.3 3" rotation="1 0 0 -1.5708">
+          <Shape>
+            <appearance>
+              <textureTransform scale='5 5'></textureTransform>
+              <imageTexture url='maloxit.jpg'></imageTexture>
+            </appearance>
+            <IndexedTriangleSet index='0 1 2 0 3 2 2 1 3 0 1 3 ' solid='false'>
+              <Coordinate point='10 10 0,  15 10 0, 10 15 0, 12.5 12.5 8'></Coordinate>
+              <Color color='1 0 0 0 0 1
+  0 1 0 1 0 0 '></Color>
+            </IndexedTriangleSet>
+          </Shape>
+        </Transform>
+        <Transform translation='7 8 7'rotation='0 0 1 -0.5708' >
+          <Shape>
+            <IndexedTriangleStripSet index='0 1 2 3  -1 3 4 5 0 -1' solid='false'>
+              <Coordinate point='8.5 0 0   0 0 -4   0 0 4   -8.5 0 0   0 -4 0   0 4 0 '> </Coordinate>
+            </IndexedTriangleStripSet>
+            <Appearance>
+              <Material diffuseColor='0 .3 .7' > </Material>
+            </Appearance>
+          </Shape>
+        </Transform>
+            <Transform translation="-10 0 -14">
+  <shape> <!--форма-->
+  <Appearance>
+  <Material
+  diffuseColor="0.6 0.2 0.1"></Material>
+  </Appearance>
+  <ElevationGrid solid="false"
+  xDimension="9" zDimension="9" height="0.0, 0.0, 0.2, 1.0, 0.5,
+  0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.5, 0.5, 0.0, 0.0, 0.0,
+  0.0, 0.0, 0.5, 0.5, 3.0, 1.0, 0.3, 0.0, 1.0, 0.0, 0.0, 0.5, 2.0,
+  1.5, 0.5, 1.0, 0.5, 0.5, 1.0, 2.5, 3.0, 1.5, 1.5, 4.5, 3.0, 1.0,
+  0.0, 0.5, 2.0, 2.0, 2.5, 3.5, 4.0, 2.0, 0.5, 0.0, 0.0, 0.0, 0.5,
+  1.5, 1.0, 2.0, 3.0, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0,
+  1.5, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.0,
+  0.0"></ElevationGrid>
+  </shape>
+  </Transform>
+   </scene>
+    </x3d>
+  </body>
 </html>
