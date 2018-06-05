@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<HTML>
+  <head>
+     <meta charset="utf-8" />
+      <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+      <title>kek</title>
+      <link rel="stylesheet" href="http://www.x3dom.org/download/dev/x3dom.css" />
+      <script src="http://www.x3dom.org/download/dev/x3dom-full.js"></script>
+      <link rel="stylesheet" href="./css/custom.css" />
+      <script src="./js/custom.js"></script>
+  </head>
+<body>
+ <X3D style="widht:100%; height:500px;">
+   <Scene>
+
+
+   <Transform  rotation='0 0 0 0' scale='1 1 1' translation='-6 -1 -6'>
+   <!-- земля -->
+   <Shape>
+   	<Appearance><ImageTexture url="floor.jpg"></ImageTexture><TextureTransform scale='5 5'></TextureTransform></Appearance>
+   	<ElevationGrid xDimension="7" zDimension="7" creaseAngle="0"
+   	height="
+   	 1.5, 1.0, 1.0, 0.5, 1.0, 1.0, 1.5,
+   	 1.0, 0.5, 0.5, 0.5, 0.5, 0.5, 1.0,
+   	 0.5, 0.5, 0.0, 0.0, 0.0, 0.5, 0.5,
+   	 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5,
+   	 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+   	 0.0, 0.0, 0.0,-0.5, 0.0, 0.0, 0.0,
+   	 0.0, 0.0,-0.5,-1.0,-0.5, 0.0, 0.0,
+   	"
+   	xSpacing="2.0" zSpacing="2.0" solid="false">
+   	</ElevationGrid>
+   </Shape>
+   </Transform>
+
+
+   <Transform translation="3 -1 -1.5" scale="1 1 1">
+          <Shape> 	<!-- 1 гараж -->
+            <Appearance>
+
+              <ImageTexture url="21.jpg"></ImageTexture><TextureTransform scale='1 1'></TextureTransform>
+
+            </Appearance>
+            <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" normalPerVertex="true" solid="false"
+                            coordIndex="0 4 7 3 -1 5 6 2 1 -1 4 5 6 7 -1 6 7 3 2 -1"
+                            colorIndex="0 1 2 3 -1 4 5 6 0 -1 1 2 3 4 -1 5 6 0 1 -1">
+              <Coordinate point="-1 0 1, 1 0 1, 1 0 -1, -1 0 -1, -1 2 1, 1 2 1, 1 2 -1, -1 2 -1"></Coordinate>
+
+            </IndexedFaceSet>
+          </Shape>
+        </Transform>
+
+
+
+        <Transform  rotation='1 0 0 228' scale='1 1 1' translation="2 3 0">
+<Shape> <!-- рамка -->
+	<IndexedLineSet ccw="true" colorPerVertex="true" convex="true"
+	creaseAngle="0" normalPerVertex="true" solid="false"
+	coordIndex="0 1 2 3 0 -1"
+	 colorIndex="0 1 2 3 0 ">
+		<Coordinate point="0 0 0, 2 0 0, 2 0 2, 0 0 2"></Coordinate>
+		<Color color="0, 0, 0, 0 0 0, 0 0 0, 0 0 0, 0 0 0, 1 1 0, 1 1 1"></Color>
+	</IndexedLineSet>
+</Shape>
+</Transform>
+
+<Transform  rotation='0 0 1 57' scale='0.7 0.7 1' translation='2 1 -0.5' >
+	<!-- 1 Треугольник --><Shape>
+	<Appearance><material diffuseColor='black'></material></Appearance>
+	<IndexedTriangleSet index='0 1 2 0 1 3' solid='false'>
+	<Coordinate point='0 0 0, 0 1 0, -0.7 -0.2 0, 0.7 -0.2 0'></Coordinate>
+	</IndexedTriangleSet>
+	</Shape>
+</Transform>
+
+<Transform  rotation='0 0 1 -57' scale='0.7 0.7 1' translation='4 1 -0.5' >
+	<!-- 2 Треугольник --><Shape>
+	<Appearance><material diffuseColor='black'></material></Appearance>
+	<IndexedTriangleSet index='0 1 2 0 1 3' solid='false'>
+	<Coordinate point='0 0 0, 0 1 0, -0.7 -0.2 0, 0.7 -0.2 0'></Coordinate>
+	</IndexedTriangleSet>
+	</Shape>
+</Transform>
+
+<Transform  rotation='0 0 0 0' scale='0.5 1 0.5' translation='2 1 -2.5' >
+		<!-- Дымоход -->
+		<Shape>
+			<Appearance><material diffuseColor='black'></material></Appearance>
+			<IndexedTriangleStripSet index='0 1 2 3 4 5 6 7 0 1' solid='false'>
+				<Coordinate point='0 0 0, 0 1 0, 1 0 0, 1 1 0, 1 0 1, 1 1 1, 0 0 1, 0 1 1'></Coordinate>
+			</IndexedTriangleStripSet>
+		</Shape>
+	</Transform>
+
+
+  </Scene>
+  </X3D>
+  </body>
+  </html>
