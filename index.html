@@ -1,13 +1,157 @@
-<!DOCTYPE html>
+<!--DOCTYPE html-->
 <html lang="ru">
   <head>  
     <meta charset="utf-8" />
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
-    <title>Лабораторная работа 2</title>
-    <link rel="stylesheet" href="https://www.x3dom.org/download/x3dom.css" />
-    <script src="https://www.x3dom.org/download/x3dom.js"></script>
+    <title>2laba</title>
+    <link rel="stylesheet" href="https://www.x3dom.org/download/dev/x3dom.css" />
+    <script src="https://www.x3dom.org/download/dev/x3dom-full.js"></script>
   </head>
   <body>
-    <h1>Здесь только я. А должна быть твоя лаба!</h1>
+    <h1>Навагина Наталья 4642 лаба 2 по ИКГ</h1>
+    <X3D id="x3d" xmlns="https://www.x3dom.org/x3dom" width="600px" height="400px" >
+    <Scene>
+      <!--Лаба 2 код-->
+      <Shape>
+        <Appearance>
+          <Material emissiveColor='1 0 0' ></Material>
+        </Appearance>
+        <PointSet>
+          <Coordinate point='1.8 1.8 0'></Coordinate>
+        </PointSet>
+      </Shape>
+      <Transform translation='0 2.55 -9.35'>
+        <Shape>
+          <IndexedLineSet coordIndex='0 1 2 3 0 -1' colorIndex='0 0 0 0 0 -1' colorPerVertex='true' >
+            <Coordinate point='-0.5 -0.5 0, -0.5 0.5 0, 0.5 0.5 0, 0.5 -0.5 0'></Coordinate>
+            <Color color='1 0 0'></Color>
+          </IndexedLineSet>
+        </Shape>
+      </Transform>
+      <Transform translation='0 -2.1 -2.5'>
+        <Shape>
+          <IndexedFaceSet ccw='true' colorPerVertex='true' convex='true' creaseAngle='0' normalPerVertex='true' solid='true' coordIndex='5 4 3 2 1 0 -1 0 1 7 6 -1 1 2 8 7 -1 2 3 9 8 -1 3 4 10 9 -1 4 5 11 10 -1 5 0 6 11 -1 6 7 8 9 10 11 -1' colorIndex='0 0 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 0 0 -1'>
+            <Coordinate point='-2 0 0, -1 0 -1.7320508, 1 0 -1.7320508, 2 0 0, 1 0 1.7320508, -1 0 1.7320508, -1 -2 0, -0.5 -2 -0.8660254, 0.5 -2 -0.8660254, 1 -2 0, 0.5 -2 0.8660254, -0.5 -2 0.8660254'></Coordinate>
+            <Color color='0.75 0.75 0.75'></Color>
+          </IndexedFaceSet>
+        </Shape>
+      </Transform>
+      <Transform translation='0 -2 -2.5'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='black'></Material>
+          </Appearance>
+          <Cylinder radius="1.3" height="0.4" top="false" bottom="false"></Cylinder>
+        </Shape>
+      </Transform>
+      <Transform translation='0 -2 -2.5'>
+        <Shape DEF="stoika">
+          <IndexedTriangleSet index='3 2 1 1 2 0 2 3 0 3 1 0' solid='true'>
+            <Coordinate point='0 -20 7, 0.9 -0.2 1.55, -0.9 -0.2 1.55, 0 -1.2 0.8'></Coordinate>
+            <ColorRGBA color='0 0 0 1, 0.35 0.35 .35 1, 0.35 0.35 .35 1, 0.35 0.35 .35 1'></ColorRGBA>
+          </IndexedTriangleSet>
+        </Shape>
+      </Transform>
+      <Transform translation='0 -2 -2.5' rotation='0 1 0 2.09'>
+        <Shape USE="stoika"></Shape>
+      </Transform>
+      <Transform translation='0 -2 -2.5' rotation='0 1 0 -2.09'>
+        <Shape>
+          <IndexedTriangleStripSet index='3 2 1 0 3 2 -1' solid='true'>
+            <Coordinate point='0 -20 7, 0.9 -0.2 1.55, -0.9 -0.2 1.55, 0 -1.2 0.8'></Coordinate>
+            <ColorRGBA color='0 0 0 1, 0.35 0.35 .35 1, 0.35 0.35 .35 1, 0.35 0.35 .35 1'></ColorRGBA>
+          </IndexedTriangleStripSet>
+        </Shape>
+      </Transform>
+      <Transform translation='-15 -21.5 -12'>
+        <Shape >
+          <Appearance>
+            <ImageTexture url="cover.jpg"></ImageTexture>
+            <Material></Material>
+          </Appearance>
+          <ElevationGrid xDimension="7" zDimension="6" xSpacing="5.0" zSpacing="5.0" solid="false"
+          height="1.5, 0.25, 0.5, 0.5, 1, 1.5, 0, 
+          1, 0.5, 0.25, 0.25, 0.5, 1, 0, 
+          0.5, 0.25, 0, 0, 0.25, 0.5, 0, 
+          0.5, 0.25, 0, 0, 0.25, 0.5, 0, 
+          1, 0.5, 0.25, 0.25, 0.5, 1, 0, 
+          1.5, 1, 0.5, 0.5, 1, 1.5, 0"></ElevationGrid>
+        </Shape>
+      </Transform>
+      <!--Лаба 1 код-->
+      <Transform translation='5 0 -1' rotation='1 0 0 0.5708'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='white'></Material>
+          </Appearance>
+          <Box size="6 3.4 0.2"></Box>
+        </Shape>
+        <Transform translation='0 0 -0.1'>
+          <Shape>
+            <Appearance>
+              <ImageTexture url="video.jpg"></ImageTexture>
+            </Appearance>
+            <Box size="5.6 3 0.2"></Box>
+          </Shape>
+        </Transform>
+      </Transform>
+      <Transform translation='0 0 -4' rotation='0 0 0 1.5708'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='white'></Material>
+          </Appearance>
+          <Box size="4 4 8"></Box>
+        </Shape>
+      </Transform>
+      <Transform translation='0 2 -8' rotation='-1 0 0 0.7'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='black'></Material>
+          </Appearance>
+          <Box size="1 2 1"></Box>
+        </Shape>
+      </Transform>
+      <Transform translation='0 2.55 -8.8'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='silver'></Material>
+          </Appearance>
+          <Box size="1.1 1.1 1.1"></Box>
+        </Shape>
+      </Transform>
+      <Transform translation='0 0 1' rotation='1 0 0 1.5708'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='silver'></Material>
+          </Appearance>
+          <Cylinder radius="1.8" height="2" top="false" bottom="false"></Cylinder>
+        </Shape>
+      </Transform>
+      <Transform translation='0 0 3' rotation='-1 0 0 1.5708'>
+        <Shape>
+          <Appearance>
+            <Material diffuseColor='black'></Material>
+          </Appearance>
+          <Cone height="2" bottomRadius="2.2" topRadius="2" ></Cone>
+        </Shape>
+      </Transform>
+      <Transform translation="0 0 4" scale="1.9 1.9 0.5">
+        <Shape>
+          <Appearance>
+            <ImageTexture url="video.jpg"></ImageTexture>
+          </Appearance>
+          <Sphere radius="1"></Sphere>
+        </Shape>
+      </Transform>
+      <Transform translation="-1.5 0 -4" rotation="1 0 0 1.5708" scale="1 1.5 10">
+        <Shape>
+          <Appearance>
+            <ImageTexture url="canon.jpg"></ImageTexture>
+            <TextureTransform  scale="3 2" translation="0.33 .2" rotate="0" ></TextureTransform>
+          </Appearance>
+          <Torus innerRadius="0.1" outerRadius="2"></Torus>
+        </Shape>
+      </Transform>
+    </Scene>
+  </X3D>
   </body> 
 </html>
