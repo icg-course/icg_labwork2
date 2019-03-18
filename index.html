@@ -14,62 +14,106 @@
     </article>
     <x3d id="x3d" xmlns="https://www.x3dom.org/x3dom"  style="width:85%; height:85%; border:none;">
       <scene>
-        <transform translation="0 2 0">
-          <shape>
-            <PointSet>
-              <Color color='0 0 0, 0 0 0, 0 0 0, 0 0 0'></Color>
-              <Coordinate point='0.3 -0.1 0, -0.3 -0.1 0,0 -0.1 0.3, 0 -0.1 -0.3'></Coordinate>
-            </PointSet>
-          </shape>
 
-          <Shape>
-            <IndexedLineSet coordIndex="0 1 2 3 4 5 6 7 0" colorIndex="0 1 2 3 4 -1 5 6 0 1 -1" colorPerVertex='true'>
-              <Coordinate point="0 0 1.5,1 0 1, 1.5 0 0, 1 0 -1, 0 0 -1.5, -1 0 -1, -1.5 0 0, -1 0 1'"></Coordinate>
-              <Color color="0.6 0 0.1, 0.6 0 0, 0.6 0 0, 0.3 0 0.2, 0.3 0.1 0, 0.3 0 0, 0.3 0 0.1">
-            </IndexedLineSet>
-          </Shape>
+        <transform translation="0 0 0">
 
-          <Shape>
-            <Appearance>
-              <Material diffuseColor='#C0C0C0'/>
-            </Appearance>
-            <IndexedFaceSet colorPerVertex="true" convex="true" creaseAngle="0" normalPerVertex="true" solid="false"
-              coordIndex="0 1 3 2 -1
-                          1 4 6 3 -1
-                          4 5 7 6 -1
-                          5 8 10 7 -1
-                          8 9 11 10 -1
-                          9 12 14 11 -1
-                          12 13 15 14 -1
-                          13 0 2  15">
-              <Coordinate point="0 0 1.5,1 0 1, 0 1 0.5, 0.5 1 0.5,
-                                1.5 0 0, 1 0 -1, 0.5 1 0, 0.5 1 -0.5,
-                                0 0 -1.5, -1 0 -1, 0 1 -0.5, -0.5 1 -0.5,
-                                -1.5 0 0, -1 0 1, -0.5 1 0, -0.5 1 0.5">
-              </Coordinate>
-            </IndexedFaceSet>
-          </Shape>
+        <!-- ФОНАРЬ -->
 
-          <transform translation="0 1 0">
+          <!-- столб -->
+          <transform translation="5 1.2 8">
             <Shape>
               <Appearance>
-                <Material diffuseColor='#A9A9A9'/>
+                <Material diffuseColor='black'></Material>
+              </Appearance>
+              <cylinder radius="0.25" height="18" solid="false"></cylinder>
+            </Shape>
+
+            <transform translation="0 8.5 1.3">
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='black'></Material>
+                </Appearance>
+                <Box size="0.1 0.1 2.2"></Box>
+              </Shape>
+            </transform>
+          </transform> 
+
+          <!-- подвеска светильника -->
+
+          <transform translation="5 7.7 10.35">
+            <Shape>
+              <Appearance>
+                <Material diffuseColor='#a9a9a9'/>
               </Appearance>
               <IndexedTriangleSet index='0 1 2 1 2 3 3 4 2 0 4 2' solid='false'>
                 <Coordinate point='-0.5 1 0.5, 0.5 1 0.5, 0 2 0, 0.5 1 -0.5, -0.5 1 -0.5'></Coordinate>
               </IndexedTriangleSet>
-            </Shape>
-          </transform>
+            </Shape>          
 
-          <transform translation="0.2 -0.8 -0.2" scale="0.5 0.5 0.5" rotation='1 0 1 0.5'>
             <Shape>
               <Appearance>
-                <Material emissiveColor='1 0 0'/>
+                <Material diffuseColor='#C0C0C0'/>
               </Appearance>
-              <IndexedTriangleStripSet index='4 0 1 5 -1 4 1 3 6 -1 4 3 2 8 -1 4 2 0 7 ' solid='true'>
-                <Coordinate point='1 0 1, -1 0 1, 1 0 -1, -1 0 -1, 0 -1.5 0, 0 1.5 0.5, -0.5 1.5 0, 0.5 1.5 0, 0 1.5 -0.5'/>
+              <IndexedFaceSet colorPerVertex="true" convex="true" creaseAngle="0" normalPerVertex="true" solid="false"
+                coordIndex="0 1 3 2 -1
+                            1 4 6 3 -1
+                            4 5 7 6 -1
+                            5 8 10 7 -1
+                            8 9 11 10 -1
+                            9 12 14 11 -1
+                            12 13 15 14 -1
+                            13 0 2  15">
+                <Coordinate point="0 0 1.5,1 0 1, 0 1 0.5, 0.5 1 0.5,
+                                  1.5 0 0, 1 0 -1, 0.5 1 0, 0.5 1 -0.5,
+                                  0 0 -1.5, -1 0 -1, 0 1 -0.5, -0.5 1 -0.5,
+                                  -1.5 0 0, -1 0 1, -0.5 1 0, -0.5 1 0.5">
+                </Coordinate>
+              </IndexedFaceSet>
             </Shape>
+
+            <Shape>
+              <IndexedLineSet coordIndex="0 1 2 3 4 5 6 7 0" colorIndex="0 1 2 3 4 -1 5 6 0 1 -1" colorPerVertex='true'>
+                <Coordinate point="0 0 1.5,1 0 1, 1.5 0 0, 1 0 -1, 0 0 -1.5, -1 0 -1, -1.5 0 0, -1 0 1'"></Coordinate>
+                <Color color="0.662 0.662 0.662, 0.662 0.662 0.662, 0.662 0.662 0.662, 0.662 0.662 0.662, 0.662 0.662 0.662, 0.662 0.662 0.662, 0.662 0.662 0.662">
+              </IndexedLineSet>
+            </Shape>
+          </transform> 
+
+          <!-- светильник -->
+          
+          <transform translation="5 7.8 10.35">
+            <transform translation="0 0 0" scale="0.5 0.5 0.5">
+              <Shape>
+                <Appearance>
+                  <Material emissiveColor='0 0 0' transparency="0.4"></Material>
+                </Appearance>
+                <IndexedTriangleStripSet index='4 0 1 5 -1 4 1 3 6 -1 4 3 2 8 -1 4 2 0 7 ' solid='false'>
+                  <Coordinate point='1 0 1, -1 0 1, 1 0 -1, -1 0 -1, 0 -1.5 0, 0 1.5 0.5, -0.5 1.5 0, 0.5 1.5 0, 0 1.5 -0.5'></Coordinate>
+                </IndexedTriangleStripSet>
+              </Shape>
+            </transform>
+
+            <transform translation="0 -0.05 0" scale="1.7 2.3 1.7">
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='yellow' specularColor="#ffb300"></Material>
+                </Appearance>
+                <Sphere radius="0.15"></Sphere> 
+              </Shape>
+            </transform>
+
+            <shape>
+              <PointSet>
+                <Color color='0 0 0, 0 0 0, 0 0 0, 0 0 0'></Color>
+                <Coordinate point='0.3 -0.1 0, -0.3 -0.1 0,0 -0.1 0.3, 0 -0.1 -0.3'></Coordinate>
+              </PointSet>
+            </shape>  
           </transform>
+        
+
+          <!-- ДОРОГА -->
+
+          <!-- газон -->
 
           <transform translation="0 -8 0" >
             <Shape>
@@ -105,15 +149,19 @@
             </Shape>
           </transform>
 
+          <!-- асфальт -->
+
           <transform translation="32.5 -8 20">
             <Shape>
               <Appearance>
-                <ImageTexture url=""></ImageTexture>
+                <ImageTexture url="https://raw.githubusercontent.com/mihalichpalich/icg_labwork2/gh-pages/asvalt.JPG"></ImageTexture>
                 <TextureTransform  scale="20 30"></TextureTransform>
               </Appearance>
               <Box size="65 0.01 20"></Box>
             </Shape>
           </transform>
+
+          <!-- поребрики -->
 
           <transform translation="32.5 -7.5 10">
             <Shape>
