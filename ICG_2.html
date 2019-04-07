@@ -12,11 +12,149 @@
     <h1>А вот и лаба!</h1>
     <X3D id="x3d" xmlns="https://www.x3dom.org/x3dom">
       <Scene>
-        <Viewpoint orientation="-1 0 0 0.35" position="5 20 40"></Viewpoint>
-
-          <Transform translation="-5 -5 -15">
+        <Viewpoint orientation="-1 0 0 0.35" position="100 100 300"></Viewpoint>
+<Transform translation="100 41 97.5">
+<!--Платформа-->
+         <Group def="Plane">
+             <Transform translation="0 1 2">
             <Shape>
-              <ElevationGrid xDimension="11" zDimension="11" xSpacing="2.0" zSpacing="2.0" solid="false"
+                <Appearance>
+                    <Material diffuseColor="linen"></Material>
+                </Appearance>
+                <Box size="20 0.5 30"></Box>
+            </Shape>
+             </Transform>
+         </Group>
+         <Transform translation="0 -0.5 0" scale="1 1 1.1">
+           <Group use="Plane"></Group>
+         </Transform>
+         <Transform translation="0 -1 0" scale="1 1 1.2">
+           <Group use="Plane"></Group>
+         </Transform>
+         <Transform translation="0 -1.5 0" scale="1 1 1.3">
+           <Group use="Plane"></Group>
+         </Transform>
+         <!--<Transform translation="0 -2 0" scale="1 1 1.4">
+           <Group use="Plane"></Group>
+         </Transform>
+         <Transform translation="0 -2.5 0" scale="1 1 1.5">
+           <Group use="Plane"></Group>
+         </Transform>
+         <Transform translation="0 -3 0" scale="1 1 1.6">
+           <Group use="Plane"></Group>
+         </Transform>
+         <Transform translation="0 -3.5 0" scale="1 1 1.7">
+           <Group use="Plane"></Group>
+         </Transform>
+         <Transform translation="0 -4 0" scale="1 1 1.8">
+           <Group use="Plane"></Group>
+         </Transform>
+         <Transform translation="0 -4.5 0" scale="1 1 1.9">
+           <Group use="Plane"></Group>
+         </Transform>
+         <Transform translation="0 -5 0" scale="1 1 2">
+           <Group use="Plane"></Group>
+         </Transform>
+         <Transform translation="0 -5.5 0" scale="1 1 2.1">
+           <Group use="Plane"></Group>
+         </Transform>
+         <Transform translation="0 -6 0" scale="1 1 2.2">
+           <Group use="Plane"></Group>
+         </Transform>
+         <Transform translation="0 -6.5 0" scale="1 1 2.3">
+           <Group use="Plane"></Group>
+         </Transform>
+         <Transform translation="0 -7 0" scale="1 1 2.4">
+           <Group use="Plane"></Group>
+         </Transform>
+         <Transform translation="0 -7.5 0" scale="1 1 2.5">
+           <Group use="Plane"></Group>
+         </Transform>
+         <Transform translation="0 -8 0" scale="1 1 2.6">
+           <Group use="Plane"></Group>
+         </Transform>-->
+<!--Колонна-->
+<!--Цилиндр-->
+        <Group def="Pillar">
+            <Transform translation="-9 6.25 15">
+                <Shape>
+                    <Appearance>
+                        <ImageTexture url="texture.jpg"></ImageTexture>
+                        <Texturetransform repeatS="True" repeatT="True" scale="7 7"></Texturetransform>
+                    </Appearance>
+                    <Cylinder radius="0.75" height="10"></Cylinder>
+                </Shape>
+            </Transform>-->
+<!--Сопло-->
+            <Transform translation="-9 2 15" , rotation="1 0 0 3.14">
+                <Shape>
+                    <Appearance>
+                        <Material diffuseColor='#663300'></Material>
+                    </Appearance>
+                    <Nozzle outerRadius="0.8" innerRadius="0.75" nozzleRadius="1" nozzleHeight="0.75" height="1.5"></Nozzle>
+                </Shape>
+                <Transform translation="0 -8.5 0" , rotation="1 0 0 3.14">
+                    <Shape>
+                        <Appearance>
+                            <Material diffuseColor='#663300'></Material>
+                        </Appearance>
+                        <Nozzle outerRadius="0.8" innerRadius="0.75" nozzleRadius="1" nozzleHeight="0.75" height="1.5"></Nozzle>
+                    </Shape>
+                </Transform>
+            </Transform>
+          </Group>
+<!--Текст-->
+<Transform translation="0 12.5 18.1" scale="0.04 0.04 0.04">
+<Shape>
+  <Text string='"Ζεύς"' solid='false' length=''>
+    <FontStyle family="TYPEWRITER" size='300' spacing='0.1' language='el'></FontStyle>
+  </Text>
+  <Appearance>
+    <Material diffuseColor='#000000'></Material>
+  </Appearance>
+</Shape>
+</Transform>
+<!--Крыша-->
+<Transform translation="0 13 2">
+   <Shape>
+    <Appearance>
+      <Material diffuseColor="linen"></Material>
+    </Appearance>
+    <Pyramid height="2.5" xbottom="20" ybottom="30" xtop="0" ytop="30" xoff="0" yoff="0"></Pyramid>
+  </Shape>
+</Transform>
+<!--Копии-->
+<Group def="Row">
+      <Transform>
+        <Group use="Pillar"></Group>
+      </Transform>
+      <Transform translation="0 0 -5", >
+        <Group use="Pillar"></Group>
+      </Transform>
+      <Transform translation="0 0 -10", >
+        <Group use="Pillar"></Group>
+      </Transform>
+      <Transform translation="0 0 -15", >
+        <Group use="Pillar"></Group>
+      </Transform>
+      <Transform translation="0 0 -20", >
+        <Group use="Pillar"></Group>
+      </Transform>
+      <Transform translation="0 0 -25", >
+        <Group use="Pillar"></Group>
+      </Transform>
+  </Group>
+      <Transform translation="18 0 0", >
+        <Group use="Row"></Group>
+      </Transform>
+      <Transform translation="0 10.5 0">
+        <Group use="Plane"></Group>
+      </Transform>
+</Transform>
+<!--Земля-->
+          <Transform scale="20 20 20">
+            <Shape>
+              <ElevationGrid xDimension="11" zDimension="11" xSpacing="1.0" zSpacing="1.0" solid="false"
                               height=
                                      "-0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5,
                                       -0.5,  0.5,  0.5,  0.5,  0.5,  0.5,  0.5,  0.5,  0.5,  0.5, -0.5,
@@ -35,32 +173,54 @@
               </Appearance>
             </Shape>
           </Transform>
+<!--Конь-->
+          <Group def="horse1">
+            <Transform>
+              <Shape>
+                <IndexedTriangleSet index='0 1 2
+                                           1 2 3
+                                           1 3 4
+                                           2 3 5
+                                           3 5 6
+                                           3 4 6
+                                           5 6 7
+                                           4 6 8
+                                           4 8 9
+                                           8 9 10
+                                           8 10 11
+                                           6 8 11
+                                           9 10 12
+                                           10 12 13
+                                           12 13 14
+                                           10 11 15
+                                           13 15 16
+                                           10 13 15
+                                           16 15 17
+                                           15 11 17
+                                           6 11 18' solid='false'>
+                  <Coordinate point='0 0.5 0, 1 3.5 0, 8.7 5.7 0, 5 6.2 1, 0.3 8 0, 3.5 11.3 0, -1 11 0.5, -4 14 0, -1 8.11 1, -3.7 4.6 0, -3 9.6 0.5, -2.3 10.2 0.5, -4.82 5.1 0, -4.8 7.7 0, -5.5 5.4 0, -3.2 10.3 0.5, -3.7 10.8 0, -1.99 13.2 0.1, -2.2 12.2 0.3'></Coordinate>
+                  <ColorRGBA color='0 0 1 1, 0 0 1 1, 0 0 1 1, 0 0 0 0.5, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 0 0 0 1, 0 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 0 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1'></ColorRGBA>
+                </IndexedTriangleSet>
+              </Shape>
+            </Transform>
+          </Group>
 
+          <Group def="horse2">
+            <Transform>
+              <Shape>
+                <IndexedTriangleSet index='0 1 2 1 2 3 1 3 4 2 3 5 3 5 6 3 4 6 5 6 7 4 6 8 4 8 9 8 9 10 8 10 11 6 8 11 9 10 12 10 12 13 12 13 14 10 11 15 13 15 16 10 13 15 16 15 17 15 11 17 6 11 18' solid='false'>
+                  <Coordinate point='0 0.5 0, 1 3.5 0, 8.7 5.7 0, 5 6.2 -1, 0.3 8 0, 3.5 11.3 0, -1 11 -0.5, -4 14 0, -1 8.11 -1, -3.7 4.6 0, -3 9.6 -0.5, -2.3 10.2 -0.5, -4.82 5.1 0, -4.8 7.7 0, -5.5 5.4 0, -3.2 10.3 -0.5, -3.7 10.8 0, -1.99 13.2 -0.1, -2.2 12.2 -0.3'></Coordinate>
+                  <ColorRGBA color='0 0 1 1, 0 0 1 1, 0 0 1 1, 0 0 0 0.5, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 0 0 0 1, 0 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 0 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1'></ColorRGBA>
+                </IndexedTriangleSet>
+              </Shape>
+            </Transform>
+          </Group>
+<!--Extrusion-->
           <Shape>
-            <IndexedTriangleSet index='0 1 2
-                                       1 2 3
-                                       1 3 4
-                                       2 3 5
-                                       3 5 6
-                                       3 4 6
-                                       5 6 7
-                                       4 6 8
-                                       4 8 9
-                                       8 9 10
-                                       8 10 11
-                                       6 8 11
-                                       9 10 12
-                                       10 12 13
-                                       12 13 14
-                                       10 11 15
-                                       13 15 16
-                                       10 13 15
-                                       16 15 17
-                                       15 11 17
-                                       6 11 18' solid='false'>
-              <Coordinate point='0 0.5 0, 1 3.5 0, 8.7 5.7 0, 5 6.2 1, 0.3 8 0, 3.5 11.3 0, -1 11 0.5, -4 14 0, -1 8.11 1, -3.7 4.6 0, -3 9.6 0.5, -2.3 10.2 0.5, -4.82 5.1 0, -4.8 7.7 0, -5.5 5.4 0, -3.2 10.3 0.5, -3.7 10.8 0, -1.99 13.2 0.1, -2.2 12.2 0.3'></Coordinate>
-              <ColorRGBA color='0 0 1 1, 0 0 1 1, 0 0 1 1, 0 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 0 0 0 1, 0 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 0 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1'></ColorRGBA>
-            </IndexedTriangleSet>
+            <IndexedFaceSet >
+              <Coordinate></Coordinate>
+              <Color></Color>
+            </IndexedFaceSet>
           </Shape>
 
     </X3D>
