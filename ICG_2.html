@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>IKG_2</title>
@@ -9,11 +9,11 @@
     <script src="../js/custom.js"></script>
   </head>
   <body>
-    <h1>А вот и лаба!</h1>
+    <h1>Temple</h1>
     <X3D id="x3d" xmlns="https://www.x3dom.org/x3dom">
       <Scene>
-        <Viewpoint orientation="-1 0 0 0.35" position="100 100 300"></Viewpoint>
-<Transform translation="100 41 97.5">
+        <Viewpoint orientation="-1 0 0 0.35" position="150 100 300"></Viewpoint>
+<Transform translation="150 40.5 145">
 <!--Платформа-->
          <Group def="Plane">
              <Transform translation="0 1 2">
@@ -34,45 +34,6 @@
          <Transform translation="0 -1.5 0" scale="1 1 1.3">
            <Group use="Plane"></Group>
          </Transform>
-         <!--<Transform translation="0 -2 0" scale="1 1 1.4">
-           <Group use="Plane"></Group>
-         </Transform>
-         <Transform translation="0 -2.5 0" scale="1 1 1.5">
-           <Group use="Plane"></Group>
-         </Transform>
-         <Transform translation="0 -3 0" scale="1 1 1.6">
-           <Group use="Plane"></Group>
-         </Transform>
-         <Transform translation="0 -3.5 0" scale="1 1 1.7">
-           <Group use="Plane"></Group>
-         </Transform>
-         <Transform translation="0 -4 0" scale="1 1 1.8">
-           <Group use="Plane"></Group>
-         </Transform>
-         <Transform translation="0 -4.5 0" scale="1 1 1.9">
-           <Group use="Plane"></Group>
-         </Transform>
-         <Transform translation="0 -5 0" scale="1 1 2">
-           <Group use="Plane"></Group>
-         </Transform>
-         <Transform translation="0 -5.5 0" scale="1 1 2.1">
-           <Group use="Plane"></Group>
-         </Transform>
-         <Transform translation="0 -6 0" scale="1 1 2.2">
-           <Group use="Plane"></Group>
-         </Transform>
-         <Transform translation="0 -6.5 0" scale="1 1 2.3">
-           <Group use="Plane"></Group>
-         </Transform>
-         <Transform translation="0 -7 0" scale="1 1 2.4">
-           <Group use="Plane"></Group>
-         </Transform>
-         <Transform translation="0 -7.5 0" scale="1 1 2.5">
-           <Group use="Plane"></Group>
-         </Transform>
-         <Transform translation="0 -8 0" scale="1 1 2.6">
-           <Group use="Plane"></Group>
-         </Transform>-->
 <!--Колонна-->
 <!--Цилиндр-->
         <Group def="Pillar">
@@ -104,10 +65,10 @@
             </Transform>
           </Group>
 <!--Текст-->
-<Transform translation="0 12.5 18.1" scale="0.04 0.04 0.04">
+<Transform translation="0 12.5 17.05" scale="0.04 0.04 0.04">
 <Shape>
-  <Text string='"Ζεύς"' solid='false' length=''>
-    <FontStyle family="TYPEWRITER" size='300' spacing='0.1' language='el'></FontStyle>
+  <Text string='"Ζεύς"' solid='false'>
+    <FontStyle family="TYPEWRITER" size='30' spacing='1' language='el'></FontStyle>
   </Text>
   <Appearance>
     <Material diffuseColor='#000000'></Material>
@@ -154,7 +115,7 @@
 <!--Земля-->
           <Transform scale="20 20 20">
             <Shape>
-              <ElevationGrid xDimension="11" zDimension="11" xSpacing="1.0" zSpacing="1.0" solid="false"
+              <ElevationGrid xDimension="11" zDimension="11" xSpacing="1.5" zSpacing="1.5" solid="false"
                               height=
                                      "-0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5,
                                       -0.5,  0.5,  0.5,  0.5,  0.5,  0.5,  0.5,  0.5,  0.5,  0.5, -0.5,
@@ -162,18 +123,20 @@
                                       -0.5,  0.5,  0,    1,    1,    1,    1,    1,    0,    0.5, -0.5,
                                       -0.5,  0.5,  0,    1,    2,    2,    2,    1,    0,    0.5, -0.5,
                                       -0.5,  0.5,  0,    1,    2,    2,    2,    1,    0,    0.5, -0.5,
-                                      -0.5,  0.5,  0,    1,    2,    2,    2 ,   1,    0,    0.5, -0.5,
+                                      -0.5,  0.5,  0,    1,    2,    2,    2,    1,    0,    0.5, -0.5,
                                       -0.5,  0.5,  0,    1,    1,    1,    1,    1,    0,    0.5, -0.5,
                                       -0.5,  0.5,  0,    0,    0,    0,    0,    0,    0,    0.5, -0.5,
                                       -0.5,  0.5,  0.5,  0.5,  0.5,  0.5,  0.5,  0.5,  0.5,  0.5, -0.5,
                                       -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5">
               </ElevationGrid>
               <Appearance>
-                <Material></Material>
+                <ImageTexture url="stone.jpg"></ImageTexture>
+                <Texturetransform repeatS="True" repeatT="True" scale="3 3"></Texturetransform>
               </Appearance>
             </Shape>
           </Transform>
 <!--Конь-->
+          <Transform translation="150 60 150">
           <Group def="horse1">
             <Transform>
               <Shape>
@@ -215,14 +178,10 @@
               </Shape>
             </Transform>
           </Group>
-<!--Extrusion-->
-          <Shape>
-            <IndexedFaceSet >
-              <Coordinate></Coordinate>
-              <Color></Color>
-            </IndexedFaceSet>
-          </Shape>
+          </Transform>
+<!---->
 
+      </Scene>
     </X3D>
   </body>
 </html>
