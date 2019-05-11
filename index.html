@@ -13,8 +13,8 @@
 
         <Shape>
             <PointSet>
-                <Color color='0 0 1, 0 1 0, 0 1 1, 1 0 0 , 1 0 1, 1 1 0'></Color>
-                <Coordinate point='0.0 0.0 0.0, 0.0 3.0 0.0, 4.0 0.0 0.0, 4.0 3.0 0.0, 2.0 6.0 0'></Coordinate>
+                <Color color='0 0 1 0 1 0 0 1 1 1 0 0  1 0 1 1 1 0'></Color>
+                <Coordinate point='0.0 0.0 0.0 0.0 3.0 0.0 4.0 0.0 0.0 4.0 3.0 0.0 2.0 6.0 0'></Coordinate>
             </PointSet>
         </Shape>
         <transform translation="0 0 -6">
@@ -25,7 +25,7 @@
                     <Material emissiveColor='1 0 0'/>
                 </Appearance>
                 <IndexedLineSet coordIndex='0 1 3 2 0 -1 1 4 3 -1'>
-                    <Coordinate point='0.0 0.0 0.0, 0.0 3.0 0.0, 4.0 0.0 0.0, 4.0 3.0 0.0, 2.0 6.0 0' />
+                    <Coordinate point='0.0 0.0 0.0 0.0 3.0 0.0 4.0 0.0 0.0 4.0 3.0 0.0 2.0 6.0 0' />
                 </IndexedLineSet>
             </Shape>
         </transform>
@@ -53,7 +53,7 @@
 			0 8 9 -1
 			1 2 8 -1
 			2 7 8 -1">
-                    <Coordinate point="0.0 0.0 0.0, 0.0 3.0 0.0, 2.0 6.0 0, 4.0 3.0 0.0, 4.0 0.0 0.0, 4.0 0 -3.0, 4.0 3.0 -3.0, 2.0 6.0 -3, 0.0 3.0 -3.0, 0.0 0.0 -3.0">
+                    <Coordinate point="0.0 0.0 0.0 0.0 3.0 0.0 2.0 6.0 0 4.0 3.0 0.0 4.0 0.0 0.0 4.0 0 -3.0 4.0 3.0 -3.0 2.0 6.0 -3 0.0 3.0 -3.0 0.0 0.0 -3.0">
                     </Coordinate>
 
                 </IndexedFaceSet>
@@ -65,8 +65,8 @@
                 <Appearance>
                 </Appearance>
                 <IndexedTriangleSet index='0 1 3 0 3 4 1 2 3 4 3 6 4 5 6 5 9 6 6 9 8 8 7 6 2 3 7 3 7 6 0 1 8 0 8 9 1 2 8 2 7 8' solid='false'>
-                    <Coordinate point='0.0 0.0 0.0, 0.0 3.0 0.0, 2.0 6.0 0, 4.0 3.0 0.0, 4.0 0.0 0.0, 4.0 0 -3.0, 4.0 3.0 -3.0, 2.0 6.0 -3, 0.0 3.0 -3.0, 0.0 0.0 -3.0'></Coordinate>
-                    <ColorRGBA color="0 .8 0 1, 0 1 1 1, 1 0 0 1, 1 .5 0 1, .8 0 1 1, 1 1 0 1, .6 .3 .1 1, 1 0 .5 1, 0 1 .5 1, 0 .8 0 1"></ColorRGBA>
+                    <Coordinate point='0.0 0.0 0.0 0.0 3.0 0.0 2.0 6.0 0 4.0 3.0 0.0 4.0 0.0 0.0 4.0 0 -3.0 4.0 3.0 -3.0 2.0 6.0 -3 0.0 3.0 -3.0 0.0 0.0 -3.0'></Coordinate>
+                    <ColorRGBA color="0 .8 0 1 0 1 1 1 1 0 0 1 1 .5 0 1 .8 0 1 1 1 1 0 1 .6 .3 .1 1 1 0 .5 1 0 1 .5 1 0 .8 0 1"></ColorRGBA>
                 </IndexedTriangleSet>
             </Shape>
         </transform>
@@ -77,7 +77,7 @@
                     <Material emissiveColor='0 1 1'/>
                 </Appearance>
                 <IndexedTriangleStripSet index='0 1 3 1 2 3 0 5 4 0 3 4  ' solid='true'>
-                    <Coordinate point='4.0 3.0 0.0, 4.0 0.0 0.0, 4.0 0 -3.0, 4.0 3.0 -3.0, 2.0 6.0 0, 2.0 6.0 -3 '></Coordinate>
+                    <Coordinate point='4.0 3.0 0.0 4.0 0.0 0.0 4.0 0 -3.0 4.0 3.0 -3.0 2.0 6.0 0 2.0 6.0 -3 '></Coordinate>
                 </IndexedTriangleStripSet>
             </Shape>
         </transform>
@@ -89,16 +89,16 @@
                         <TextureTransform scale="3 3"/>
                 </Appearance>
                 <ElevationGrid xDimension="10" zDimension="10" creaseAngle="0.5"
-                               height="0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4,
-                            0.0, 0.0, 0.0, 0.0,0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-                            0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4,
-                            0.0, 0.0, 0.0, 0.0,0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-                          0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4,
-                            0.0, 0.0, 0.0, 0.0,0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-                             0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4,
-                              0.0, 0.0, 0.0, 0.0,0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-                               0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4,
-                               0.0, 0.0, 0.0, 0.0,0.0, 0.0, 0.0, 0.0, 0.0, 0.0"
+                               height="0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4
+                            0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+                            0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4
+                            0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+                          0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4
+                            0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+                             0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4
+                              0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+                               0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4 0.4
+                               0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0"
                                xSpacing="2" zSpacing="2" solid="false">
                 </ElevationGrid>
             </Shape>
@@ -127,16 +127,16 @@
             <transform translation="2 1.5 -0.7" scale="0.15 0.15 0.15">
                 <shape>
                     <IndexedTriangleStripSet index='0 1 2 3 4 5 6 7 8 -1' solid='true'>
-                        <Coordinate point='-4 1 3, -2 2 1.5, -3 4 0.5, -2 5 1.5, 0 5 0, 2 4 1.5, 5 5 -2.5, 4 3 1.5, 6 1 2'></Coordinate>
-                        <ColorRGBA color='0 0 1 0, 0 0 1 0, 0 0 1 1, 0 0 1 1, 0 0 1 0, 0 0 1 1, 0 0 1 1, 0 0 1 1, 0 0 1 0'></ColorRGBA>
+                        <Coordinate point='-4 1 3 -2 2 1.5 -3 4 0.5 -2 5 1.5 0 5 0 2 4 1.5 5 5 -2.5 4 3 1.5 6 1 2'></Coordinate>
+                        <ColorRGBA color='0 0 1 0 0 0 1 0 0 0 1 1 0 0 1 1 0 0 1 0 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 0'></ColorRGBA>
                     </IndexedTriangleStripSet>
                 </shape>
             </transform>
             <transform translation="1 1.5 -0.2" scale="0.15 0.15 0.15" rotation="0 1 0 3.14">
                 <shape>
                     <IndexedTriangleStripSet index='0 1 2 3 4 5 6 7 8 -1' solid='true'>
-                        <Coordinate point='-4 1 3, -2 2 1.5, -3 4 0.5, -2 5 1.5, 0 5 0, 2 4 1.5, 5 5 -2.5, 4 3 1.5, 6 1 2'></Coordinate>
-                        <ColorRGBA color='0 0 1 0, 0 0 1 0, 0 0 1 1, 0 0 1 1, 0 0 1 0, 0 0 1 1, 0 0 1 1, 0 0 1 1, 0 0 1 0'></ColorRGBA>
+                        <Coordinate point='-4 1 3 -2 2 1.5 -3 4 0.5 -2 5 1.5 0 5 0 2 4 1.5 5 5 -2.5 4 3 1.5 6 1 2'></Coordinate>
+                        <ColorRGBA color='0 0 1 0 0 0 1 0 0 0 1 1 0 0 1 1 0 0 1 0 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 0'></ColorRGBA>
                     </IndexedTriangleStripSet>
                 </shape>
             </transform>
