@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/icg-course/icg_labwork2.svg?branch=gh-pages)](https://travis-ci.org/icg-course/icg_labwork2)
+[![Build Status](https://travis-ci.com/icg-course/icg_labwork2.svg?branch=gh-pages)](https://travis-ci.com/icg-course/icg_labwork2)
 # Репозиторий лабораторной работы №2 (Сложные геометрические объекты)
 
 Данный репозиторий предназначен для выполнения и сдачи лабораторной работы №2.
