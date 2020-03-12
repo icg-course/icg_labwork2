@@ -5,7 +5,7 @@
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
     <title>Лабораторная работа 1</title>
     <link rel="stylesheet" href="https://www.x3dom.org/download/x3dom.css" />
-    <script src="https://www.x3dom.org/download/x3dom.js"></script>
+    <script src="https://www.x3dom.org/release/x3dom-full.js"></script>
   </head>
   <body>
     <h1>Беседка в поле</h1>
@@ -182,18 +182,24 @@
             </Appearance>
           </Shape>
         </Transform>
-        <Transform translation = "1 1 1"> <!--вода-->
+        <Transform translation = "-1 1 -1"> <!--вода-->
           <Shape>
             <ElevationGrid xDimension="5" zDimension="5"
-            height="1.5 10 0.5 0.5 0
+            height="0.9 0.7 0.5 0.5 0
                     1 0.5 0.25 0.25 0
                     0.5 0.25 0 0 0
                     0.5 0.25 0 0 0,
                     1 0.5 0.25 0.25 0"
-            xSpacing="1" zSpacing="1" ccw = "true" solid="false">
+            xSpacing=".5" zSpacing=".5" ccw = "true" solid="false">
+            <ColorRGBA 
+              color = "0 0 1 0.5, 0 0 1 0.5, 0 0 1 0.5, 0 0 1 0.5, 0 0 1 0.5,
+              0 0 1 0.5, 0 0 1 0.5, 0 0 1 0.5, 0 0 1 0.5, 0 0 1 0.5,
+              0 0 1 0.5, 0 0 1 0.5, 0 0 1 0.5, 0 0 1 0.5, 0 0 1 0.5,
+              0 0 1 0.5, 0 0 1 0.5, 0 0 1 0.5, 0 0 1 0.5, 0 0 1 0.5,
+              0 0 1 0.5, 0 0 1 0.5, 0 0 1 0.5, 0 0 1 0.5, 0 0 1 0.5">
+            </ColorRGBA>
             </ElevationGrid>
             <Appearance>
-              <Material diffuseColor="0.9 0.1 0.1"/>
             </Appearance>
           </Shape>
         </Transform>
