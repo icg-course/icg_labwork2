@@ -1,0 +1,38 @@
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>lab2</title>
+		<link rel="stylesheet" href="https://www.x3dom.org/download/dev/x3dom.css">
+		<script src="https://www.x3dom.org/download/dev/x3dom.js"></script>
+	</head>
+	<body>
+		<x3d>
+			<scene>
+             <Group DEF = "Star">
+               <transform>
+                    <shape>
+                        <appearance>
+                        </appearance>
+                        <IndexedTriangleSet Index = '1 2 10  2 3 4  4 5 6  6 7 8  8 9 10  10 2 8  2 4 8  4 6 8  0 1 2  0 1 10  0 2 3  0 3 4  0 4 5  0 5 6  0 6 7  0 7 8  0 8 9  0 9 10 '
+                                            solid = "false" colorpervertex = "true" normalpervertex = "true">
+                            <coordinate point = '0 0 2,0 8 0, 2.5 3.5 0, 7.5 2.5 0, 4 -1 0, 5 -6 0, 0 -4 0, -5 -6 0, -4 -1 0, -7.5 2.5 0, -2.5 3.5 0'></coordinate>
+                            <ColorRGBA color="1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1, 1 0 0 1,"></ColorRGBA> 
+                        </IndexedTriangleSet>
+                    </shape>
+                </transform>
+
+                 <transform>
+                    <shape>
+                        <appearance> 
+                            <material emissivecolor = "0 0 0"></material>
+                        </appearance>
+                        <IndexedLineset coordIndex = "0 1 2 0 -1  0 1 10 0 -1  0 2 3 0 -1 0 3 4 0 -1  0 4 5 0 -1  0 5 6 0 -1  0 6 7 0 -1  0 7 8 0 -1  0 8 9 0 -1  0 9 10 0 -1">
+                            <coordinate point = '0 0 2,0 8 0, 2.5 3.5 0, 7.5 2.5 0, 4 -1 0, 5 -6 0, 0 -4 0, -5 -6 0, -4 -1 0, -7.5 2.5 0, -2.5 3.5 0'></coordinate>
+                        </IndexedLineset>
+                    </shape>
+                </transform>
+            </Group>    
+			</scene>
+		</x3d>
+	</body>
+</html>
