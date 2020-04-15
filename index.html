@@ -63,7 +63,7 @@
 						</transform>
 						
 						<transform DEF="arm_rotation" rotation="1 0 0 0.7">
-							<transform translation="1.2 0 0">
+							<transform DEF="left_arm" translation="1.2 0 0">
 								<group DEF="full_arm">
 									<transform translation="0.2 0 0" rotation="0 1 0 -1.57">
 										<transform rotation="1 0 0 -1.57">
@@ -82,17 +82,15 @@
 									</transform>
 							
 									<transform translation="0 -1 0">
-										<group DEF="arm"
-											<transform translation "0 0 0">
-												<shape>
-													<appearance>
-														<material diffusecolor="#404040"></material>
-													</appearance>
-													<box size="0.3 2.3 0.5"></box>
-												</shape>
-											</transform>
+										<group DEF="arm">
+											<shape>
+												<appearance>
+													<material diffusecolor="#404040"></material>
+												</appearance>
+												<box size="0.3 2.3 0.5"></box>
+											</shape>
 											
-											<transform translation="0.1 -1 0">
+											<transform translation="0.1 0 0">
 												<shape>
 													<appearance>
 														<material diffusecolor="#000010"></material>
@@ -104,7 +102,7 @@
 									</transform>
 								</group>
 							
-								<transform DEF="left_foot" translation="1.2 -2.15 0" rotation="1 0 0 -0.4">
+								<transform translation="0 -2.15 0" rotation="1 0 0 -0.4">
 									<group DEF="full_foot">
 										<transform rotation="0 0 1 1.57">
 											<shape DEF="roller">
@@ -136,19 +134,17 @@
 								</transform>
 							</transform>
 							
-							<transform translation="-1.2 0 0" rotation="0 1 0 3.1415">
-								<transform rotation="1 0 0 -0.7">
-									<group USE="full_arm"></group>
-									
-									<transform translation="0 -2.15 0" rotation="1 0 0 0.4">
-										<group USE="full_foot"></group>
-									</transform>
+							<transform DEF="right_arm" translation="-1.2 0 0" rotation="0 1 0 3.1415">
+								<group USE="full_arm"></group>
+								
+								<transform translation="0 -2.15 0" rotation="1 0 0 0.4">
+									<group USE="full_foot"></group>
 								</transform>
 							</transform>
 						</transform>
 					</transform>
 					
-					<transform DEF="center_foot" translation="0 -1.3 0.4">
+					<transform DEF="center_foot" translation="0 -1.4 0" rotation="1 0 0 0.3">
 						<group USE="full_foot"></group>
 					</transform>
 					
