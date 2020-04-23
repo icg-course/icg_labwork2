@@ -8,6 +8,131 @@
     <script src="https://www.x3dom.org/download/x3dom.js"></script>
   </head>
   <body>
-    <h1>Здесь только я. А должна быть твоя лаба!</h1>
-  </body> 
+    <p align="center">Лабораторная работа №2 Брылев Евгений </p> 
+
+
+<X3D id="x3d" xmlns="https://www.x3dom.org/x3dom">
+
+<scene>
+
+
+
+<transform translation="-6,0"> 
+	<Shape> 
+		<Appearance> 
+  <!-- Земля -->
+			<ImageTexture url='https://lh5.googleusercontent.com/-Ochc8HOY8uE/URDsSk9NZ9I/AAAAAAAAA0E/eoV5-EU7Xuk/s1024/earthmap1k.jpg'> </ImageTexture>
+				<TextureProperties>
+				</TextureProperties> 
+		</Appearance> 
+					<Sphere radius="10"></Sphere> 
+	</Shape> 
+
+
+
+<transform translation="24,15"> 
+	<shape> 
+		<Appearance> 
+   <!-- Луна -->
+			<ImageTexture url='https://st2.depositphotos.com/2800301/6522/i/950/depositphotos_65228683-stock-photo-moon.jpg'> </ImageTexture>
+				<TextureProperties></TextureProperties> 
+		</Appearance> 
+					<Sphere radius="2"></Sphere> 
+	</shape>
+</transform> 
+
+
+
+<transform translation="5,13.75"> 
+	<shape> 
+		<Appearance> 
+   <!-- Ракета нос-->
+			<ImageTexture url='https://avatars.mds.yandex.net/get-pdb/1782154/bf2538f5-abb4-44b8-a1c6-752d2bc5832d/s375'> </ImageTexture>
+				<TextureProperties></TextureProperties> 
+		</Appearance> 
+					<Cone height="0.5" bottomRadius="0.1"></Cone> 
+	</shape>
+</transform> 
+
+
+
+<transform translation="5,13"> 
+	<shape> 
+		<Appearance> 
+   <!-- Ракета тело -->
+			<ImageTexture url='https://avatars.mds.yandex.net/get-pdb/1782154/bf2538f5-abb4-44b8-a1c6-752d2bc5832d/s375'> </ImageTexture>
+				<TextureProperties></TextureProperties> 
+		</Appearance> 
+					<Cylinder height="1" radius="0.1"></Cylinder> 
+	</shape>
+</transform> 
+
+<transform translation="5,12.8"> 
+	<shape> 
+		<Appearance> 
+   <!-- зад -->
+			<ImageTexture url='https://avatars.mds.yandex.net/get-pdb/1782154/bf2538f5-abb4-44b8-a1c6-752d2bc5832d/s375'> </ImageTexture>
+				<TextureProperties></TextureProperties> 
+		</Appearance> 
+					<Cone height="1"  bottomRadius="0.1"></Cone> 
+	</shape>
+</transform> 
+
+<transform rotation="1 0 0" translation="5,12.8"> 
+	<shape> 
+		<Appearance> 
+   <!-- огонёк -->
+			<Material diffuseColor="orange"></Material> 
+		</Appearance> 
+					<Cone height="2"  bottomRadius="0.05"></Cone> 
+	</shape>
+</transform> 
+
+<!-- ---подставка для земли --->
+<transform translation="-4, -32,-4">
+ 		<Shape>
+          <ElevationGrid xDimension="3" zDimension="3" xSpacing="4.0" zSpacing="4.0" solid="true"
+                          height= 
+                                 "17,17,17,
+                                 17,1,17,
+                                 17,17,17">
+          </ElevationGrid>
+          <Appearance>
+            <Material emissivecolor="0,255,0"></Material>
+          </Appearance>
+        </Shape>
+</transform>
+
+
+<!-- torus-->
+<transform rotation="1 0 0 -1.57" translation="0,-15,0">
+		<Shape>
+          <Torus innerRadius="2" outerRadius="4"></Torus>
+          <Appearance>
+            <Material diffuseColor="0,255,0"></Material>
+          </Appearance>
+        </Shape>
+</transform>   
+
+
+<!-- ---подставка для луны.     P.S. не баг, а фича --->
+<transform translation="23, -5,-2">
+ 		<Shape>
+          <ElevationGrid xDimension="4" zDimension="4" xSpacing="1.0" zSpacing="1.0" solid="true"
+                          height=
+                                 "-4,-4,-4,-4,
+                                 -4,13,-13,-4,
+                                 -4,13,-13,-4,
+                                  -4,-4,-4, -4">
+          </ElevationGrid>
+          <Appearance>
+            <Material emissivecolor="139,0,139"></Material>
+          </Appearance>
+        </Shape>
+</transform>
+
+
+</scene>
+</X3D>  
+</body> 
 </html>
