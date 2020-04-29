@@ -1,23 +1,51 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>  
+  <head>
     <meta charset="utf-8" />
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
-    <title>Лабораторная работа 2</title>
-     <link rel="stylesheet" href="https://www.x3dom.org/download/dev/x3dom.css" />
+    <title>2 lab</title>
+    <link rel="stylesheet" href="https://www.x3dom.org/download/dev/x3dom.css" />
     <script src="https://www.x3dom.org/download/dev/x3dom-full.js"></script>
     <link rel="stylesheet" href="../css/custom.css" />
     <script src="../js/custom.js"></script>
-  </head>
-  <body>
-    <p align="center">Лабораторная работа №2 Брылев Евгений </p> 
+ </head>
+
+<body>
+
+<p align="center">Лабораторная работа №2 Брылев Евгений </p> 
 
 
 <X3D id="x3d" xmlns="https://www.x3dom.org/x3dom">
-
 <scene>
 
+	<Transform translation="0 -13 0" >
+		<Shape>
+			<IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" normalPerVertex="true" solid="false"
+			coordIndex="
+			0 4 7 3 -1 
+			5 6 2 1 -1 
+			4 5 6 7 -1 
+			6 7 3 2 -1 
+			3 2 1 0 -1 
+			0 1 5 4"
+			colorIndex="0 1 2 3 -1 4 5 6 0 -1 1 2 3 4 -1 5 6 0 1 -1 5 6 0 1 -1 5 6 0 1">
+				<Coordinate point="-2 0 2, 2 0 2, 2 0 -2, -2 0 -2, -1 2 1, 1 2 1, 1 2 -1, -1 2 -1"></Coordinate>
+				<Color color="1 0 1,1 1 0, 0 1 1, 1 1 0, 1 1 1, 1 1 0, 1 0 1, 1 1 0, 1 1 1"></Color>
+			</IndexedFaceSet>
+		</Shape>
+	</Transform>
 
+
+
+<transform translation="0 -18 0" rotation="0 0 1 1.57" >
+ <Shape>
+ 	<!--pedestal/cup-->
+          <Appearance>
+            <Material diffuseColor='#483D8B'></Material>
+          </Appearance>
+          <SolidOfRevolution angle='6.283185' crossSection='[-10 3 -20 10 -5 5 0 35 3 35 0.1 34.9 0.5 10 5 5]' solid='false'></SolidOfRevolution> 
+        </Shape>
+   
+</transform>
 
 <transform translation="0,0"> 
 	<Shape> 
@@ -69,6 +97,9 @@
 	</shape>
 </transform> 
 
+
+
+
 <transform translation="5,12.8"> 
 	<shape> 
 		<Appearance> 
@@ -80,6 +111,10 @@
 	</shape>
 </transform> 
 
+
+
+
+
 <transform rotation="1 0 0" translation="5,12.8"> 
 	<shape> 
 		<Appearance> 
@@ -90,34 +125,8 @@
 	</shape>
 </transform> 
 
-<!-- подставка для земли-->
-<transform translation="-4, -32,-4">
- 		<Shape>
-          <ElevationGrid xDimension="3" zDimension="3" xSpacing="4.0" zSpacing="4.0" solid="true"
-                          height= 
-                                 "17,17,17,
-                                 17,1,17,
-                                 17,17,17">
-          </ElevationGrid>
-          <Appearance>
-            <Material emissivecolor="0,255,0"></Material>
-          </Appearance>
-        </Shape>
-</transform>
+<!-- ---подставка для луны.     P.S. не баг, а фича --->
 
-
-<!-- torus-->
-<transform rotation="1 0 0 -1.57" translation="0,-15,0">
-		<Shape>
-          <Torus innerRadius="2" outerRadius="4"></Torus>
-          <Appearance>
-            <Material diffuseColor="0,255,0"></Material>
-          </Appearance>
-        </Shape>
-</transform>   
-
-
-<!-- подставка для луны-->
 <transform translation="23, -5,-2">
  		<Shape>
           <ElevationGrid xDimension="4" zDimension="4" xSpacing="1.0" zSpacing="1.0" solid="true"
@@ -133,8 +142,171 @@
         </Shape>
 </transform>
 
+<!-- ball watch---------------------------------------------->
+<transform  translation="0, -10, -35" rotation="1 0 0 -1.7"  > 
+	<Shape> 
+		<Appearance> 
+  			<ImageTexture url='https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/64d37654642197.596400e9a6f0b.jpg'> </ImageTexture>
+				<TextureProperties>
+				</TextureProperties> 
+		</Appearance> 
+					<Sphere radius="2"></Sphere> 
+	</Shape> 
+</transform>
+
+<transform  translation="-18, -10, -30"  rotation="1 0 0 -1.7"> 
+	<Shape> 
+		<Appearance> 
+  			<ImageTexture url='https://mir-s3-cdn-cf.behance.net/project_modules/disp/fba36722433459.56312b2d6a55a.png'> </ImageTexture>
+				<TextureProperties>
+				</TextureProperties> 
+		</Appearance> 
+					<Sphere radius="1"></Sphere> 
+	</Shape> 
+</transform>
+
+<transform  translation="-30, -10, -18" rotation="1 0 0 -1.7" > 
+	<Shape> 
+		<Appearance> 
+  			<ImageTexture url='https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/b6709e54642197.596400e9a6c8a.jpg'> </ImageTexture>
+				<TextureProperties>
+				</TextureProperties> 
+		</Appearance> 
+					<Sphere radius="1"></Sphere> 
+	</Shape> 
+</transform>
+
+<transform  translation="-35, -10, 0"  rotation="1 0 0 -1.7"> 
+	<Shape> 
+		<Appearance> 
+  			<ImageTexture url='https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/9f69e384418177.5d5c4ad8d0782.jpg'> </ImageTexture>
+				<TextureProperties>
+				</TextureProperties> 
+		</Appearance> 
+					<Sphere radius="2"></Sphere> 
+	</Shape> 
+</transform>
+
+
+<transform  translation="-30, -10, 18" rotation="1 0 0 -1.7" > 
+	<Shape> 
+		<Appearance> 
+  			<ImageTexture url='https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/67fc6154642197.596400e9a75a7.jpg'> </ImageTexture>
+				<TextureProperties>
+				</TextureProperties> 
+		</Appearance> 
+					<Sphere radius="1"></Sphere> 
+	</Shape> 
+</transform>
+
+<transform   translation="-18, -10, 30" rotation="1 0 0 -1.7" > 
+	<Shape> 
+		<Appearance> 
+  			<ImageTexture url='https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3e27d454642197.596400e9a7812.jpg'> </ImageTexture>
+				<TextureProperties>
+				</TextureProperties> 
+		</Appearance> 
+					<Sphere radius="1"></Sphere> 
+	</Shape> 
+</transform>
+
+
+<transform  translation="0, -10, 35" rotation="1 0 0 -1.7" > 
+	<Shape> 
+		<Appearance> 
+  			<ImageTexture url='https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/86c9a354642197.596400e9a5d0e.jpg'> </ImageTexture>
+				<TextureProperties>
+				</TextureProperties> 
+		</Appearance> 
+					<Sphere radius="2"></Sphere> 
+	</Shape> 
+</transform>
+
+<transform  translation="18, -10, 30"  rotation="1 0 0 -1.7"> 
+	<Shape> 
+		<Appearance> 
+  			<ImageTexture url='https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/460c8454642197.596400e9a67b7.jpg'> </ImageTexture>
+				<TextureProperties>
+				</TextureProperties> 
+		</Appearance> 
+					<Sphere radius="1"></Sphere> 
+	</Shape> 
+</transform>
+
+<transform  translation="30, -10, 18"  rotation="1 0 0 -1.7"> 
+	<Shape> 
+		<Appearance> 
+  			<ImageTexture url='https://sun9-30.userapi.com/c858528/v858528486/169633/ItO0R4OxFCc.jpg'> </ImageTexture>
+				<TextureProperties>
+				</TextureProperties> 
+		</Appearance> 
+					<Sphere radius="1"></Sphere> 
+	</Shape> 
+</transform>
+
+<transform  translation="35, -10, 0" rotation="1 0 0 -1.7" > 
+	<Shape> 
+		<Appearance> 
+  			<ImageTexture url='https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/f0441289591359.5df99823f2555.png'> </ImageTexture>
+				<TextureProperties>
+				</TextureProperties> 
+		</Appearance> 
+					<Sphere radius="2"></Sphere> 
+	</Shape> 
+</transform>
+
+<transform  translation="30, -10, -18" rotation="1 0 0 -1.7" > 
+	<Shape> 
+		<Appearance> 
+  			<ImageTexture url='https://sun9-55.userapi.com/c858528/v858528486/169673/rOyO7Rukq5M.jpg'> </ImageTexture>
+				<TextureProperties>
+				</TextureProperties> 
+		</Appearance> 
+					<Sphere radius="1"></Sphere> 
+	</Shape> 
+</transform>
+
+<transform   translation="18, -10, -30" rotation="1 0 0 -1.7" > 
+	<Shape> 
+		<Appearance> 
+  			<ImageTexture url='https://sun9-65.userapi.com/c858528/v858528486/1695f0/w4f7_b4GjwM.jpg'> </ImageTexture>
+				<TextureProperties>
+				</TextureProperties> 
+		</Appearance> 
+					<Sphere radius="1"></Sphere> 
+	</Shape> 
+</transform>
+<!------------------------------------------------------------------>
+<!---- label----->
+<transform translation="-30 -10 1" rotation=" 1 0 0 -1.7">
+	<Shape>
+        <Text string='space mood watch' solid='false'>
+          <FontStyle family="SERIF" size='2'  language='en'></FontStyle>
+        </Text>
+        <Appearance>
+          <Material diffuseColor='white'></Material>
+        </Appearance>
+      </Shape>
+  </transform>
+
+
+<transform  translation="0 -5 -20"> 
+   <transform rotation="1 0 0 1.4">
+	<Shape> 
+		<Appearance> 
+ <!--smile sadness -->
+  			<material> 
+  				<ImageTexture  url='https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/27acd884418177.5d5c4ad8d0177.jpg'> </ImageTexture>
+  			</material>
+			
+		</Appearance> 
+					<Cylinder radius="0.25" height="16"></Cylinder>
+	</Shape> 
+</transform>
+</transform>
+
 
 </scene>
 </X3D>  
-</body> 
+</body>
 </html>
