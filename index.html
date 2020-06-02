@@ -10,12 +10,12 @@
     <script src="https://www.x3dom.org/download/x3dom.js"></script>
   </head>
 
-  <body>
-    <h1>Здесь ничего быть не должно, но тут моя лаба!</h1>
+  <body bgcolor="2D2D2D">
+    <h1 style = "color: white" >Здесь ничего быть не должно, но тут моя лаба!</h1>
     <X3D id="x3d" xmlns="https://www.x3dom.org/x3dom">
-      <Scene>
-        <background backURL='https://avatars.mds.yandex.net/get-zen_doc/1678002/pub_5ddf7817f4882e4380667b85_5de4f0ed95aa9f00b1a4d0b6/scale_1200'></background>
-<!------Platform--------------->
+      <Scene> 
+      <Transform translation = "0 -.3">
+<!--Platform-->
           <Transform translation = "0 -1"> 
             <Shape>
               <Appearance>
@@ -28,12 +28,12 @@
           <Transform translation = "0 -1.251"> 
             <Shape>
               <Appearance>
-                <ImageTexture url="surprise.png" repeatS="true" repeatT="False"></ImageTexture>
+                <ImageTexture url="force.jpg" repeatS="true" repeatT="False"></ImageTexture>
               </Appearance>
               <Box size="6 0 4"></Box>
             </Shape>
           </Transform> 
-<!------Shell--------->
+<!--Shell-->
         <!--Shell_1-->
           <Transform translation = "0 0 1.7">
             <Group DEF = "SHELL">
@@ -82,7 +82,7 @@
              
         
 
-<!------Balls+Rope------>
+<!--Balls+Rope-->
         <!--Ball_1-->
           <Group DEF = "BALL">
             <Transform>
@@ -124,7 +124,57 @@
           <Transform translation = "-1.6">
             <Group USE = "BALL"></Group>
           </Transform>
-    
+<!--Cube-->
+          <Transform translation="0 1 -0.25" scale = "0.125 0.125 0.125" rotation = "1 0 1 0.79">
+            <Shape>
+              <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" normalPerVertex="true" solid="false" 
+                                coordIndex="0 4 7 3 -1 5 6 2 1 -1 4 5 6 7 -1 6 7 3 2 -1 3 2 1 0 -1 0 1 5 4" 
+                                colorIndex="0 1 2 3 -1 2 1 5 0 -1 3 2 5 2 -1 1 3 0 1 -1 3 4 0 1 -1 5 6 0 1">
+              <Coordinate point="-2 0 2, 2 0 2, 2 0 -2, -2 0 -2, -2 4 2, 2 4 2, 2 4 -2, -2 4 -2"></Coordinate>
+              <Color color="0 0 1, 0 1 0, 0 1 1, 1 0 0, 1 0 1, 1 1 0, 1 1 1, 1 1 0, 1 1 1"></Color>
+              </IndexedFaceSet>
+            </Shape>
+          </Transform>
+<!--Plane-->
+          <Transform translation = "-4 2 0"> 
+            <Shape>
+              <IndexedTriangleSet index=" 0 1 2  0 1 3  0 2 5  0 3 4 " solid = "false">
+                <Coordinate point =" 0 0 0, -4 0 0, -4 1 -.25, -4 1 .25, -4 1 1.5, -4 1 -1.5 ">
+                </Coordinate>
+                <ColorRGBA
+                  color = "1 1 1 0.9, 1 1 1 0.9, 1 1 1 1, 1 1 1 1, 1 1 1 1, 1 1 1 1">
+                </ColorRGBA>
+              </IndexedTriangleSet>
+            </Shape>
+          </Transform>
+<!--Text-->
+          <Transform translation = "-7 2.76 -.5" rotation = "1 0 0 -1.57" scale = "0.25 0.25 0.25">
+            <Transform rotation = "0 1 0 0.24">  
+              <Shape>
+                <Text string = "Сила в правде!" solid = "true" >
+                  <FontStyle size = "1"></FontStyle>
+                </Text>
+                <Appearance>
+                  <Material diffusecolor = "black"></Material>
+                </Appearance>
+              </Shape>
+            </Transform>
+          </Transform>
+
+           <Transform translation = "-6.8 2.76 .5" rotation = "1 0 0 -1.57" scale = "0.25 0.25 0.25">
+            <Transform rotation = "0 1 0 0.24">  
+              <Shape>
+                <Text string = "Ну и в ньютонах" solid = "true" >
+                  <FontStyle size = "1"></FontStyle>
+                </Text>
+                <Appearance>
+                  <Material diffusecolor = "black"></Material>
+                </Appearance>
+              </Shape>
+            </Transform>
+          </Transform>
+
+        </Transform>
       </Scene>
     </X3D>  
   </body>
