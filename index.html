@@ -7,7 +7,63 @@
     <link rel="stylesheet" href="https://www.x3dom.org/download/x3dom.css" />
     <script src="https://www.x3dom.org/download/x3dom.js"></script>
   </head>
-  <body>
-    <h1>Здесь только я. А должна быть твоя лаба!</h1>
+  <body style='width:100%; height:100%; border:0; margin:0; padding:0; background: linear-gradient(Grey 0%, White 100%);'>
+    <x3d id='x3dElement' showStat='false' showLog='false' style='width:100%; height:100%; border:0' >
+		<scene DEF='scene'>
+		<Shape>
+			<IndexedFaceSet solid="false" 
+						coordIndex="0 1 2 3 -1 0 1 5 4 -1 0 3 7 4 -1 1 2 6 5 -1 2 3 7 6 -1 4 5 6 7 -1 
+							8 9 13 12 -1 9 10 14 13 -1 10 11 15 14 -1 8 11 15 12 -1 12 13 14 15 -1 
+							16 17 21 20 -1 17 18 22 21 -1 18 19 23 22 -1 16 19 23 20 -1 20 21 22 23 -1"> 
+		
+				<Coordinate point="-3 0 3, -3 0 -3, 3 0 -3, 3 0 3, -2.5 1 2.5, -2.5 1 -2.5, 2.5 1 -2.5, 2.5 1 2.5, 
+					-2 1 2, -2 1 -2, 2 1 -2, 2 1 2, -1.5 1.8 1.5, -1.5 1.8 -1.5, 1.5 1.8 -1.5, 1.5 1.8 1.5, -1 1.8 1, 
+					-1 1.8 -1, 1 1.8 -1, 1 1.8 1, -0.5 2.5 0.5, -0.5 2.5 -0.5, 0.5 2.5 -0.5, 0.5 2.5 0.5">
+				</Coordinate>
+			</IndexedFaceSet>
+			
+		    <Appearance>
+				<ImageTexture url='stone_1.jpg'>
+				</ImageTexture>
+				
+				<TextureTransform scale="3 3">
+                </TextureTransform>
+		    </Appearance>			
+		</Shape>
+		<Transform translation = "-10 0 -11">
+		<Shape>
+			<ElevationGrid xDimension="5" zDimension="5"
+				height="2, 3, 2, 1, 2,
+                        1, 0, 0, 0, 1.5,
+                        1, 0, 0, 0, 1,
+                        -0.8, 0, 0, -0.5, 2,
+					    -1, -2.5, -2.5, -2, 2"
+				xSpacing="5.0" zSpacing="5.0" solid="false">
+		  </ElevationGrid>
+			<Appearance sorttype="auto" alphaclipthreshold="0.1">
+				<ImageTexture url='grass.jpg'>
+				</ImageTexture>
+				
+				<TextureTransform scale="1 1">
+				</texturetransform>
+			</Appearance>
+		</Shape>
+		</Transform>
+		<Transform translation = "0 -.3 0">
+		<Shape>
+			<IndexedLineSet coordIndex="0 1 5 3 0 4 5 2 0 -1 1 2 3 4 1 -1"
+						colorIndex="0 1 2 3 4 -1 5 6 0 1 -1" colorPerVertex="true"> 
+				
+				<Coordinate point='0 2.8 0, -0.6 3.6 0,  0 3.6 -0.6 , 0.6 3.6 0, 0 3.6 0.6,
+                     0 4.4 0'>
+				</Coordinate>
+				
+				<Color color="0 1 0, 0 1 1, 0 .5 0, 0 0 0.5, .5 0 1, 1 0 0, 1 1 1">
+				</Color>
+			</IndexedLineSet>
+		</Shape>
+		</Transform>		
+        </scene>
+    </x3d>
   </body> 
 </html>
