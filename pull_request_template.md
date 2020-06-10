@@ -1,1 +1,1 @@
-https://maksvty.github.io/icg_labwork1
+https://maksvty.github.io/icg_labwork2
