@@ -24,10 +24,7 @@
                <X3D>
                   <Scene>
                      <!--сцена-->
-                     <Background backUrl="fon.jpg" bottomUrl="fon.jpg" 
-                    frontUrl="fon.jpg" leftUrl="fon.jpg" 
-                    rightUrl="fon.jpg" topUrl="fon.jpg">
-					</Background>
+                     <Background backUrl="fon.jpg"></Background>
                      <Transform translation='20 -23 -300' >
                         <!--для поворота всей сцены-->
                         <!--ФУРА-->
@@ -37,8 +34,9 @@
                                  <!--ШИНА1-->
                                  <Shape>
                                     <Appearance>
-									
-									<Material diffusecolor="#060e1a"></Material>
+									 <ImageTexture url="shina.jpg"></ImageTexture>
+                                      <Texturetransform scale="2 1"></Texturetransform>
+								
                                     </Appearance>
                                     <Torus innerRadius=".8" outerRadius="1.4"></Torus>
                                  </Shape>
@@ -47,7 +45,8 @@
                                  <!--ШИНА2-->
                                  <Shape>
                                     <Appearance>
-                                       <Material diffusecolor="#060e1a"></Material>
+                                       <ImageTexture url="shina.jpg"></ImageTexture>
+                                      <Texturetransform scale="2 1"></Texturetransform>
                                     </Appearance>
                                     <Torus innerRadius=".8" outerRadius="1.4"></Torus>
                                  </Shape>
@@ -223,31 +222,7 @@
                         </Transform>
 						
 
-                        <!--Окружение-->
-                        <Transform translation = "0 0 0">
-                           <Transform>
-                              <!--Дорога-->
-                              <Shape>
-                                 <Appearance>
-                                    <ImageTexture url="https://st4.depositphotos.com/2403349/20455/i/450/depositphotos_204552332-stock-photo-gray-texture-asphalt-road-cracks.jpg"></ImageTexture>
-                                    <Texturetransform scale="4 4" ></Texturetransform>
-                                 </Appearance>
-                                 <Box size = "50 0 500"></Box>
-                              </Shape>
-                           </Transform>
-                           <Transform translation = "30 -0.05 0" >
-                              <!--трава-->
-                              <Shape>
-                                 <Appearance>
-								
-								 <ImageTexture url="https://3dlancer.net/upload/modelimages/87/12087/texture-seamless-texture-of-grass-63755-xxl.jpg"></ImageTexture>
-                                 <Texturetransform scale="4 4" ></Texturetransform>
-								 
-                                 </Appearance>
-                                 <Box size = "500 0 500"></Box>
-                              </Shape>
-                           </Transform>
-                        </Transform>
+                      
                      </Transform>
                   </Scene>
                </X3D>
