@@ -1,13 +1,89 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>  
+    <style>
+        section{
+            border: 4px double purple;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)}
+    </style>
+  <head>
     <meta charset="utf-8" />
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
     <title>Лабораторная работа 2</title>
-    <link rel="stylesheet" href="https://www.x3dom.org/download/x3dom.css" />
-    <script src="https://www.x3dom.org/download/x3dom.js"></script>
+    <link rel="stylesheet" href="https://www.x3dom.org/release/x3dom.css" />
+    <script src="https://www.x3dom.org/download/dev/x3dom-full.js"></script>
   </head>
   <body>
-    <h1>Здесь только я. А должна быть твоя лаба!</h1>
-  </body> 
+      <section>
+        <!--<h1 align=center>Лабораторная работа 1</h1>
+        <p align=center>Ардаманова Дарья</p>-->
+          <X3D width="800px" height="800px">
+        <Scene>
+          <transform translation="0 3.5 0">
+            <Shape>
+              <!--Текст-->
+              <Appearance>
+               <Material diffusecolor="1 1 0"></Material>
+              </Appearance>
+              <text length="10" maxExtent="10" string="Лабораторная работа 2">
+                <FontStyle family="SANS" horizontal="true" justify="MIDDLE" language="ru"
+                leftToRight="true" size="0.5" spacing="1" style="ITALIC" topBottom="true"></FontStyle>
+              </text>
+            </Shape>
+          </transform>
+          <transform translation='-0.25 -0.5 0' rotation='1 0 0 0'>
+            <Shape>
+              <Appearance>
+                <ImageTexture url="кр2.jpg"></ImageTexture>
+                </Appearance>
+              <Extrusion crossSection="-1.75 -0.5 -1.05 1.45 1.1 1.45 1.8 -0.5 0 -1.75 -1.75 -0.5"
+                scale="1 1 1 1 0.2 0.2" spine="0 0 0 0 0.2 0 0 3 0">
+             </Extrusion>
+            </Shape>
+          </transform>
+          <transform translation='-0.25 -2.4 0' rotation='0 0 0 0'>
+                <Shape>
+                  <Appearance>
+                    <ImageTexture url="dom.jpg"></ImageTexture>
+                    </Appearance>
+                  <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true"
+                  creaseAngle="0" solid="false"
+                  coordIndex="0 4 7 3 -1 5 6 2 1 -1 4 5 6 7 -1 6 7 3 2 -1 0 1 5 4 -1" 
+                  colorIndex="0 1 2 3 -1 4 5 6 0 -1 1 2 3 4 -1 5 6 0 1 -1 5 6 0 1 -1 5 6 0 1 -1">
+                  <Coordinate point="-1 0 1, 1 0 1, 1 0 -1, -1 0 -1,
+                   -1 2 1, 1 2 1, 1 2 -1, -1 2 -1"></Coordinate>
+                  </IndexedFaceSet>
+                 </Shape>
+             </transform>
+      <transform translation='-2 -2.5 -2.5' rotation='0 0 0 0'>
+        <Shape>
+        <Appearance>
+        <ImageTexture url="4.jpg"></ImageTexture>
+        </Appearance>
+        <ElevationGrid xDimension="5" zDimension="6"
+        height="0, 0.15, 0, 0.15, 0,
+        0.1, 0, 0.1, 0, 0.1,
+        0, 0.1, 0, 0.1, 0,
+        0.1, 0, 0.1, 0, 0.1,
+        0, 0.15, 0, 0.15, 0
+        0.1, 0, 0.1, 0, 0.1"
+        xSpacing="1" zSpacing="1" solid="false">
+        </ElevationGrid>
+        </Shape>
+        </transform>
+<transform translation="1 -2.4 0" rotation="1 0 0 -1.57">
+  <Shape>
+    <IndexedTriangleSet index="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17" solid="false">
+      <Coordinate point="0.1 0 0, 0.5 0 0, 0.3 0 0.3, 0.5 0 0, 0.9 0 0, 0.7 0 0.3, 0.1 0 0.3, 0.5 0 0.3, 0.3 0 0.6, 0.5 0 0.3, 0.9 0 0.3, 0.7 0 0.6, 0.3 0 0.6, 0.7 0 0.6, 0.5 0 0.9,
+      0.3 0 0.9, 0.7 0 0.9, 0.5 0 1.2"></Coordinate>
+      <ColorRGBA color="0 .6 0 1, 0 .6 0 1, 0 .2 0 2, 0 .6 0 1, 0 .6 0 2, 0 .2 0 1, 0 .6 0 1, 0 .6 0 1, 0 .2 0 1, 0 .6 0 1, 0 .8 0 1, 0 .5 0 1, 
+      0 .8 0 1, 0 .8 0 1, 0 .2 0 1, 0 .8 0 1, 0 .8 0 1, 0 .2 0 1"></ColorRGBA>
+     </IndexedTriangleSet>
+  </Shape>
+</transform>
+          </Scene>
+    </X3D>
+</section>
+  </body>
 </html>
