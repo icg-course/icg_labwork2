@@ -5,7 +5,7 @@
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
     <title>Лабораторная работа 2</title>
     <link rel="stylesheet" href="https://www.x3dom.org/download/x3dom.css" />
-    <script src="https://www.x3dom.org/download/x3dom.js"></script>
+    <script src="https://x3dom.org/download/dev/x3dom-full.debug.js"></script>
   </head>
   <body>
     <h1>Проверка.Здесь только я. А должна быть твоя лаба! и будет</h1>
@@ -14,9 +14,10 @@
     <x3d width="100vw" height="100vh">
         
 		<Scene>
-	<transform translation='-3 0 0'>
-  
-
+	<transform translation='-3 -3 0'>
+    
+    
+<!--линии-->
      <Shape>
       <Appearance>
        <Material emissiveColor='1 0 0'/>
@@ -25,38 +26,89 @@
        <Coordinate point='0.0 0.0 0.0, 0.0 4.0 0.0, 3.0 6.0 0.0, 6.0 4.0 0.0, 6.0 0.0 0' />
       </IndexedLineSet>
      </Shape>
-
+<!--точки-->
 <Shape>
   <PointSet>
     <Color color="1 0 0, 0 1 0, 0 0 1, 0.8 0.8 0.8"></Color>
     <Coordinate point="2 4 2, 4 4 2, 3 2 2, 1.5 3 2, 4.5 3 2"></Coordinate>
     </PointSet>
 </Shape>
-
+<!--заполнение по четырём точкам-->
 <Shape>
   <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true"
 creaseAngle="0" solid="false"
-coordIndex="0 10 11 8 -1 2 6 3 9 -1 4 7"
-colorIndex="0 1 2 3 -1 4 5 6 0 -1 1 2 3 4 -1 5 6 0 1 -1">
-<Coordinate point="0 0 0, 0 4 0, 3 6 0, 6 4 0, 6 0 0, 2 4 0, 4 4 0, 3 2 0, 1.5 3 0, 4.5 3 0 
-                  0 0 -2, 1.5 3 -2"></Coordinate>
-<Color color="0 0 1, 0 1 0, 0 1 1, 1 0 0, 1 0 1, 1 1 0, 1 1 1"></Color>
+coordIndex="0 10 11 8 -1 8 11 12 1 -1 1 5 13 12 -1 5 2 14 13 -1 2 6 15 14 -1 6 15 16 3 -1 3 16 17 9 -1 9 17 18 4 -1 4 18 19 7 -1 7 19 10 0"
+colorIndex="0 1 2 3 -1 4 5 6 0 -1 1 2 3 4 -1 5 6 0 1 -1 0 1 2 3 -1 4 5 6 0 -1 1 2 3 4 -1 5 6 0 1 -1 0 1 2 3 -1 4 5 6 0 -1 1 2 3 4">
+<Coordinate point="0 0 0, 0 4 0, 3 6 0, 6 4 0, 6 0 0, 2 4 0, 4 4 0, 3 2 0, 1.5 3 0, 4.5 3 0, 0 0 -2,
+                 1.5 3 -2, 0 4 -2, 2 4 -2, 3 6 -2, 4 4 -2, 6 4 -2, 4.5 3 -2, 6 0 -2, 3 2 -2"></Coordinate>
+<Color color="1 0 0, 1 1 0, 1 1 0, 1 0 0, 1 0 0, 1 1 0, 1 1 0"></Color>
+<olor color="0 0 1, 0 1 0, 0 1 1, 1 0 0, 1 0 1, 1 1 0, 1 1 1"></Color>
 </IndexedFaceSet>
 </Shape>
+
+
+<!--плейн?-->
+<transform translation="6.5 3 -2" rotation=" 0 -1 1 3.14" scale="0.2 0.2 0.5">  
+  <transform  rotation=" 1 0 0 0.79" >  
+  <Shape>
+    <Appearance>
+      <magetexture url="l.jpg"></imagetexture>
+    </Appearance>
+    <ElevationGrid xDimension="37" zDimension="2"
+ height="0,1,2,3,3,2,2,3,4,5,6,6,5,5,6,7,8,9,9,8,8,7,6,6,7,7,6,5,4,3,3,4,4,3,2,1,0
+0,1,2,3,3,2,2,3,4,5,6,6,5,5,6,7,8,9,9,8,8,7,6,6,7,7,6,5,4,3,3,4,4,3,2,1,0"
+ xSpacing="1" zSpacing="2.0" solid="false">
+</ElevationGrid>
+  </Shape>
+</Transform>
+</Transform>
+
+
+<shape>
+  <Appearance>
+    <Material diffuseColor=#287233></Material>
+   </Appearance>
+  <IndexedTriangleSet index="0 1 2 3 4 5" solid="false">
+    <Coordinate point="1.7 4.3 0, 0 4.3 0, 2.7 6 0, 3.3 6 0, 4.3 4.3 0, 6 4.3 0">
+    </Coordinate>
+   </IndexedTriangleSet>
+</shape>
+
+
+<transform translation='-3 -3 0'>
+<shape>
+  <Appearance>
+    <Material diffuseColor=#287233></Material>
+   </Appearance>
+  <IndexedTriangleStripSet index='0 1 2 3 4 5 6 7 -1 8 9 10 11 12 13 14' solid='false'>
+    <Coordinate point='-2 6 0, -2 -2 0, 0 0 0, 0 -2 0, 2 0 0, 2 -2 0, 4 4 0, 6 0 0, 10 6 0, 10 -2 0, 8 0 0, 8 -2 0, 6 0 0, 6 -2 0, 2 -2 0'></Coordinate>
+   </IndexedTriangleStripSet>
+</shape>
+</transform>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 		<!--Водичка-->
 		<transform translation='0 -5.3 -6'>
-		<shape>
+		<hape>
 			<appearance>
 				<imagetexture url="v.png"></imagetexture>
 			</appearance>
 			<box size="35 1 20"></box>
 		</shape>
     	</transform>
-		<!--колонки-->
 
       </Transform>
 		</Scene>
