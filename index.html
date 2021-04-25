@@ -58,17 +58,6 @@ colorIndex="0 1 1 0 -1 0 1 1 0 -1 0 0 1 1 -1 0 0 1 1 -1 0 0 1 1 -1 0 1 1 0 -1 0 
 </transform>
 </transform>
 
-<!--треугольные верхушки -->
-<shape>
-<!--здесь ошибка, потому что не нравится-->  <ppearance>
-    <Material diffuseColor=#287233></Material>
-   </Appearance>
-  <IndexedTriangleSet index="0 1 2 3 4 5" solid="false">
-    <Coordinate point="1.7 4.3 0, 0 4.3 0, 2.7 6 0, 3.3 6 0, 4.3 4.3 0, 6 4.3 0">
-    </Coordinate>
-   </IndexedTriangleSet>
-</shape>
-
 <!--задник из треугольников-->
 <transform translation='-1 0 -5'>
   <shape>
@@ -82,6 +71,17 @@ colorIndex="0 1 1 0 -1 0 1 1 0 -1 0 0 1 1 -1 0 0 1 1 -1 0 0 1 1 -1 0 1 1 0 -1 0 
      </IndexedTriangleStripSet>
   </shape>
   </transform>
+
+  <!--треугольные верхушки -->
+<hape>
+  <!--здесь ошибка, потому что мне не нравится--><Appearance>
+      <Material diffuseColor=#287233></Material>
+     </Appearance>
+    <IndexedTriangleSet index="0 1 2 3 4 5" solid="false">
+      <Coordinate point="1.7 4.3 0, 0 4.3 0, 2.7 6 0, 3.3 6 0, 4.3 4.3 0, 6 4.3 0">
+      </Coordinate>
+     </IndexedTriangleSet>
+  </shape>
       </transform>
 		</Scene>
     </x3d>
