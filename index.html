@@ -1,13 +1,304 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>  
-    <meta charset="utf-8" />
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
-    <title>Лабораторная работа 2</title>
-    <link rel="stylesheet" href="https://www.x3dom.org/download/x3dom.css" />
-    <script src="https://www.x3dom.org/download/x3dom.js"></script>
-  </head>
-  <body>
-    <h1>Здесь только я. А должна быть твоя лаба!</h1>
-  </body> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>ЛР#2</title>
+	<script src='https://www.x3dom.org/download/dev/x3dom-full.js'></script> 
+    <link rel='stylesheet' href='https://www.x3dom.org/download/x3dom.css'></link> 
+</head>
+<body>
+	<h1>Лабораторная работа 2</h1>
+<x3d width="100vw" height="100vh">
+<scene>
+	<!-- cylinder -->
+	<transform translation="-1.7 0 .2">
+		<shape>
+			<appearance>
+				<material diffuseColor="#1d3557"></material>
+				<imagetexture url="./geometric.jpg"></imagetexture>
+				<texturetransform scale=".6 .6"></texturetransform>
+			</appearance>
+			<cylinder radius=".7"></cylinder>
+		</shape>
+	</transform>
+
+	<!-- box -->
+	<transform translation="0 0 0" scale="1.8 1 .5">
+		<shape>
+			<appearance>
+				<material diffuseColor="#1d3557"></material>
+				<imagetexture url="./geometric.jpg"></imagetexture>
+				<texturetransform scale=".6 .6"></texturetransform>
+			</appearance>
+			<box></box>
+		</shape>
+	</transform>
+	
+	<!-- box вспышка -->
+	<transform translation=".4 1.15 0" scale=".5 .2 .2">
+		<shape>
+			<appearance>
+				<material emissiveColor="gold"></material>
+			</appearance>
+			<box></box>
+		</shape>
+	</transform>
+
+	<!-- кнопка -->
+	<transform translation="-.7 1 0" scale="1 .15 1">
+		<shape>
+			<appearance>
+				<material diffuseColor="red"></material>
+			</appearance>
+			<cylinder radius=".3"></cylinder>
+		</shape>
+	</transform>
+
+	<!-- объектив -->
+	<transform translation=".4 0 .51" scale="1 1 1" rotation="1 0 0 1.5708">
+		<shape>
+			<appearance>
+				<material diffuseColor="green"></material>
+				<imagetexture url="./geometric.jpg"></imagetexture>
+			</appearance>
+			<cylinder radius=".7"></cylinder>
+		</shape>
+	</transform>
+
+	<!-- torus ближний -->
+	<transform translation=".4 0 .5">
+		<shape>
+			<appearance>
+				<material diffuseColor="gold"></material>
+			</appearance>
+			<torus outerRadius=".7" innerRadius=".2"></torus>
+		</shape>
+	</transform>
+	
+	<!-- torus дальний -->
+	<transform translation=".4 0 1.5">
+		<shape>
+			<appearance>
+				<material diffuseColor="gold"></material>
+			</appearance>
+			<torus outerRadius=".6" innerRadius=".1"></torus>
+		</shape>
+	</transform>
+
+	<!-- шар -->
+	<transform translation=".4 0 7">
+		<shape>
+			<appearance>
+				<material diffuseColor="red"></material>
+			</appearance>
+			<sphere radius="1"></sphere>
+		</shape>
+	</transform>
+
+	<!-- конус -->
+	<transform translation=".4 1.2 2" rotation="1 0 0 -1.5708">
+		<shape>
+			<appearance>
+				<material diffuseColor="blue" transparency='.4'></material>
+			</appearance>
+			<cone radius="1" height="4"></cone>
+		</shape>
+	</transform>
+
+	<!-- текст -->
+	<transform translation="-3.2 4.3 0">
+		<shape>
+			<appearance>
+				<material diffuseColor="red"></material>
+			</appearance>
+			<text string="Нажмёшь?">
+				<fontstyle family="Helvetica sans-serif" style="bold"> </fontstyle>	
+			</text>
+		</shape>
+	</transform>
+
+	<!-- текст 2-->
+	<transform translation="-0.4 11.6 1.5">
+		<shape>
+			<appearance>
+				<material diffuseColor="red"></material>
+			</appearance>
+			<text string="Hello world">
+				<fontstyle family="Helvetica sans-serif" style="bold"> </fontstyle>	
+			</text>
+		</shape>
+	</transform>
+
+	<!-- 2 Часть -->
+	<!-- указатель -->
+	<Transform translation = "-1.75 4 0">
+		<Shape>
+			<appearance>
+			</appearance>
+		<IndexedTriangleSet index="0 1 2" solid="false">
+			<Coordinate point="0 0 0, 2 0 0, 1 -2 0"></Coordinate>
+				<Color color="0.5 1 0, 0.5 1 0, 1 0 0"></Color>
+		</IndexedTriangleSet>
+		</Shape>
+	</Transform>
+	   
+	<!-- Вода -->
+	<Transform translation = "-7 -2.98 -2" rotation = "0 0 0 -1.5708">
+		<Shape>
+			<appearance>
+				<imagetexture url="wt.png"></imagetexture>
+			</appearance>
+			<ElevationGrid xDimension="7" zDimension="7"
+			height="0, 0, 0, 0, 0, 0, 0
+					0, 1, 2, 1.2, 1, 0.5, 0,
+					0, 0.3, 0.2, 0.1, 0.04, 0.03, 0
+					0, 0.2, 0.3, 0.2, 0.1, 0.05, 0,
+					0, 0, 0, 0, 0, 0, 0"
+			xSpacing="2.5" zSpacing="2" solid="false">
+			</ElevationGrid>
+		</Shape>
+	</Transform>
+	<!-- LineSet -->
+	<Transform translation="-7 -3 -2">
+		<Shape>
+			<IndexedLineSet coordIndex="0 1 2 3 0 –1 0 4 5 6 7 4 -1 7 3 -1 6 2 -
+		   1 5 1 -1"
+			colorPerVertex='true'>
+				<Coordinate point=
+				"0 0 0, 0 0 8, 
+				15 0 8, 15 0 0,
+				0 10 0, 0 10 8, 
+				15 10 8, 15 10 0,
+				15 10 0, 15 0 0,
+				15 10 8, 15 0 8,
+				0 10 8, 0 0 8"></Coordinate>
+				<Color color="1 1 0, 0 0 0, 0 0 0, 1 1 0, 0 0 0, 0 1 1, 0 0 0, 0 0 0"></Color>
+			</IndexedLineSet>
+		</Shape>
+	</Transform>
+	<!-- Частицы -->
+		<Shape>
+			<PointSet>
+			<Color color="0 0 1, 0 0 0.7, 0 0 0.5,
+			0 0 0.8, 0 0 1, 0 0 1,
+			0 0 1, 0 0 1, 0 0 1,
+			0 0 1, 0 0 1, 0 0 1,
+			0 0 1, 0 0 1, 0 0 1"></Color>
+			<Coordinate point="−2 2 0, 0 3 0, 0 2.4 2,
+			0 1.6 4, −5 2 0, −5 2 2.1,
+			−3 1.6 1, −1 2 0, 5 1.2 3,
+			-5 1 2, 2 2 2, 1 3 -1,
+			2 2.4 3, 2.5 3 -1, 3 2.1 3"></Coordinate>
+			</PointSet>
+		</Shape>
+	
+	<!-- Аквариум -->
+	<!-- Основание -->
+	<transform translation="0.5 -4 2">
+		<shape>
+			<appearance>
+				<imagetexture url="but.jpg"></imagetexture>
+			</appearance>
+			 <box size="15 2 8"></box>
+		 </shape>
+	 </transform>  
+	<!-- Боковая сторона 1 -->
+	<transform translation="-7 -3 -2" >
+		<Shape>
+			<appearance>
+				<material transparency='0.4'></material>
+			</appearance>
+		<IndexedFaceSet ccw="true" colorPerVertex="false" convex="true"
+			creaseAngle="0" solid="false"
+			coordIndex="0 1 2 3 0 -1 "
+			colorIndex="0 1 2 3 0 -1">
+			<Color color="0 0 0.1, 0 0 0.1, 0 0 0.1"></Color>
+			<Coordinate point="0 0 0, 0 0 8, 0 10 8, 0 10 0"></Coordinate>
+		</IndexedFaceSet>
+		</Shape>
+	</transform>
+
+	<!-- Боковая сторона 2 -->
+	<transform translation="8 -3 -2" >
+		<Shape>
+			<appearance>
+				<material transparency='.6'></material>
+			</appearance>
+		<IndexedFaceSet ccw="true" colorPerVertex="false" convex="true"
+			creaseAngle="0" solid="false"
+			coordIndex="0 1 2 3 0 -1 "
+			colorIndex="0 1 2 3 0 -1">
+			<Color color="0 0 0.1, 0 0 0.1, 0 0 0.1"></Color>
+			<Coordinate point="0 0 0, 0 0 8, 0 10 8, 0 10 0"></Coordinate>
+		</IndexedFaceSet>
+		</Shape>
+	</transform>
+
+	<!-- Передняя сторона -->
+	<transform translation="-7 -3 -2" >
+		<Shape>
+			<appearance>
+				<material transparency='.6'></material>
+			</appearance>
+		<IndexedFaceSet ccw="true" colorPerVertex="false" convex="true"
+			creaseAngle="0" solid="false"
+			coordIndex="0 1 2 3 0 -1 "
+			colorIndex="0 1 2 3 0 -1">
+			<Color color="0 0 0.1, 0 0 0.1, 0 0 0.1"></Color>
+			<Coordinate point="0 0 0, 15 0 0, 15 10 0, 0 10 0"></Coordinate>
+		</IndexedFaceSet>
+		</Shape>
+	</transform>
+
+	<!-- задняя сторона -->
+	<transform translation="-7 -3 6" >
+		<Shape>
+			<appearance>
+				<material transparency='.6'></material>
+			</appearance>
+		<IndexedFaceSet ccw="true" colorPerVertex="false" convex="true"
+			creaseAngle="0" solid="false"
+			coordIndex="0 1 2 3 0 -1 "
+			colorIndex="0 1 2 3 0 -1">
+			<Color color="0 0 0.1, 0 0 0.1, 0 0 0.1"></Color>
+			<Coordinate point="0 0 0, 15 0 0, 15 10 0, 0 10 0"></Coordinate>
+		</IndexedFaceSet>
+		</Shape>
+	</transform>
+
+	<Transform translation = "0 12 -1" rotation = "1 0 0 1.5708">
+		<Shape>
+			<IndexedTriangleStripSet index='0 1 2 3 4 -1' solid='false'>
+				<Coordinate point='0 0 0, 2 2 2, -2 2 2, 0 2 -2, 0 4 0'></Coordinate>
+				<ColorRGBA color='0 .8 0 1, 0 1 1 1, 1 0 0 1, 1 .5 0 1, 1 .5 0 1'></ColorRGBA>
+			</IndexedTriangleStripSet>
+		</Shape>
+	</Transform>
+	
+	<!--Фон-->
+	<Background
+	skyAngle='0.8,
+			  1.3,
+			  1.5708'
+	skyColor='0 0 0.1,
+			  0 0 0.4,
+			  0 0 0.8'
+	groundAngle='0.4,
+				 1.2,
+				 1.5708'
+	groundColor='0 0 0.1,
+				 0 0 0.15,
+				 0 0 0.542,
+				 0 0 0.669'/>
+	<!--Фон-->	 
+	
+	<!-- расположение камеры -->
+	<Viewpoint position="-8 3 20" orientation="0 1 0 -0.5" 
+		zNear="0" zFar="100" centerOfRotation="0.00000 0.00000 0.00000" 
+		fieldOfView="0.9" description="defaultX3DViewpointNode">
+	</Viewpoint>
+
+			</scene>
+		</x3d>
+	</body>
 </html>
