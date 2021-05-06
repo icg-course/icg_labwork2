@@ -1,13 +1,670 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>  
-    <meta charset="utf-8" />
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
-    <title>Лабораторная работа 2</title>
-    <link rel="stylesheet" href="https://www.x3dom.org/download/x3dom.css" />
-    <script src="https://www.x3dom.org/download/x3dom.js"></script>
-  </head>
-  <body>
-    <h1>Здесь только я. А должна быть твоя лаба!</h1>
-  </body> 
+
+<head>
+  <meta charset="utf-8" />
+
+
+  <script type="text/javascript"
+    src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=MJoCGhxwrv6etnFvUSinv2JRAyDkquxP66aK0j0y-UMfRl2NVU0ExIcmoSxBMFnz_kjTPG1xG020FVDYS0EKeeQwe0mhnfYtxsz57A1AwhurCn-P3030qFxPQDef4GJAEGBCc_SeuhPFlj7EPtp_NoStCajt2EZeapL17S4l-Vc"
+    charset="UTF-8"></script>
+  <script type="text/javascript"
+    src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=xsz4tdPLwYfsxGJUTke8rt1l5qooPO_mXINU4BPNJ65ZKZjKQTvD0uqvXUO_C4cOyx8z9aIn-1ZhaFBowEOftA"
+    charset="UTF-8"></script>
+  <script type='text/javascript' src='https://www.x3dom.org/download/dev/x3dom.js'></script>
+  <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css' />
+
+</head>
+
+<body
+  style='width:100%; height:100%; border:0; margin:0; padding:0; background: url("Chesm.png") no-repeat fixed; background-size: cover; background-position: center;'>
+
+  <X3D width="100vw" height="100vh">
+
+    <Scene>
+      <!-- буквы-->
+      <Transform DEF="bukvi" translation="-8 3 0">
+        <Shape>
+          <Appearance>
+            <Material diffuseColor="#000000"></Material>
+          </Appearance>
+          <Text string="Залищук из 4841" solid="false">
+            <FontStyle size="0.5" style="BOLD" family="Helvetica"> </FontStyle>
+          </Text>
+        </Shape>
+      </Transform>
+      <!-- буквы-->
+      <Transform DEF="bukvi2" translation="-0.6 3 0">
+        <Shape>
+          <Appearance>
+            <Material diffuseColor="#0000FF"></Material>
+          </Appearance>
+          <Text string="ГУАП" solid="false">
+            <FontStyle size="0.5" style="BOLD" family="Helvetica"> </FontStyle>
+          </Text>
+        </Shape>
+      </Transform>
+      <!--Поверхность-->
+      <Transform DEF="train" translation="0 -0.1 0">
+        <Shape>
+          <Appearance>
+            <ImageTexture url="grass.jpg"></ImageTexture>
+          </Appearance>
+          <box size="15 0.2 15"></box>
+        </Shape>
+      </Transform>
+      <!--Центральный корпус-->>
+      <Transform DEF="centr" translation="0.3 2.5 0" rotation="1 0 0 1.57">
+        <Shape>
+          <Appearance>
+            <Material diffuseColor="#FF7F50"></Material>
+          </Appearance>
+          <torus innerRadius="0.15" outerRadius="1.1"></torus>
+        </Shape>
+      </Transform>
+      <Transform translation="0.3 1.55 0">
+        <Shape>
+          <Appearance>
+            <ImageTexture url="centTower.jpg"></ImageTexture>
+          </Appearance>
+          <Cylinder height="2" radius="1.1"></Cylinder>
+        </Shape>
+      </Transform>
+      <!--Стена центрального корпуса-->
+      <Transform DEF="stena1" translation="-0.55 0.6 0.5" rotation="0 1 0 0.32">
+        <Shape>
+          <Appearance>
+            <ImageTexture url="korp.jpg"></ImageTexture>
+          </Appearance>
+          <box size="1 1.4 3.5"></box>
+        </Shape>
+      </Transform>
+      <!--Стена центрального корпуса 2-->
+      <Transform DEF="stena2" translation="1 0.6 0.35" rotation="0 1 0 -0.58">
+        <Shape>
+          <Appearance>
+            <ImageTexture url="korp.jpg"></ImageTexture>
+          </Appearance>
+          <box size="1 1.4 3.5"></box>
+        </Shape>
+      </Transform>
+      <!--Стена центрального корпуса 3-->
+      <Transform>
+        <Transform DEF="stena3" translation="0.5 0.6 -1.2" rotation="0 1 0 -1.57">
+          <Shape>
+            <Appearance>
+              <ImageTexture url="korp.jpg"></ImageTexture>
+            </Appearance>
+            <box size="1 1.4 3.5"></box>
+          </Shape>
+        </Transform>
+      </Transform>
+      <Transform>
+        <!--Корпус с башней-->
+        <Transform DEF="bashn1" translation="0 0 2">
+          <Transform translation="0 0.6 3">
+            <Shape>
+              <Appearance>
+                <ImageTexture url="korpN.jpg"></ImageTexture>
+              </Appearance>
+              <box size="1.5 1.5 3"></box>
+            </Shape>
+          </Transform>
+          <Transform translation="0 0.6 1.2">
+            <Shape>
+              <Appearance>
+                <ImageTexture url="tower.jpg"></ImageTexture>
+              </Appearance>
+              <box size="0.5 1.5 1"></box>
+            </Shape>
+          </Transform>
+          <Transform translation="0 0.8 0.3">
+            <Shape>
+              <Appearance>
+                <ImageTexture url="tower.jpg"></ImageTexture>
+              </Appearance>
+              <Cylinder height="1.7" radius="0.5"></Cylinder>
+            </Shape>
+          </Transform>
+          <Transform translation="0 1.8 0.3">
+            <Shape>
+              <Appearance>
+                <ImageTexture url="tower.jpg"></ImageTexture>
+              </Appearance>
+              <Cylinder height="1.7" radius="0.3"></Cylinder>
+            </Shape>
+          </Transform>
+          <Transform translation="0 1.5 0.3">
+            <Shape>
+              <Appearance>
+                <ImageTexture url="metal.jpg"></ImageTexture>
+              </Appearance>
+              <Sphere radius="0.49"></Sphere>
+            </Shape>
+          </Transform>
+          <Transform translation="0 2.6 0.3">
+            <Shape>
+              <Appearance>
+                <ImageTexture url="metal.jpg"></ImageTexture>
+              </Appearance>
+              <Sphere radius="0.28"></Sphere>
+            </Shape>
+          </Transform>
+          <Transform translation="0 1.35 3" rotation="0 0 1 0.79">
+            <Shape>
+              <Appearance>
+                <ImageTexture url="metal.jpg"></ImageTexture>
+              </Appearance>
+              <box size="1.05 1.05 2.99"></box>
+            </Shape>
+          </Transform>
+        </Transform>>
+        <!--Корпус с башней 2-->
+        <Transform DEF="bashn2" translation="-1 0 -1" rotation="0 1 0 -2.36">
+          <Transform translation="0 0.6 3">
+            <Shape>
+              <Appearance>
+                <ImageTexture url="korpN.jpg"></ImageTexture>
+              </Appearance>
+              <box size="1.5 1.5 3"></box>
+            </Shape>
+          </Transform>
+          <Transform translation="0 0.6 1.2">
+            <Shape>
+              <Appearance>
+                <ImageTexture url="tower.jpg"></ImageTexture>
+              </Appearance>
+              <box size="0.5 1.5 1"></box>
+            </Shape>
+          </Transform>
+          <Transform translation="0 0.8 0.3">
+            <Shape>
+              <Appearance>
+                <ImageTexture url="tower.jpg"></ImageTexture>
+              </Appearance>
+              <Cylinder height="1.7" radius="0.5"></Cylinder>
+            </Shape>
+          </Transform>
+          <Transform translation="0 1.8 0.3">
+            <Shape>
+              <Appearance>
+                <ImageTexture url="tower.jpg"></ImageTexture>
+              </Appearance>
+              <Cylinder height="1.7" radius="0.3"></Cylinder>
+            </Shape>
+          </Transform>
+          <Transform translation="0 1.5 0.3">
+            <Shape>
+              <Appearance>
+                <ImageTexture url="metal.jpg"></ImageTexture>
+              </Appearance>
+              <Sphere radius="0.49"></Sphere>
+            </Shape>
+          </Transform>
+          <Transform translation="0 2.6 0.3">
+            <Shape>
+              <Appearance>
+                <ImageTexture url="metal.jpg"></ImageTexture>
+              </Appearance>
+              <Sphere radius="0.28"></Sphere>
+            </Shape>
+          </Transform>
+          <Transform translation="0 1.35 3" rotation="0 0 1 0.79">
+            <Shape>
+              <Appearance>
+                <ImageTexture url="metal.jpg"></ImageTexture>
+              </Appearance>
+              <box size="1.05 1.05 2.99"></box>
+            </Shape>
+          </Transform>
+        </Transform>>
+        <!--Корпус с башней 3-->
+        <Transform DEF="bashn3" translation="2 0 -1" rotation="0 1 0 2.36">
+          <Transform translation="0 0.6 3">
+            <Shape>
+              <Appearance>
+                <ImageTexture url="korpN.jpg"></ImageTexture>
+              </Appearance>
+              <box size="1.5 1.5 3"></box>
+            </Shape>
+          </Transform>
+          <Transform translation="0 0.6 1.2">
+            <Shape>
+              <Appearance>
+                <ImageTexture url="tower.jpg"></ImageTexture>
+              </Appearance>
+              <box size="0.5 1.5 1"></box>
+            </Shape>
+          </Transform>
+          <Transform translation="0 0.8 0.3">
+            <Shape>
+              <Appearance>
+                <ImageTexture url="tower.jpg"></ImageTexture>
+              </Appearance>
+              <Cylinder height="1.7" radius="0.5"></Cylinder>
+            </Shape>
+          </Transform>
+          <Transform translation="0 1.8 0.3">
+            <Shape>
+              <Appearance>
+                <ImageTexture url="tower.jpg"></ImageTexture>
+              </Appearance>
+              <Cylinder height="1.7" radius="0.3"></Cylinder>
+            </Shape>
+          </Transform>
+          <Transform translation="0 1.5 0.3">
+            <Shape>
+              <Appearance>
+                <ImageTexture url="metal.jpg"></ImageTexture>
+              </Appearance>
+              <Sphere radius="0.49"></Sphere>
+            </Shape>
+          </Transform>
+          <Transform translation="0 2.6 0.3">
+            <Shape>
+              <Appearance>
+                <ImageTexture url="metal.jpg"></ImageTexture>
+              </Appearance>
+              <Sphere radius="0.28"></Sphere>
+            </Shape>
+          </Transform>
+          <Transform translation="0 1.35 3" rotation="0 0 1 0.79">
+            <Shape>
+              <Appearance>
+                <ImageTexture url="metal.jpg"></ImageTexture>
+              </Appearance>
+              <box size="1.05 1.05 2.99"></box>
+            </Shape>
+          </Transform>
+        </Transform>
+      </Transform>
+
+
+
+      <!--деревья-->
+      <Transform DEF="derevya" translation='0 0 0'>
+        <!--дерево-->
+        <!--двигать дерево-->
+        <Transform DEF="derevos" translation='4 0.7 3' scale='0.2 0.2 0.2'>
+          <!--дерево1шапка-->
+          <Transform translation='0 0 0' rotation='1 0 0 3.14' scale='0.5 0.5 0.5'>
+
+            <Transform translation='0 0 0'>
+              <Shape>
+                <Appearance>
+                  <ImageTexture url="1.jpg"></ImageTexture>
+                  <Material></Material>
+                </Appearance>
+                <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                  coordIndex="0 1 2 -1, 0 1 3 -1, 0 2 4 -1, 0 3 4 -1, 1 2 5 -1, 2 4 5 -1, 1 3 5 -1, 3 4 5 -1">
+                  <Coordinate point="0 0 0, -2 -2 2, 2 -2 2, 2 -2 -2, -2 -2 -2, 0 -4 0"></Coordinate>
+                  <Color color="0 0 1, 0 1 0, 0 1 1, 1 0 0, 1 0 1, 1 1 0, 1 1 1"></Color>
+                </IndexedFaceSet>
+              </Shape>
+            </Transform>
+
+
+            <Transform translation='0 0 0' rotation='1 0 0 1.55'>
+              <Shape>
+                <Appearance>
+                  <ImageTexture url="1.jpg"></ImageTexture>
+                  <Material></Material>
+                </Appearance>
+                <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                  coordIndex="0 1 2 -1, 0 1 3 -1, 0 2 4 -1, 0 3 4 -1, 1 2 5 -1, 2 4 5 -1, 1 3 5 -1, 3 4 5 -1">
+                  <Coordinate point="0 0 0, -2 -2 2, 2 -2 2, 2 -2 -2, -2 -2 -2, 0 -4 0"></Coordinate>
+                  <Color color="0 0 1, 0 1 0, 0 1 1, 1 0 0, 1 0 1, 1 1 0, 1 1 1"></Color>
+                </IndexedFaceSet>
+              </Shape>
+            </Transform>
+
+
+
+            <Transform translation='0 0 0' rotation='1 0 0 -1.55'>
+              <Shape>
+                <Appearance>
+                  <ImageTexture url="1.jpg"></ImageTexture>
+                  <Material></Material>
+                </Appearance>
+                <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                  coordIndex="0 1 2 -1, 0 1 3 -1, 0 2 4 -1, 0 3 4 -1, 1 2 5 -1, 2 4 5 -1, 1 3 5 -1, 3 4 5 -1">
+                  <Coordinate point="0 0 0, -2 -2 2, 2 -2 2, 2 -2 -2, -2 -2 -2, 0 -4 0"></Coordinate>
+                  <Color color="0 0 1, 0 1 0, 0 1 1, 1 0 0, 1 0 1, 1 1 0, 1 1 1"></Color>
+                </IndexedFaceSet>
+              </Shape>
+            </Transform>
+
+            <Transform translation='0 0 0' rotation='0 0 1 -1.55'>
+              <Shape>
+                <Appearance>
+                  <ImageTexture url="1.jpg"></ImageTexture>
+                  <Material></Material>
+                </Appearance>
+                <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                  coordIndex="0 1 2 -1, 0 1 3 -1, 0 2 4 -1, 0 3 4 -1, 1 2 5 -1, 2 4 5 -1, 1 3 5 -1, 3 4 5 -1">
+                  <Coordinate point="0 0 0, -2 -2 2, 2 -2 2, 2 -2 -2, -2 -2 -2, 0 -4 0"></Coordinate>
+                  <Color color="0 0 1, 0 1 0, 0 1 1, 1 0 0, 1 0 1, 1 1 0, 1 1 1"></Color>
+                </IndexedFaceSet>
+              </Shape>
+            </Transform>
+
+            <Transform translation='4 0 0' rotation='0 0 1 -1.55'>
+              <Shape>
+                <Appearance>
+                  <ImageTexture url="1.jpg"></ImageTexture>
+                  <Material></Material>
+                </Appearance>
+                <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                  coordIndex="0 1 2 -1, 0 1 3 -1, 0 2 4 -1, 0 3 4 -1, 1 2 5 -1, 2 4 5 -1, 1 3 5 -1, 3 4 5 -1">
+                  <Coordinate point="0 0 0, -2 -2 2, 2 -2 2, 2 -2 -2, -2 -2 -2, 0 -4 0"></Coordinate>
+                  <Color color="0 0 1, 0 1 0, 0 1 1, 1 0 0, 1 0 1, 1 1 0, 1 1 1"></Color>
+                </IndexedFaceSet>
+              </Shape>
+            </Transform>
+
+          </Transform>
+
+          <!--дерево2шапка-->
+          <Transform translation='0 0.7 0' rotation='1 0 0 3.14' scale='0.5 0.5 0.5'>
+
+            <Transform translation='0 0 0'>
+              <Shape>
+                <Appearance>
+                  <ImageTexture url="1.jpg"></ImageTexture>
+                  <Material></Material>
+                </Appearance>
+                <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                  coordIndex="0 1 2 -1, 0 1 3 -1, 0 2 4 -1, 0 3 4 -1, 1 2 5 -1, 2 4 5 -1, 1 3 5 -1, 3 4 5 -1">
+                  <Coordinate point="0 0 0, -2 -2 2, 2 -2 2, 2 -2 -2, -2 -2 -2, 0 -4 0"></Coordinate>
+                  <Color color="0 0 1, 0 1 0, 0 1 1, 1 0 0, 1 0 1, 1 1 0, 1 1 1"></Color>
+                </IndexedFaceSet>
+              </Shape>
+            </Transform>
+
+
+            <Transform translation='0 0 0' rotation='1 0 0 1.55'>
+              <Shape>
+                <Appearance>
+                  <ImageTexture url="1.jpg"></ImageTexture>
+                  <Material></Material>
+                </Appearance>
+                <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                  coordIndex="0 1 2 -1, 0 1 3 -1, 0 2 4 -1, 0 3 4 -1, 1 2 5 -1, 2 4 5 -1, 1 3 5 -1, 3 4 5 -1">
+                  <Coordinate point="0 0 0, -2 -2 2, 2 -2 2, 2 -2 -2, -2 -2 -2, 0 -4 0"></Coordinate>
+                  <Color color="0 0 1, 0 1 0, 0 1 1, 1 0 0, 1 0 1, 1 1 0, 1 1 1"></Color>
+                </IndexedFaceSet>
+              </Shape>
+            </Transform>
+
+
+
+            <Transform translation='0 0 0' rotation='1 0 0 -1.55'>
+              <Shape>
+                <Appearance>
+                  <ImageTexture url="1.jpg"></ImageTexture>
+                  <Material></Material>
+                </Appearance>
+                <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                  coordIndex="0 1 2 -1, 0 1 3 -1, 0 2 4 -1, 0 3 4 -1, 1 2 5 -1, 2 4 5 -1, 1 3 5 -1, 3 4 5 -1">
+                  <Coordinate point="0 0 0, -2 -2 2, 2 -2 2, 2 -2 -2, -2 -2 -2, 0 -4 0"></Coordinate>
+                  <Color color="0 0 1, 0 1 0, 0 1 1, 1 0 0, 1 0 1, 1 1 0, 1 1 1"></Color>
+                </IndexedFaceSet>
+              </Shape>
+            </Transform>
+
+            <Transform translation='0 0 0' rotation='0 0 1 -1.55'>
+              <Shape>
+                <Appearance>
+                  <ImageTexture url="1.jpg"></ImageTexture>
+                  <Material></Material>
+                </Appearance>
+                <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                  coordIndex="0 1 2 -1, 0 1 3 -1, 0 2 4 -1, 0 3 4 -1, 1 2 5 -1, 2 4 5 -1, 1 3 5 -1, 3 4 5 -1">
+                  <Coordinate point="0 0 0, -2 -2 2, 2 -2 2, 2 -2 -2, -2 -2 -2, 0 -4 0"></Coordinate>
+                  <Color color="0 0 1, 0 1 0, 0 1 1, 1 0 0, 1 0 1, 1 1 0, 1 1 1"></Color>
+                </IndexedFaceSet>
+              </Shape>
+            </Transform>
+
+            <Transform translation='4 0 0' rotation='0 0 1 -1.55'>
+              <Shape>
+                <Appearance>
+                  <ImageTexture url="1.jpg"></ImageTexture>
+                  <Material></Material>
+                </Appearance>
+                <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                  coordIndex="0 1 2 -1, 0 1 3 -1, 0 2 4 -1, 0 3 4 -1, 1 2 5 -1, 2 4 5 -1, 1 3 5 -1, 3 4 5 -1">
+                  <Coordinate point="0 0 0, -2 -2 2, 2 -2 2, 2 -2 -2, -2 -2 -2, 0 -4 0"></Coordinate>
+                  <Color color="0 0 1, 0 1 0, 0 1 1, 1 0 0, 1 0 1, 1 1 0, 1 1 1"></Color>
+                </IndexedFaceSet>
+              </Shape>
+            </Transform>
+
+          </Transform>
+
+          <!--ствол дерева-->
+          <Transform translation='0 -2 0'>
+            <Shape>
+              <Appearance>
+                <Material diffuseColor='#B22222'></Material>
+              </Appearance>
+              <Cylinder radius="0.1" height="5"></Cylinder>
+            </Shape>
+          </Transform>
+        </Transform>
+
+        <!--дерево2-->
+        <Transform translation='-1 0 2'>
+          <Shape USE='derevos'>
+          </Shape>
+        </Transform>
+
+        <!--дерево3-->
+        <Transform translation='1.5 0 2.5'>
+          <Shape USE='derevos'>
+          </Shape>
+        </Transform>
+
+      </Transform>
+
+
+      <!--деревья слева-->
+      <Transform DEF="derevyaleft" translation='0 0 0'>
+        <!--дерево1-->
+        <Transform translation='-7 0 3'>
+          <Shape USE='derevos'>
+          </Shape>
+        </Transform>
+
+        <!--дерево2-->
+        <Transform translation='-7 0 2'>
+          <Shape USE='derevos'>
+          </Shape>
+        </Transform>
+
+        <!--дерево3-->
+        <Transform translation='-7 0 4'>
+          <Shape USE='derevos'>
+          </Shape>
+        </Transform>
+
+        <!--дерево4-->
+        <Transform translation='-7 0 1'>
+          <Shape USE='derevos'>
+          </Shape>
+        </Transform>
+
+        <!--дерево5-->
+        <Transform translation='-7 0 0'>
+          <Shape USE='derevos'>
+          </Shape>
+        </Transform>
+
+
+        <!--дерево6-->
+        <Transform translation='-8 0 0'>
+          <Shape USE='derevos'>
+          </Shape>
+        </Transform>
+
+        <!--дерево7-->
+        <Transform translation='-9 0 0.5'>
+          <Shape USE='derevos'>
+          </Shape>
+        </Transform>
+
+        <!--дерево8-->
+        <Transform translation='-10 0 1'>
+          <Shape USE='derevos'>
+          </Shape>
+        </Transform>
+      </Transform>
+
+      <Transform translation='0.7 0 3' rotation="0 1 0 -1.2">
+        <Shape USE='derevyaleft'>
+        </Shape>
+      </Transform>
+
+      <!--деревья сзади-->
+      <Transform translation='-4 0 -9'>
+        <Shape USE='derevya'>
+        </Shape>
+      </Transform>
+
+      <!--двигать ракету-->
+      <Transform DEF="raketa" translation='0.2 3.3 0' rotation="0 0 1 0.5" scale='0.2 0.2 0.2'>
+        <!--ракета-->
+        <Transform translation='3 -3 0' rotation="0 0 1 3.14" scale='0.2 0.2 0.2'>
+          <Transform translation='0 0 0' rotation="1 0 0 1.57">
+            <Transform translation='0 0 0' rotation="0 0 1 1.57">
+              <Shape>
+                <Appearance>
+                  <ImageTexture url="2.jpg"></ImageTexture>
+                  <Material></Material>
+                </Appearance>
+                <IndexedLineSet coordIndex="0 1 2 3 4 5 6 7 8 6 2">
+                  <Coordinate point="0 0 7, 1 -2 0, 0 0 2, 0 0 10, 0 2 12, 0 4 10, 0 4 2, 1 6 0, 0 4 7"></Coordinate>
+                </IndexedLineSet>
+              </Shape>
+            </Transform>
+          </Transform>
+        </Transform>
+
+        <!--точки-->
+        <Transform translation='3.4 -0.6 0.1' scale='0.2 0.2 0.2'>
+          <Shape>
+            <Appearance>
+              <ImageTexture url="2.jpg"></ImageTexture>
+              <Material></Material>
+            </Appearance>
+            <PointSet>
+              <Coordinate point='0 0 0,
+                                1 -1 0, -1 -1 0,
+                                2.1 -2.2 0, -2.1 -2.2 0,
+                                2.1 -4 0, -2.1 -4 0
+                                2.1 -6 0, -2.1 -6 0
+                                2.1 -8 0, -2.1 -8 0,
+                                2.1 -10 0, -2.1 -10 0,
+                                0 -10 0,
+                                -2.7 -8 0,  -3.3 -10 0,  -4 -12 0,  -3 -11 0,
+                                2.7 -8 0, 3.3 -10 0,  4 -12 0,  3 -11 0,
+                                      '></Coordinate>
+            </PointSet>
+          </Shape>
+        </Transform>
+      </Transform>
+
+      <!--треугольники типо свечение от ракеты, блики-->
+
+      <Transform DEF="bliki" translation="1 3.2 0" rotation="1 0 0 3.14" scale="0.09 0.09 0.09">
+        <Shape>
+          <IndexedTriangleSet index="0 1 2 3 4 5 6 7 8" solid="false">
+            <Coordinate point="-4 1 3, -2 2 1.5, -3 4 0.5, -2 3 1.5, 0 4 0, 2 3 1.5, 5 5 -2.5, 4 3 1.5, 6 4 2">
+            </Coordinate>
+            <ColorRGBA color="0 .8 0 1, 0 1 1 1, 1 0 0 0, 1 .5 0 0, .8 0 1 0, 1 1 0 1, .6 .3 .1 0, 1 0 .5 1, 0 1 .5 0">
+            </ColorRGBA>
+          </IndexedTriangleSet>
+        </Shape>
+      </Transform>
+
+      <!--треугольники опадающие листья-->
+
+      <Transform DEF="listya" translation="4 0.6 3" rotation="1 0 0 3.14" scale="0.09 0.09 0.09">
+        <Shape>
+          <Appearance>
+            <ImageTexture url="5.jpg"></ImageTexture>
+            <Material></Material>
+          </Appearance>
+          <IndexedTriangleSet index="0 1 2 3 4 5 6 7 8" solid="false">
+            <Coordinate point="-4 1 3, -2 2 1.5, -3 4 0.5, -2 3 1.5, 0 4 0, 2 3 1.5, 5 5 -2.5, 4 3 1.5, 6 4 2">
+            </Coordinate>
+            <ColorRGBA color="0 .8 0 1, 0 1 1 1, 1 0 0 0, 1 .5 0 0, .8 0 1 0, 1 1 0 1, .6 .3 .1 0, 1 0 .5 1, 0 1 .5 0">
+            </ColorRGBA>
+          </IndexedTriangleSet>
+        </Shape>
+      </Transform>
+
+      <!--листья слева-->
+      <Transform translation='-7.5 -0.2 2.3' rotation="0 0 0 0">
+        <Shape USE='listya'>
+        </Shape>
+      </Transform>
+
+      <!--вход-->
+      <Transform DEF="vhod1" translation="-1.1 0.12 0.98" rotation="0 1 -1 3.14" scale="0.08 0.08 0.1">
+        <Transform translation="0 0 0" rotation="0 0 1 1.2" scale="0.8 0.8 0.8">
+          <Shape>
+            <Appearance>
+              <TextureTransform scale="1.2 1"></TextureTransform>
+              <ImageTexture url="4.jpg"></ImageTexture>
+              <Material></Material>
+            </Appearance>
+            <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+              coordIndex="0 4 7 3 -1 5 6 2 1 -1 4 5 6 7 -1 6 7 3 2 -1"
+              colorIndex="0 1 2 3 -1 4 5 6 0 -1 1 2 3 4 -1 5 6 0 1 -1">
+              <Coordinate point="-2 0 2, 2 0 2, 2 0 -2, -2 0 -2, -2 6 2, 2 6 2, 2 6 -2, -2 6 -2"></Coordinate>
+              <Color color="0 0 1, 0 1 0, 0 1 1, 1 0 0, 1 0 1, 1 1 0, 1 1 1"></Color>
+            </IndexedFaceSet>
+          </Shape>
+        </Transform>
+      </Transform>
+
+      <!--вход2-->
+      <Transform translation='0.3 0 0.2' rotation="0 1 0 2.2">
+        <Shape USE='vhod1'>
+        </Shape>
+      </Transform>
+
+      <!--вход3-->
+      <Transform translation='0.68 0 -0.45' rotation="0 1 0 -2">
+        <Shape USE='vhod1'>
+        </Shape>
+      </Transform>
+
+
+      <!--тропинка-->
+      <Transform DEF="train1" translation="-4.6 -0.04 2.7" rotation="0 1 0 1.9">
+        <Shape>
+          <Appearance>
+            <ImageTexture url="6.jpg"></ImageTexture>
+          </Appearance>
+          <box size="1.2 0.1 5.5"></box>
+        </Shape>
+      </Transform>
+
+      <!--тропинка2-->
+      <Transform DEF="train1" translation="0 -0.04 0.2" rotation="0 1 0 1.9">
+        <Shape>
+          <Appearance>
+            <ImageTexture url="6.jpg"></ImageTexture>
+          </Appearance>
+          <box size="7 0.1 5"></box>
+        </Shape>
+      </Transform>
+
+
+  </X3D>
+
+</body>
+
 </html>
