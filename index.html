@@ -1,13 +1,309 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>  
-    <meta charset="utf-8" />
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
-    <title>Лабораторная работа 2</title>
-    <link rel="stylesheet" href="https://www.x3dom.org/download/x3dom.css" />
-    <script src="https://www.x3dom.org/download/x3dom.js"></script>
-  </head>
-  <body>
-    <h1>Здесь только я. А должна быть твоя лаба!</h1>
-  </body> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ЛабРАБ#2 Холодилин К. С.</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script type='text/javascript' src='https://www.x3dom.org/download/dev/x3dom-full.js'> </script> 
+    <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'></> 
+</head>
+
+<!-- Box, Sphere, Cylinder, Cone, Torus, Text, Transform,
+Material, ImageTexture, TextureTransform. -->
+
+<body>
+    <x3d width="100vw" height="100vh">
+        <scene>
+
+                <!-- Сетка микрофона -->
+			<transform translation="0 0 0">
+				<shape>
+					<appearance>
+                        <imagetexture url="./BLackmicnet.jpg"></imagetexture>
+                        <texturetransform scale="1 1"></texturetransform>
+						<material diffuseColor="#140c03"></material>
+					</appearance>
+					<cylinder radius="1", height ="2.8"></cylinder>
+                    <!-- <box size="x z y"></box> -->
+				</shape>
+            </transform>
+
+                <!-- Корпус микрофона-->
+			<transform translation="0 -2.5 0">
+				<shape>
+					<appearance>
+                        <imagetexture url="./BlackMetalTexture.jpg"></imagetexture>
+                        <texturetransform scale="1 1"></texturetransform>
+						<material diffuseColor="#140c03"></material>
+					</appearance>
+					<cylinder radius="1", height ="2.5"></cylinder>
+                    <!-- <box size="x z y"></box> -->
+				</shape>
+            </transform>
+
+                 <!-- Кольцо микрофона 1-->
+			<transform translation="0 1.56 0">
+				<shape>
+					<appearance>
+                        <imagetexture url="./BlackMetalTexture.jpg"></imagetexture>
+                        <texturetransform scale="1 1"></texturetransform>
+						<material diffuseColor="#140c03"></material>
+					</appearance>
+					<cylinder radius="1.07", height ="0.3"></cylinder>
+                    <!-- <box size="x z y"></box> -->
+				</shape>
+            </transform>
+
+                 <!-- Кольцо микрофона 2-->
+			<transform translation="0 -1.25 0">
+				<shape>
+					<appearance>
+                        <imagetexture url="./BlackMetalTexture.jpg"></imagetexture>
+                        <texturetransform scale="1 1"></texturetransform>
+						<material diffuseColor="#140c03"></material>
+					</appearance>
+					<cylinder radius="1.07", height ="0.3"></cylinder>
+                    <!-- <box size="x z y"></box> -->
+				</shape>
+            </transform>
+
+                <!-- Кольцо микрофона 3-->
+			<transform translation="0 -1.6 0">
+				<shape>
+					<appearance>
+                        <imagetexture url="./BlackMetalTexture.jpg"></imagetexture>
+                        <texturetransform scale="1 1"></texturetransform>
+						<material diffuseColor="#140c03"></material>
+					</appearance>
+					<cylinder radius="1.07", height ="0.15"></cylinder>
+                    <!-- <box size="x z y"></box> -->
+				</shape>
+            </transform>
+
+                 <!-- Крышка микрофона-->
+			<transform translation="0 0.92 0">
+				<shape>
+					<appearance>
+                        <imagetexture url="./BlackMetalTexture.jpg"></imagetexture>
+                        <texturetransform scale="1 1"></texturetransform>
+						<material diffuseColor="#140c03"></material>
+					</appearance>
+					<sphere radius="0.99"></sphere>
+                    <!-- <box size="x z y"></box> -->
+				</shape>
+            </transform>
+            
+                <!-- Держатель микрофона-->
+			<transform translation="0 -3.6 0" rotation ="1 0 0 1.5708">
+				<shape>
+					<appearance>
+                        <imagetexture url="./BlackMetalTexture.jpg"></imagetexture>
+                        <texturetransform scale="1 1"></texturetransform>
+						<material diffuseColor="#140c03"></material>
+					</appearance>
+					<torus innerradius="0.15" outerradius="1"></torus>
+                    <!-- <box size="x z y"></box> -->
+				</shape>
+            </transform>
+
+                <!-- Держатель микрофона 2-->
+			<transform translation="0 -3.2 0">
+				<shape>
+					<appearance>
+                        <imagetexture url="./BlackMetalTexture.jpg"></imagetexture>
+                        <texturetransform scale="1 1"></texturetransform>
+						<material diffuseColor="#140c03"></material>
+					</appearance>
+					<cone bottomRadius='0.6'></cone>
+                    <!-- <box size="x z y"></box> -->
+				</shape>
+            </transform>
+
+				<!-- Подставка-->
+            <transform translation="0 -4.25 0">
+				<shape>
+					<appearance>
+                        <imagetexture url="./BalsaWood.jpg"></imagetexture>
+                        <texturetransform scale="0.5 0.5"></texturetransform>
+						<material diffuseColor="#E7E5E2"></material>
+					</appearance>
+                    <box size="27 0.5 20"></box>
+				</shape>
+            </transform>
+
+				<!-- Текст -->
+            <transform translation="-2.3 3 0">
+				<shape>
+                    <appearance>
+                        <material diffuseColor="#00ff00"></material>
+                        </appearance>
+                        <text string="Динамик">
+                        <fontstyle family="Helvetica sansserif" style="bold"></fontstyle>
+                        </text>
+                </shape>
+            </transform>
+
+
+			<!-- расположение камеры -->
+			<Viewpoint position="-6.06334 4.20531 6.74917" orientation="-0.51196 -0.84732 -0.14121 0.83887" 
+	zNear="5.16810" zFar="100" centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="0.78540" description="defaultX3DViewpointNode"></Viewpoint>
+
+<!-- pointSet IndexedFaceSet IndexedLineSet 
+    TriangleSet TriangleSetStrip ElevationGrid -->
+    
+    <!-- Не динамик -->
+    <Transform translation="-8 -4 -2 ">
+        <Shape>
+                <IndexedLineSet coordIndex="0 1 2 3 0 –1 0 4 5 6 7 4 -1 7 3 -1 6 2 -
+                1 5 1 -1"
+                colorPerVertex='true'>
+                <Coordinate point="0 0 0, 0 0 3, 3 0 3, 3 0 0,
+                0 5 0, 0 5 3, 3 5 3, 3 5 0,
+                3 5 0, 3 0 0,
+                3 5 3, 3 0 3,
+                0 5 3, 0 0 3"></Coordinate>
+                <Color color="1 1 1, 1 1 1, 1 1 1, 1 1 1, 1 1 1, 1 1 1, 1 1 1, 1 1 1"></Color>
+                </IndexedLineSet>
+        </Shape>        
+    </Transform>
+    
+    <!-- Динамик-лицевая стороная -->
+    <transform translation="5 -4 1.001">
+            <Shape>
+            <appearance>
+                <imagetexture url="din.jpg"></imagetexture>
+                <texturetransform scale="1 1.7" rotation = '3.14'>
+                </texturetransform>
+            </appearance>
+                <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true"
+                creaseAngle="0" solid="false"
+                coordIndex="0 1 2 3 0 -1 "
+                colorIndex="0 1 2 3 0 -1">
+                <Coordinate point="0 0 0, 3 0 0, 3 5 0, 0 5 0"></Coordinate>
+                </IndexedFaceSet>
+            </Shape>
+    </transform>
+    
+    <!-- Динамик -->
+    <transform translation="6.5 -1.5 -0.5">
+        <Shape>
+        <appearance>
+            <imagetexture url="pls.jpg"></imagetexture>
+            <texturetransform scale="1 1" rotation = '3.14'>
+            </texturetransform>
+        </appearance>
+            <box size="3 5 3"></box>
+        </Shape>
+    </transform>
+
+    <!-- Указатель М-->
+    <Transform translation = "5.5 4 -0.5" rotation="1 0 0 3.14">
+        <Shape>
+            <IndexedTriangleSet index="0 1 2" solid="false">
+            <Coordinate point="0 0 0, 2 0 0, 1 2 0"></Coordinate>
+            <Color color="1 0 0, 1 0 0, 1 0 0"></Color>
+            </IndexedTriangleSet>
+        </Shape>
+    </Transform>
+
+    <!-- Микрофон -->
+    <Transform translation="4 5 -0.5"> 
+        <shape>
+            <appearance>
+            <material diffuseColor="#ff0000"></material>
+            </appearance>
+            <text string="Микрофон">
+            <fontstyle family="Helvetica sansserif" style="bold"></fontstyle>
+            </text>
+            </shape>
+    </Transform>
+
+    <!-- Не микрофон -->
+    <Transform translation = "-7.5 4 -0.5" rotation="1 0 0 3.14">
+        <Shape>
+            <IndexedTriangleSet index="0 1 2" solid="false">
+            <Coordinate point="0 0 0, 2 0 0, 1 2 0"></Coordinate>
+            <Color color="1 0 0, 1 0 0, 1 0 0"></Color>
+            </IndexedTriangleSet>
+        </Shape>
+    </Transform>
+
+    <!-- Указатель НМ -->
+    <Transform translation="-15 5 -0.5"> 
+        <shape>
+            <appearance>
+            <material diffuseColor="#ff0000"></material>
+            </appearance>
+            <text string="Здесь могла быть ваша реклама">
+            <fontstyle family="Helvetica sansserif" style="bold"></fontstyle>
+            </text>
+            </shape>
+    </Transform>
+    <!-- Самолётки -->
+    <Transform translation="0 9 0"rotation="0 0 1 -.5">
+        <Transform rotation="1 0 0 1.2">
+            <Shape>
+                <appearance>
+                    <imagetexture url="ppr.jpg"></imagetexture>
+                    <texturetransform scale="1 1" rotation = '3.14'>
+                    </texturetransform>
+                </appearance>
+                <IndexedTriangleStripSet index='0 1 2 3 -1' solid='false'>
+                <Coordinate point='0 0 0, 2 0 2, 2 3 3, 4 0 0'></Coordinate>
+                </IndexedTriangleStripSet>
+            </Shape>
+        </Transform>
+    </Transform>
+    
+    <!-- Флаг -->
+    <transform translation = "3 4 -4" rotation="1 0 0 -1.57">
+        <Transform  rotation = "0 1 0 -1.5708">
+            <Shape>
+                <appearance>
+                    <imagetexture url="Ukr.jpg"></imagetexture>
+                    <texturetransform scale="1 1" rotation = '1.57' translation='0,-1'>
+                    </texturetransform>
+                </appearance>
+                <ElevationGrid xDimension="5" zDimension="5"
+                height="-0.5, 0.2, 0.4, -0.2, 0.2,
+                        0.3, 0, 0, 0, 0.1,
+                        0.1, -0.2, 0, 0, 0.4,
+                        0.2, 0.1, -0.3, -0.2, 0.2,
+                        0, 0, 0, 0, 0"
+                xSpacing="1.25" zSpacing="1.75" solid="false">
+                </ElevationGrid>
+            </Shape>
+        </Transform>
+    </transform>
+    
+    <!-- Флагшток -->
+    <Transform  translation = "-4 3 -4">
+        <Shape>
+            <appearance>
+                <imagetexture url="met.jpg"></imagetexture>
+                <texturetransform scale="1 1" rotation = '1.57' translation='0,-1'>
+                </texturetransform>
+            </appearance>
+            <cylinder height="14" radius="0.2"></cylinder>
+        </Shape>
+    </Transform>
+
+    <!-- Саунд -->
+    <transform translation="0 -2 0">
+        <Shape>
+            <PointSet>
+            <Color color=" 1 0 0, 0 1 0, 0 0 1,
+            0.8 0.8 0.8, 0.4, 0.4 1,
+            0.1 0.4 1, 1 1 0, 0 1 1"></Color>
+            <Coordinate point="6 2.1 4, 6.5 1 3, 6.25 1.2 6,
+            6.5 1.5 4, 6.2 1 3, 6.3 1 5.5,
+            4 5 3, 4.5 2 3, 5 2 3"></Coordinate>
+            </PointSet>
+        </Shape>
+    </transform>
+    <Background backUrl='Bg.jpg' ></Background>
+        </scene>
+    </x3d>
+</body>
 </html>
