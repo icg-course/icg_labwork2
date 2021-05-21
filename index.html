@@ -18,6 +18,13 @@
   <X3D width="100vw" height="100vh">
 
     <Scene>
+
+<!-- viewpoint -->
+      <Viewpoint position="53.22915 26.12410 114.16259" orientation="-0.57020 0.82147 -0.00828 0.37634" 
+    zNear="0" zFar="257.57661"
+     centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="0.78540" description="defaultX3DViewpointNode"></Viewpoint>
+
+<group>
       <!-- бокальчик-->
       <!-- сам бокал-->
       <Transform rotation="1 0 0 3.14">
@@ -38,6 +45,20 @@
         </Shape>
       </Transform>
 
+      <transform translation='0 -7 0'>
+        <shape DEF='paper'>
+      <IndexedTriangleStripSet index='0 1 2 3 4 -1' solid='false'>
+                  <Coordinate point='0 0 5, 2 2 5, 4 0 5, 6 2 5, 8 0 5'></Coordinate>
+                      <ColorRGBA color='0.5 0.5 0.5 1, 0.5 0.5 0.5 1, 0.5 0.5 0.5 1, 0.5 0.5 0.5 1 , 0.5 0.5 0.5 1'></ColorRGBA>
+                                      </IndexedTriangleStripSet>
+              </shape>
+          </transform>
+
+          <transform translation='0 -7 1.5'>
+            <shape USE='paper'>
+          
+                  </shape>
+              </transform>
       <!-- палка от ножки-->
       <Transform translation="0 -4.4 0">
         <Shape>
@@ -227,7 +248,7 @@
 
 
       <!-- конец подноса подноса -->
-
+    </group>
       <!-- стена бар -->
       <Transform translation="0 0 -40">
         <Shape>
@@ -444,85 +465,6 @@
         </Shape>
       </Transform>
       <!-- конец буквы-->
-      <Transform translation="-38 0 -60">
-        <Transform scale="1.5 1.5 1.5">
-          <!-- человек-->
-          <!-- тело-->
-          <Transform translation="40 -7.5 25 ">
-            <Transform translation="0 2.6 0">
-              <Shape>
-                <Appearance>
-                  <TextureTransform scale="1 1"></TextureTransform>
-                  <ImageTexture url="dd.jpg"></ImageTexture>
-                </Appearance>
-                <box size="7 15 3.5"></box>
-              </Shape>
-            </Transform>
-
-            <!-- голова-->
-            <Transform translation="0 13.5 0 ">
-              <Shape>
-                <Appearance>
-                  <TextureTransform scale="1 1"></TextureTransform>
-                  <ImageTexture url="gg2.png"></ImageTexture>
-                </Appearance>
-                <Sphere radius="3.5"></Sphere>
-              </Shape>
-              <!-- рука-->
-              <Transform translation="4.5 -9 0 ">
-                <Transform rotation="0 0 1 0.5">
-                  <Shape>
-                    <Appearance>
-                      <TextureTransform scale="1 1"></TextureTransform>
-                      <ImageTexture url="sj.jpg"></ImageTexture>
-
-                    </Appearance>
-                    <box size="2 10.4 2"></box>
-                  </Shape>
-                </Transform>
-                <!-- рука-->
-                <Transform translation="-9 0 0 " rotation="0 0 1 -0.5">
-                  <Shape>
-                    <Appearance>
-                      <TextureTransform scale="1 1"></TextureTransform>
-                      <ImageTexture url="sj.jpg"></ImageTexture>
-
-                    </Appearance>
-                    <box size="2 10.4 2"></box>
-                  </Shape>
-                </Transform>
-              </Transform>
-              <!-- нога-->
-              <Transform translation="-2 -25 0 ">
-                <Shape>
-                  <Appearance>
-                    <TextureTransform scale="1 1"></TextureTransform>
-                    <ImageTexture url="kk.jpg"></ImageTexture>
-                  </Appearance>
-                  <box size="2.9 16 2.9"></box>
-                </Shape>
-              </Transform>
-
-              <!-- нога2-->
-              <Transform translation="2 -24 0 ">
-                <Shape>
-                  <Appearance>
-                    <TextureTransform scale="1 1"></TextureTransform>
-                    <ImageTexture url="kk.jpg"></ImageTexture>
-                  </Appearance>
-                  <box size="2.9 17 2.9"></box>
-                </Shape>
-              </Transform>
-
-            </Transform>
-
-
-          </Transform>
-        </Transform>
-      </Transform>
-
-      <!-- конец человека -->
-      <!-- Вторая лаба поехала -->
 
       <!--Дискошар-->
       <Transform translation="0 30 50">
@@ -549,7 +491,7 @@
         <!--Вообще не нужные точки закончились-->
         <!--Дискошар закончился-->
       </Transform>
-
+<group>
       <!--Надпись на стене-->
       <Transform translation="-70 0 70" scale="7 7 7" rotation="0 1 0 1.57">
 
@@ -592,33 +534,55 @@
             </IndexedLineSet>
           </Shape>
         </Transform>
-
+      
 
 
 
       </Transform>
+    </group>
       <!--Надпись конец-->
 
-      <Transform translation = "0 200 0">
-      <Transform translation = "0 0 0" rotation = "0 1 0 -1.5708">
-        <Shape>
-        <Appearance>
-        <Imagetexture url="1.jpg"></Imagetexture>
-        <Texturetransform scale="1 1" rotation = '0' translation='0,-1'></Texturetransform>
-        </Appearance>
-        <ElevationGrid xDimension="5" zDimension="5"
-        height="4, 3.5, 3.4, 3.2, 4,
-        2.6, 2.5, 2, 2.4, 2.6,
-        1.9, 2, 2.1, 2.3, 1.9,
-        1, 1.2, 1.5, 1.1, 1,
-        0, 0, 0, 0, 0"
-        xSpacing="1.25" zSpacing="1.25" solid="false">
-        </ElevationGrid>
-        </Shape>
-        </Transform> </Transform>
+
+    <!-- trianglefaceset -->
+      <transform scale='3 3 3' translation='25 -10 5' rotation='0 1 0 2'>
+        <shape>
+          <IndexedTriangleSet index="0 1 4 0 3 4 1 2 4 2 3 4" solid="false">
+              <Coordinate point="0 0 0, 2 0 2, 4 0 0, 2 0 -2, 2 3 0">
+                      </Coordinate>
+
+                      <ColorRGBA color=" 0.75 0.75 0.75 1, 0.75 0.75 0.75 1, 0.75 0.75 0.75 1,
+                                        0.75 0.75 0.75 1 , 0.75 0.75 0.75 1">
+                      </ColorRGBA>
+                    </IndexedTriangleSet>
+                    <Appearance>
+                      <ImageTexture url="py.jpg"></ImageTexture>
+                      <texturetransform rotation= '0.56'></texturetransform>
+                    </Appearance>
+                  </shape>
+            </transform>
+
+
+<!-- elevationgrid -->
+            <transform translation='0 0 0'>
+              <shape>
+                  <ElevationGrid xDimension="2" zDimension="2"
+                  height="7, 0, 0, 7"
+                  xSpacing="3" zSpacing="3" solid="false">
+                </ElevationGrid>
+                <appearance>
+                  <imagetexture url='blue.jpg'></imagetexture>
+                </appearance>
+                </shape>
+                </transform>
+
+<!-- ВСТРАИВАНИЕ -->
+            <transform translation='17 5 -22' scale='3 3 3'> 
+                <inline url="man.x3d"> </inline>
+            </transform>
 
 
 
+     
 
 
 
