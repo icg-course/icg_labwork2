@@ -5,12 +5,61 @@
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
     <title>Лабораторная работа 2</title>
     <link rel="stylesheet" href="https://www.x3dom.org/download/x3dom.css" />
-    <script src="https://www.x3dom.org/download/x3dom.js"></script>
+    <script src="https://x3dom.org/download/dev/x3dom-full.debug.js"></script>
   </head>
   <body>
-    <h1>Здесь только я. А должна быть твоя лаба!</h1>
      <X3D>
         <Scene>
+
+     <!--линии-->
+     <!--сердечко-->
+     <Transform translation = "0 3 -1.5"  rotation="0 1 0 -0.2" >
+      <Shape>
+         <Appearance>
+            <Material emissiveColor='1 0 0'/>
+         </Appearance> 
+         <IndexedLineSet coordIndex='0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 0 -1 '>
+            <Coordinate point="0.0 0.0 0.0, 0.25 0.35 0.0, 0.5 0.55 0.0, 1.0 0.55 0.0, 1.25 0.35 0.0, 1.35 0.05 0.0, 1.32 -0.12 0.0, 1.25 -0.32 0.0, 1.0 -0.65 0.0, 0.0 -1.3 0.0, -1.0 -0.65 0, -1.25 -0.32 0.0, -1.32 -0.12 0.0, -1.35 0.05 0.0, -1.25 0.35 0.0, -1.0 0.55 0.0, -0.5 0.55 0.0, -0.25 0.35 0.0" />
+         </IndexedLineSet>
+     </Shape>
+  </Transform>
+
+   <!--точки-->
+   <!--сердечко-->
+   <Transform translation = "0 3 -1.6"  rotation="0 1 0 -0.2" >
+   <Shape>
+      <PointSet>
+         <Color color="1 0 0, 0 1 0, 0 0 1, 1 1 0, 0 1 1, 1 1 1, 0 0 0, 0.5 1 0, 0 1 0.5, 0 0.5 0.5, 0.8 1 1, 0.1 1 0, 1 1.5 0, 0 1 0.4, 0.3 0.5 0.1, 0.5 0.6 0, 0 0.4 0, 0.8 1 0, 0 1 1, 1 1 1"></Color>
+         <Coordinate point="0.0 0.0 0.0, 0.25 0.35 0.0, 0.5 0.55 0.0, 1.0 0.55 0.0, 1.25 0.35 0.0, 1.35 0.05 0.0, 1.32 -0.12 0.0, 1.25 -0.32 0.0, 1.0 -0.65 0.0, 0.0 -1.3 0.0, -1.0 -0.65 0, -1.25 -0.32 0.0, -1.32 -0.12 0.0, -1.35 0.05 0.0, -1.25 0.35 0.0, -1.0 0.55 0.0, -0.5 0.55 0.0, -0.25 0.35 0.0, 0.5 -0.96 0.0, -0.5 -0.96 0.0 "></Coordinate>
+      </PointSet>
+  </Shape>
+  </Transform>
+   <!--еще точки-->
+   <!--сердечко-->
+   <Transform translation = "0 3 -1.4"  rotation="0 1 0 -0.2" >
+   <Shape>
+      <PointSet>
+         <Color color="1 0 0, 0 1 0, 0 0 1, 1 1 0, 0 1 1, 1 1 1, 0 0 0, 0.5 1 0, 0 1 0.5, 0 0.5 0.5, 0.8 1 1, 0.1 1 0, 1 1.5 0, 0 1 0.4, 0.3 0.5 0.1, 0.5 0.6 0, 0 0.4 0, 0.8 1 0, 0 1 1, 1 1 1"></Color>
+         <Coordinate point="0.0 0.0 0.0, 0.25 0.35 0.0, 0.5 0.55 0.0, 1.0 0.55 0.0, 1.25 0.35 0.0, 1.35 0.05 0.0, 1.32 -0.12 0.0, 1.25 -0.32 0.0, 1.0 -0.65 0.0, 0.0 -1.3 0.0, -1.0 -0.65 0, -1.25 -0.32 0.0, -1.32 -0.12 0.0, -1.35 0.05 0.0, -1.25 0.35 0.0, -1.0 0.55 0.0, -0.5 0.55 0.0, -0.25 0.35 0.0, 0.5 -0.96 0.0, -0.5 -0.96 0.0 "></Coordinate>
+      </PointSet>
+  </Shape>
+  </Transform>
+
+<!--заполнение по четырём точкам-->
+<!--ваза-->
+  <Transform translation = "1 0 -1">
+    <Shape>
+        <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true"
+            creaseAngle="0" solid="false"
+            coordIndex="0 1 2 3 -1 0 4 7 3 -1 0 4 5 1 -1 1 5 6 2 -1 3 7 6 2"
+            colorIndex="2 2 2 2 -1 2 0 1 2 -1 2 0 1 2 -1 0 1 0 1 -1 1 1 0 1">
+        <Coordinate point="0 0 0, 0 0 -0.7, 0.7 0 -0.7, 0.7 0 0, 0 2 0, 0 2 -0.7, 0.7 2 -0.7, 0.7 2 0"></Coordinate>
+        <ColorRGBA color="0 0.1 0.9 0.7, 0 0.5 0.5 0.7, 0 0 1 0.9"></Color>
+        </IndexedFaceSet>
+    </Shape>
+</Transform>
+
+
     <!-- стол-->
     <!-- столешница-->
         <Transform translation = "0 0 0">
