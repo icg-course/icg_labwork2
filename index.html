@@ -1,13 +1,380 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>  
+
+<head>
     <meta charset="utf-8" />
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
-    <title>Лабораторная работа 2</title>
-    <link rel="stylesheet" href="https://www.x3dom.org/download/x3dom.css" />
-    <script src="https://www.x3dom.org/download/x3dom.js"></script>
-  </head>
-  <body>
-    <h1>Здесь только я. А должна быть твоя лаба!</h1>
-  </body> 
+    <script type='text/javascript' src='https://www.x3dom.org/download/dev/x3dom-full.js'> </script>
+    <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css' />
+</head>
+
+<body
+    style='width:100%; height:100%; border:0; margin:0; padding:0; background: url("Hv.jpg"); background-position: center;'>
+    <x3d width="100vw" height="100vh">
+        <scene>
+            <!-- ILS -->
+            <Shape>
+                <IndexedLineSet coordIndex="0 1 2 3 0 –1 0 4 5 6 7 4 -1 7 3 -1 6 2 -1 5 1 -1" colorPerVertex='true'>
+                    <Coordinate point="0 0 0, 0 0 5, 5 0 5, 5 0 0, 
+                                   0 5 0, 0 5 5, 5 5 5, 5 5 0, 
+                                   5 5 0, 5 0 0,
+                                   5 5 5, 5 0 5,
+                                   0 5 5, 0 0 5"></Coordinate>
+                    <Color color="1 1 1, 1 1 1, 1 1 1, 1 1 1, 1 1 1, 1 1 1, 1 1 1, 1 1 1"></Color>
+                </IndexedLineSet>
+            </Shape>
+
+            <!-- XYZ -->
+            <transform translation="3 6 2.5" rotation="0 0 1 1.5708">
+                <Shape>
+                    <IndexedLineSet coordIndex="0 1 –1 0 2 -1 0 3 -1 0 4 -1" colorPerVertex='true'>
+                        <Coordinate point="0 0 0, 3 0 0, 0 0 0, 0 0 3, 0 3 0"></Coordinate>
+                        <Color color="1 0 0, 0 1 0, 0 0 1"></Color>
+                    </IndexedLineSet>
+                </Shape>
+            </transform>
+
+            <transform translation="0 6.2 2.5">
+                <shape>
+                    <appearance>
+                        <material diffuseColor="#f00"></material>
+                    </appearance>
+                    <text string="X">
+                        <fontstyle family="Helvetica sans-serif"></fontstyle>
+                    </text>
+                </shape>
+            </transform>
+
+            <transform translation="3 6.2 5" rotation="0 1 0 -1.5708">
+                <shape>
+                    <appearance>
+                        <material diffuseColor="#00f"></material>
+                    </appearance>
+                    <text string="Z">
+                        <fontstyle family="Helvetica sans-serif"></fontstyle>
+                    </text>
+                </shape>
+            </transform>
+
+            <transform translation="2.3 9 2.5">
+                <shape>
+                    <appearance>
+                        <material diffuseColor="#00ff00"></material>
+                    </appearance>
+                    <text string="Y">
+                        <fontstyle family="Helvetica sans-serif"></fontstyle>
+                    </text>
+                </shape>
+            </transform>
+            <!-- XYZ -->
+
+            <!-- Text-->
+            <transform translation="5 9 -2">
+                <shape>
+                    <appearance>
+                        <material diffuseColor="#ffff00"></material>
+                    </appearance>
+                    <text string="Кто сломал MINECRAFT?!?!?">
+                        <fontstyle family="Helvetica sans-serif"></fontstyle>
+                    </text>
+                </shape>
+            </transform>
+            <!---------------------------------------------------- kubik -------------------------------------------------------------------------------->
+            <!-- Kubik1 -->
+            <transform translation="-1 0 0" rotation="0 0 1 1.5708">
+                <Shape>
+                    <appearance>
+                        <imagetexture url="GrSd.png"></imagetexture>
+                        <texturetransform scale="1 1" rotation='1.5708'>
+                        </texturetransform>
+                    </appearance>
+                    <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                        coordIndex="0 1 2 3 0 -1" colorIndex="0 1 2 3 0 -1">
+                        <Coordinate point="0 0 0, 0 0 5, 0 5 5, 0 5 0"></Coordinate>
+                    </IndexedFaceSet>
+                </Shape>
+            </transform>
+            <!-- kubik1 -->
+
+            <!-- Kubik2 -->
+            <transform translation="0 0 0">
+                <Shape>
+                    <appearance>
+                        <imagetexture url="GrSd.png"></imagetexture>
+                        <texturetransform scale="1 1">
+                        </texturetransform>
+                    </appearance>
+                    <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                        coordIndex="0 1 2 3 0 -1" colorIndex="0 1 2 3 0 -1">
+                        <Coordinate point="0 0 0, 5 0 0, 5 5 0, 0 5 0"></Coordinate>
+                    </IndexedFaceSet>
+                </Shape>
+            </transform>
+
+            <!-- kubik2 -->
+
+            <!-- Kubik3 -->
+            <transform translation="0 0 0">
+                <Shape>
+                    <appearance>
+                        <imagetexture url="GrDn.png"></imagetexture>
+                        <texturetransform scale="1 1" rotation='1.5708'>
+                        </texturetransform>
+                    </appearance>
+                    <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                        coordIndex="0 1 2 3 0 -1" colorIndex="0 1 2 3 0 -1">
+                        <Coordinate point="0 0 0, 5 0 0, 5 0 5, 0 0 5"></Coordinate>
+                    </IndexedFaceSet>
+                </Shape>
+            </transform>
+
+            <!-- kubik3 -->
+
+            <!-- Kubik4 -->
+            <transform translation="0 0 0">
+                <Shape>
+                    <appearance>
+                        <imagetexture url="GrSd.png"></imagetexture>
+                        <texturetransform scale="1 1" rotation='1.5708'>
+                        </texturetransform>
+                    </appearance>
+                    <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                        coordIndex="0 1 2 3 0 -1" colorIndex="0 1 2 3 0 -1">
+                        <Coordinate point="5 0 0, 5 0 5, 5 5 5, 5 5 0"></Coordinate>
+                    </IndexedFaceSet>
+                </Shape>
+            </transform>
+            <!-- kubik4 -->
+
+            <!-- Kubik5 -->
+            <transform translation="0 0 0">
+                <Shape>
+                    <appearance>
+                        <imagetexture url="GrSd.png"></imagetexture>
+                        <texturetransform scale="1 1" rotation='0'>
+                        </texturetransform>
+                    </appearance>
+                    <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                        coordIndex="0 1 2 3 0 -1" colorIndex="0 1 2 3 0 -1">
+                        <Coordinate point="0 0 5, 5 0 5, 5 5 5, 0 5 5"></Coordinate>
+                    </IndexedFaceSet>
+                </Shape>
+            </transform>
+            <!-- kubik5 -->
+
+
+            <!-- Kubik6 -->
+            <transform rotation="0 0 1 0">
+                <Shape>
+                    <appearance>
+                        <imagetexture url="GrUp.png"></imagetexture>
+                        <texturetransform scale="1 1" rotation='0'>
+                        </texturetransform>
+                    </appearance>
+                    <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                        coordIndex="0 1 2 3 0 -1" colorIndex="0 1 2 3 0 -1">
+                        <Coordinate point="0 5 0, 0 5 5, 5 5 5, 5 5 0"></Coordinate>
+                    </IndexedFaceSet>
+                </Shape>
+            </transform>
+            <!-- kubik6 -->
+            <!---------------------------------------------------- kubik -------------------------------------------------------------------------------->
+            <!-- Ilum-->
+            <Transform translation="0 9 -2">
+                <Shape>
+                    <appearance>
+                        <imagetexture url="Glaz2.png"></imagetexture>
+                        <texturetransform scale="1 1" rotation='0' translation='0,-1'>
+                        </texturetransform>
+                    </appearance>
+                    <IndexedTriangleSet index="0 1 2" solid="false">
+                        <Coordinate point="0 0 0, 5 0 0, 2.5 5 0"></Coordinate>
+                        <ColorRGBA color="0 .8 0 1, 0 1 1 1, 1 0 0 0"></ColorRGBA>
+                    </IndexedTriangleSet>
+                </Shape>
+            </Transform>
+            <!-- Ilum -->
+
+            <!-- ITTTSSSSS -->
+            <Transform translation="-1 5.01 -1" rotation="1 0 0 1.5708">
+                <Shape>
+                    <IndexedTriangleStripSet index='0 1 2 3 4 5 6 7 -1' solid='false'>
+                        <Coordinate point='1 1 0, 1 3 0, 3 1 0, 2 4 0, 4 4 0, 4 6 0, 5 6 0, 4 6.01 4'></Coordinate>
+                        <ColorRGBA color='0 .8 0 1, 0 1 1 1, 1 0 0 1, 1 .5 0 1, .8 0 1 1, 1 1 0 1, .6 .3 .1 1, 1 0 .5 1, 0 1 .5 1'></ColorRGBA>
+                    </IndexedTriangleStripSet>
+                </Shape>
+            </Transform>
+            <!-- ITTTSSSSS -->
+
+
+            <!-- EllGrido -->
+            <Transform translation="0 0 0" rotation="0 1 0 -1.5708">
+                <Shape>
+                    <appearance>
+                        <imagetexture url="wt.jpg"></imagetexture>
+                        <texturetransform scale="1 1" rotation='0' translation='0,-1'>
+                        </texturetransform>
+                    </appearance>
+                    <ElevationGrid xDimension="5" zDimension="5" height="4, 3.5, 3.4, 3.2, 4,
+                                2.6, 2.5, 2, 2.4, 2.6,
+                                1.9, 2, 2.1, 2.3, 1.9,
+                                1, 1.2, 1.5, 1.1, 1,
+                                0, 0, 0, 0, 0" xSpacing="1.25" zSpacing="1.25" solid="false">
+                    </ElevationGrid>
+                </Shape>
+            </Transform>
+            <!-- EllGrido -->
+            <!-- WaterSd1 -->
+            <transform translation="0 0 5" rotation="0 1 0 -3.14159">
+                <Shape>
+                    <appearance>
+                        <imagetexture url="wt.jpg"></imagetexture>
+                        <texturetransform scale="1 1" rotation='0'>
+                        </texturetransform>
+                    </appearance>
+                    <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                        coordIndex="0 1 2 3 4 5 0 -1 " colorIndex="0 1 2 3 4 5 0 -1">
+                        <Coordinate point="0 0 0, 0 4 0, 1.25 2.6 0, 2.5 1.9 0, 3.75 1 0, 5 0 0"></Coordinate>
+                    </IndexedFaceSet>
+                </Shape>
+            </transform>
+            <!-- WaterSd1 -->
+
+
+            <!-- WaterSd2 -->
+            <transform translation="0 0 0" rotation="0 1 0 -3.14159">
+                <Shape>
+                    <appearance>
+                        <imagetexture url="wt.jpg"></imagetexture>
+                        <texturetransform scale="1 1" rotation='0'>
+                        </texturetransform>
+                    </appearance>
+                    <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                        coordIndex="0 1 2 3 4 5 0 -1" colorIndex="0 1 2 3 4 5 0 -1">
+                        <Coordinate point="0 0 0, 0 4 0, 1.25 2.6 0, 2.5 1.9 0, 3.75 1 0, 5 0 0"></Coordinate>
+                    </IndexedFaceSet>
+                </Shape>
+            </transform>
+            <!-- WaterSd2 -->
+
+
+            <!-- Travka1 -->
+            <transform translation="2 5 4.5" rotation="1 0 0 -1.5708">
+                <transform rotation="0 0 1 -0.785398">
+                    <Shape>
+                        <appearance>
+                            <imagetexture url="Tra.png"></imagetexture>
+                            <texturetransform scale="1 1" rotation='0'>
+                            </texturetransform>
+                        </appearance>
+                        <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                            coordIndex="0 1 2 3 0 -1 " colorIndex="0 1 2 3 0 -1">
+                            <Coordinate point="0 5 0, 0 5 5, 5 5 5, 5 5 0"></Coordinate>
+                        </IndexedFaceSet>
+                    </Shape>
+                </transform>
+            </transform>
+            <!-- Travka1 -->
+
+
+            <!-- Travka1 -->
+            <transform translation="9 5 8" rotation="1 0 0 -1.5708">
+                <transform rotation="0 0 1 0.785398">
+                    <Shape>
+                        <appearance>
+                            <imagetexture url="Tra.png"></imagetexture>
+                            <texturetransform scale="1 1" rotation='0'>
+                            </texturetransform>
+                        </appearance>
+                        <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                            coordIndex="0 1 2 3 0 -1 " colorIndex="0 1 2 3 0 -1">
+                            <Coordinate point="0 5 0, 0 5 5, 5 5 5, 5 5 0"></Coordinate>
+                        </IndexedFaceSet>
+                    </Shape>
+                </transform>
+            </transform>
+            <!-- Travka1 -->
+
+            <!-- PS -->
+            <Shape>
+                <PointSet>
+                    <Color color=" 1 0 0, 0 1 0, 0 0 1, 0.8 0.8 0.8, 0.4, 0.4 1, 0.1 0.4 1, 1 1 0, 0 1 1"></Color>
+                    <Coordinate point="−2 6 0, 0 7 0, 0 8 2, 0 7 4, −5 8 0, −5 9 0, −3 9.6 0, −1 7 0, 5 8 0"></Coordinate>
+                </PointSet>
+            </Shape>
+            <!-- PS -->
+
+            <!-- KubBg-->
+            <!-- 1 -->
+            <transform rotation="0 0 1 0" translation="5 .0002 0">
+                <Shape>
+                    <appearance>
+                        <imagetexture url="GrUp.png"></imagetexture>
+                        <texturetransform scale="1 1" rotation='0'>
+                        </texturetransform>
+                    </appearance>
+                    <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                        coordIndex="0 1 2 3 0 -1" colorIndex="0 1 2 3 0 -1">
+                        <Coordinate point="0 5 0, 0 5 5, 5 5 5, 5 5 0"></Coordinate>
+                    </IndexedFaceSet>
+                </Shape>
+            </transform>
+            <transform translation="7.5 2.5 2.5">
+                <Shape>
+                    <appearance>
+                        <imagetexture url="GrSd.png" repeatS='false'></imagetexture>
+                        <texturetransform scale="1 1"></texturetransform>
+                        <material diffuseColor="#140c03"></material>
+                    </appearance>
+                    <box size="5 5 5"></box>
+                </Shape>
+            </transform>
+            <!-- 2 -->
+            <transform rotation="0 0 1 0" translation="10.0002 0">
+                <Shape>
+                    <appearance>
+                        <imagetexture url="GrUp.png"></imagetexture>
+                        <texturetransform scale="1 1" rotation='0'>
+                        </texturetransform>
+                    </appearance>
+                    <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" creaseAngle="0" solid="false"
+                        coordIndex="0 1 2 3 0 -1 " colorIndex="0 1 2 3 0 -1">
+                        <Coordinate point="0 5 0, 0 5 5, 5 5 5, 5 5 0"></Coordinate>
+                    </IndexedFaceSet>
+                </Shape>
+            </transform>
+            <transform translation="12.5 2.5 2.5">
+                <Shape>
+                    <appearance>
+                        <imagetexture url="GrSd.png" repeatS='false'></imagetexture>
+                        <texturetransform scale="1 1"></texturetransform>
+                        <material diffuseColor="#140c03"></material>
+                    </appearance>
+                    <box size="5 5 5"></box>
+                </Shape>
+            </transform>
+            
+            <transform translation="2.5 2.5 2.5">
+                <Shape>
+                    <appearance>
+                        <imagetexture url="Van.jpg" repeatS='false'></imagetexture>
+                        <texturetransform scale="1 1"></texturetransform>
+                        <material diffuseColor="#140c03"></material>
+                    </appearance>
+                    <box size="4.9 4.9 4.9"></box>
+                </Shape>
+            </transform>
+
+            <Sound>
+                <AudioClip url='"Tu.wav"' loop='true' enabled='true' />
+            </Sound>
+
+            <!-- расположение камеры -->
+            <Viewpoint position="0 4 15" orientation="0 0 0 0" zNear="1" zFar="1000"
+                centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="0.9" description="defaultX3DViewpointNode">
+            </Viewpoint>
+
+        </scene>
+    </x3d>
+</body>
+
 </html>
