@@ -1,13 +1,336 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>  
-    <meta charset="utf-8" />
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
-    <title>Лабораторная работа 2</title>
-    <link rel="stylesheet" href="https://www.x3dom.org/download/x3dom.css" />
-    <script src="https://www.x3dom.org/download/x3dom.js"></script>
-  </head>
-  <body>
-    <h1>Здесь только я. А должна быть твоя лаба!</h1>
-  </body> 
+<html> 
+<head> 
+<title>Lab2</title> 
+<script src="https://x3dom.org/download/dev/x3dom-full.debug.js"></script> 
+<link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'></link> 
+</head> 
+<body> 
+<h1>Prokopeva S.L. 4843</h1> 
+<x3d width='90em' height='40em'> 
+    <scene> 
+<!-- Object Text HTML-->        
+        <transform DEF="Text" translation="-2 3 -2"> 
+            <shape> 
+                <appearance> 
+                    <material diffuseColor='black'></material> 
+                </appearance> 
+                <text string="Predmeti" ></text> 
+            </shape> 
+        </transform>                                 
+<!-- Object Box HTML-->           
+        <transform DEF="nozhka1" translation="-1.7 0 -0.2" > 
+            <shape> 
+                <appearance> 
+                    <material diffuseColor='darkbrown'></material> 
+            </appearance> 
+            <box size="0.1 1.3 0.1"></box> 
+        </shape> 
+       </transform> 
+<!-- Object Box HTML-->           
+        <transform DEF="nozhka2" translation="1.7 0 -0.2" > 
+            <shape> 
+                <appearance> 
+                    <material diffuseColor='darkbrown'></material> 
+            </appearance> 
+            <box size="0.1 1.3 0.1"></box> 
+        </shape> 
+       </transform> 
+<!-- Object Box HTML-->    
+        <transform DEF="nozhka3" translation="-1.7 0 1.2" > 
+            <shape> 
+                <appearance> 
+                    <material diffuseColor='darkbrown'></material> 
+            </appearance> 
+            <box size="0.1 1.3 0.1"></box> 
+        </shape> 
+       </transform> 
+<!-- ObjectвЂљ Box HTML-->    
+        <transform DEF="nozhka4" translation="1.7 0 1.2" > 
+            <shape> 
+                <appearance> 
+                    <material diffuseColor='darkbrown'></material> 
+            </appearance> 
+            <box size="0.1 1.3 0.1"></box> 
+        </shape> 
+    </transform> 
+<!-- Object Box HTML-->    
+        <transform DEF="stpleshnica" translation="0 0.7 0.5" > 
+            <shape> 
+                <appearance> 
+                    <Imagetexture url ='stol.png'></imagetexture> 
+                    <texturetransform rotation = '-1.57'></texturetransform>
+		        </appearance> 
+                <box size="4 0.1 2"></box> 
+            </shape> 
+        </transform> 
+<!-- Object Cone HTML-->    
+        <transform DEF="Tarelka" translation="1.5 .75 0.5"  rotation="1 0 0 3.14"> 
+            <shape> 
+                <appearance> 
+                    <material diffuseColor='gray'></material> 
+                </appearance> 
+                <cone bottomradius="0.4" height="0.15"></cone> 
+            </shape> 
+        </transform> 
+<!-- Object Cone HTML-->    
+        <transform DEF="Tarelka1" translation="-1.5 .75 0.5" rotation="1 0 0 3.14"> 
+            <shape> 
+                <appearance> 
+                    <material diffuseColor='gray'></material> 
+                </appearance> 
+                <cone bottomradius="0.4" height="0.15"></cone> 
+               </shape> 
+            </transform> 
+<!-- Object Torus HTML-->    
+        <transform DEF="ponchik" translation="-1.5 .85 0.5" scale=".1 .1 .1" rotation="1 0 0 1.57"> 
+            <shape> 
+                <appearance> 
+                    <material diffuseColor='.5 .1 .5'></material> 
+                </appearance> 
+                <Torus></Torus> 
+            </shape> 
+        </transform> 
+<!-- keksik-->  
+<!--IndexedFaceSet-->  
+        <Transform translation="1.5 0.75 0.5">
+            <Shape>
+                <Appearance>
+                    <Material emissiveColor='1 0 1'/></Material>
+                </Appearance>
+                        <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" solid="false" 
+                            coordIndex="0 8 15 7 -1 7 15 14 6 -1 6 14 13 5 -1 5 13 12 4 -1 4 12 11 3 -1 3 11 10 2 -1 2 10 9 1 -1 1 9 8 0 -1  " >
+                            <Coordinate point="
+                                -0.1 0 0.1, 
+                                0 0 0.15,
+                                0.1 0 0.1, 
+                                0.15 0 0, 
+                                0.1 0 -0.1, 
+                                0 0 -0.15, 
+                                -0.1 0 -0.1, 
+                                -0.15 0 0, 
+                                -0.1 0.2 0.1,  
+                                0 0.2 0.15,  
+                                0.1 0.2 0.1, 
+                                0.15 0.2 0, 
+                                0.1 0.2 -0.1, 
+                                0 0.2 -0.15, 
+                                -0.1 0.2 -0.1,
+                                -0.15 0.2 0"></Coordinate>
+                        </IndexedFaceSet>
+            </Shape>
+        </Transform>
+<!--IndexedTriangleSet -->    
+<Transform translation="0 .75 0.9">
+    <Shape>
+        <IndexedTriangleSet index="0 1 8 1 2 8 2 3 8 3 4 8 4 5 8 5 6 8 6 7 8 7 0 8" solid="false">
+               <Coordinate point="
+                    -0.1 0.2 0.1,
+                    0 0.2 0.15, 
+                    0.1 0.2 0.1, 
+                    0.15 0.2 0,
+                    0.1 0.2 -0.1,
+                    0 0.2 -0.15,
+                    -0.1 0.2 -0.1,
+                    -0.15 0.2 0,
+                    0 0.3 0"></Coordinate>
+               <Color color="0 0 1, 0 1 0, 0 1 1, 1 0 0, 1 0 1, 0 0 1, 0 1 0, 0 1 1, 1 0 0, 1 0 1"></Color>
+        </IndexedTriangleSet>
+    </Shape>
+</Transform>
+<!-- Chainik-->         
+<!-- Object Sphere HTML-->           
+        <transform DEF="Chainik" translation="0 .95 0"> 
+            <shape> 
+                <appearance> 
+                    <material diffuseColor='1 1 1'></material> 
+                </appearance> 
+                <sphere radius="0.3"></sphere> 
+            </shape> 
+        </transform> 
+<!-- Object Torus HTML-->   
+        <transform DEF="ruchka" translation="0 1.2 0" scale="0.1 0.1 0.1 " rotation="0 1 0 1.57"> 
+            <shape> 
+                <appearance> 
+                    <material diffuseColor='.15 .15 .15'></material> 
+                </appearance> 
+                    <torus innerRadius=".2" outerRadius="1.7"></torus> 
+              </shape> 
+            </transform> 
+<!-- Object Cylinder HTML-->             
+        <transform DEF="nosik" translation="0 1 -0.2" scale="0.05 0.2 0.05" rotation="1 0 0 -0.80"> 
+            <shape> 
+                <appearance> 
+                    <material diffuseColor='.15 .15 .15'></material> 
+                </appearance> 
+                <cylinder></cylinder> 
+            </shape> 
+        </transform> 
+<!-- Chainik -->                
+<!-- Object Cylinder HTML-->         
+        <transform DEF="Krygka" translation="-1.2 .9 -0.12" scale=".1 .15 .1" rotation="0 0 0 0"> 
+            <shape> 
+                <appearance> 
+                    <material diffuseColor='.75 .75 .75'></material> 
+                </appearance> 
+                <cylinder></cylinder> 
+            </shape> 
+        </transform> 
+<!-- Object Torus HTML-->         
+        <transform DEF="ruchka" translation="-1.2 .9 -0.24" scale=".1 .15 .1" rotation="0 1 0 1.57"> 
+            <shape> 
+                <appearance> 
+                      <material diffuseColor='.15 .15 .15'></material> 
+                </appearance> 
+                      <torus innerRadius=".15" outerRadius=".5"></torus> 
+             </shape> 
+        </transform> 
+<!-- Object Cylinder HTML-->                 
+        <transform DEF="Krygka1" translation=" 1.2 .9 -0.12" scale=".1 .15 .1" rotation="0 0 0 0"> 
+            <shape> 
+                <appearance> 
+                    <material diffuseColor='.75 .75 .75'></material> 
+                </appearance> 
+                <cylinder></cylinder> 
+            </shape> 
+        </transform> 
+<!-- Object Torus HTML-->                 
+        <transform DEF="ruchka1" translation=" 1.2 .9 -0.24" scale=".1 .15 .1" rotation="0 1 0 1.57"> 
+            <shape> 
+                <appearance> 
+                    <material diffuseColor='.15 .15 .15'></material> 
+                </appearance> 
+                    <torus innerRadius=".15" outerRadius=".5"></torus> 
+            </shape> 
+        </transform> 
+<!-- Object Cone HTML-->    
+        <transform DEF="Tarelka1" translation=" 0 .75 0.9"  rotation="1 0 0 3.14"> 
+            <shape> 
+                <appearance> 
+                    <material diffuseColor='gray'></material> 
+                </appearance> 
+                <cone bottomradius="0.4" height="0.15"></cone> 
+               </shape> 
+            </transform> 
+<!-- Object Cone HTML-->  
+<!-- keksik-->  
+<!--IndexedFaceSet-->  
+ <Transform translation="0 .75 0.9">
+        <Shape>
+            <Appearance>
+              <Material emissiveColor='1 0 1'/></Material>
+            </Appearance>
+                    <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" solid="false" 
+                            coordIndex="0 8 15 7 -1 7 15 14 6 -1 6 14 13 5 -1 5 13 12 4 -1 4 12 11 3 -1 3 11 10 2 -1 2 10 9 1 -1 1 9 8 0 -1 " >
+                            <Coordinate point="
+                                -0.1 0 0.1, 
+                                0 0 0.15,
+                                0.1 0 0.1, 
+                                0.15 0 0, 
+                                0.1 0 -0.1, 
+                                0 0 -0.15, 
+                                -0.1 0 -0.1, 
+                                -0.15 0 0, 
+                                -0.1 0.2 0.1,  
+                                0 0.2 0.15,  
+                                0.1 0.2 0.1, 
+                                0.15 0.2 0, 
+                                0.1 0.2 -0.1, 
+                                0 0.2 -0.15, 
+                                -0.1 0.2 -0.1,
+                                -0.15 0.2 0"></Coordinate>
+                    </IndexedFaceSet>
+        </Shape>
+</Transform>
+<!-- keksik-->
+<!--Par-->
+    <Transform>
+        <Shape>
+          <Appearance>
+            <Material emissiveColor='1 1 1'/></Material>
+          </Appearance>
+          <PointSet>
+            <Coordinate point="0. 1.2 -0.4, 
+            .05 1.25 -0.45, -.05 1.25 -0.45, 
+            .1 1.3 -0.5, 0 1.3 -0.5, -.1 1.3 -0.5, 
+            .15 1.35 -0.55, 0.05 1.35 -0.55, -.05 1.35 -0.55, -.15 1.35 -0.55, 
+            .2 1.4 -0.6, .1 1.4 -0.6, 0 1.4 -0.6, -.1 1.4 -0.6, -.2 1.4 -.6,
+	        1.2 1.08 -0.12, 1.15 1.08 -0.15, 1.25 1.08 -0.15,1.15 1.08 -0.09, 1.25 1.08 -0.09,
+	        1.2 1.13 -0.15, 1.15 1.13 -0.18, 1.25 1.13 -0.18,1.15 1.13 -0.12, 1.25 1.13 -0.12,
+             -1.2 1.08 -0.12,-1.15 1.08 -0.15,-1.25 1.08 -0.15,-1.15 1.08 -0.09,-1.25 1.08 -0.09,
+             -1.2 1.13 -0.09,-1.15 1.13 -0.12,-1.25 1.13 -0.12,-1.15 1.13 -0.06,-1.25 1.13 -0.06
+            "></Coordinate>
+          </PointSet>
+        </Shape>
+    </Transform>
+<!--Pol-->
+   <transform translation="-3.9 -0.7 -5">
+          <Shape> 
+	        <Appearance>
+               <Material diffuseColor="green"></Material>
+            </Appearance>
+            <ElevationGrid xDimension="7" zDimension="6" 
+			height=".3, .2, 0.4, 0.3, .1, .3, 0,
+			.1, 0.3, 0.25, 0.25, 0.3, .1, 0, 	
+			0.3, 0.25, 0, 0, 0.25, 0.3, 0, 
+			0.3, 0.25, 0, 0, 0.25, 0.3, 0, 	
+			.1, 0.3, 0.25, 0.25, 0.3, .1, 0, 
+			.15, .1, 0.3, 0.3, .1, .15, 0"
+			xSpacing="1.3" zSpacing="2" solid="false"> 
+	        </ElevationGrid>          
+	       </Shape>
+   </transform>
+<!--verhushka keksika-->
+        <Transform translation="1.5 .75 0.5">
+            <Shape>
+              <IndexedTriangleStripSet index='0 1 8 1 2 -1 2 3 8 3 -1 3 4 8 4 -1 4 5 8 5 -1 5 6 8 6 -1 6 7 8 7 -1 7 0 8 ' solid='false'>
+               <Coordinate point="
+                    -0.1 0.2 0.1,
+                    0 0.2 0.15, 
+                    0.1 0.2 0.1, 
+                    0.15 0.2 0,
+                    0.1 0.2 -0.1,
+                    0 0.2 -0.15,
+                    -0.1 0.2 -0.1,
+                    -0.15 0.2 0,
+                    0 0.3 0"></Coordinate>
+               <Color color="0 1 0, 0 0 1, 0 1 1, 1 0 1, 1 0 0, 0 1 0, 0 0 1, 0 1 1, 1 0 1  "></Color>
+              </IndexedTriangleStripSet>
+            </Shape>
+        </Transform>
+        <!--Decor-->
+        <Transform translation=" 0 .83 1.3" scale="0.4 0.07 0.4" rotation="1 0 0 3.14">
+            <Shape>
+                <IndexedLineSet coordIndex="0 1 3 2 0 -1"
+                                colorIndex="0 1 2 3 4 -1"
+                                colorPerVertex="true">
+                                <Coordinate point="0 0 0, 1 0 1, -1 0 1, 0 0 2"></Coordinate>
+                                <Color color="0 0 1, 0 1 0, 0 1 1, 1 0 0, 1 0 1"></Color>
+                </IndexedLineSet>
+            </Shape>
+       </Transform>
+        <!--Decor-->
+        <Transform translation="1.5 .83 .9"scale="0.4 0.07 0.4"  rotation="1 0 0 3.14">
+            <Shape>
+                <IndexedLineSet coordIndex="0 1 3 2 0 -1"
+                                colorIndex="0 1 2 3 4 -1"
+                                colorPerVertex="true">
+                                <Coordinate point="0 0 0, 1 0 1, -1 0 1, 0 0 2"></Coordinate>
+                                <Color color="0 0 1, 0 1 0, 0 1 1, 1 0 0, 1 0 1"></Color>
+                </IndexedLineSet>
+            </Shape>
+        </Transform>
+        <!--Decor-->
+        <Transform translation="-1.5 .83 .9"scale="0.4 0.07 0.4"  rotation="1 0 0 3.14">
+           <Shape>
+                <IndexedLineSet coordIndex="0 1 3 2 0 -1"
+                                colorIndex="0 1 2 3 4 -1"
+                                colorPerVertex="true">
+                                <Coordinate point="0 0 0, 1 0 1, -1 0 1, 0 0 2"></Coordinate>
+                                <Color color="0 0 1, 0 1 0, 0 1 1, 1 0 0, 1 0 1"></Color>
+                </IndexedLineSet>
+           </Shape>
+        </Transform>
+</scene> 
+</x3d> 
+</body> 
 </html>
