@@ -1,13 +1,498 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>  
-    <meta charset="utf-8" />
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
-    <title>Лабораторная работа 2</title>
-    <link rel="stylesheet" href="https://www.x3dom.org/download/x3dom.css" />
-    <script src="https://www.x3dom.org/download/x3dom.js"></script>
-  </head>
-  <body>
-    <h1>Здесь только я. А должна быть твоя лаба!</h1>
-  </body> 
+    <head>
+        <meta charset="utf-8" />
+        
+        <script src="https://www.x3dom.org/download/dev/x3dom.js"></script>
+        <link rel="stylesheet" href="https://www.x3dom.org/download/dev/x3dom.css" />
+    </head>
+    <body style='width:100%; height:100%; border:0; margin:0; padding:0; background: url("2k_earth_daymap.jpg"); background-position: center;'>
+        <x3d width="100vw" height="100vh">
+        <scene>
+
+            <Shape>
+
+                <IndexedLineSet coordIndex="0 1 2 3 0 –1 0 4 5 6 7 4 -1 7 3 -1 6 2 -1 5 1 -1"
+                
+                colorPerVertex='true'>
+                
+                <Coordinate point="0 0 0, 0 0 2, 5 0 2, 5 0 0,
+                
+                0 2 0, 0 2 2, 5 2 2, 5 2 0,
+                
+                "></Coordinate>
+                
+                <Color color="1 1 1, 1 1 1, 1 1 1, 1 1 1, 1 1 1, 1 1 1, 1 1 1, 1 1 1"></Color>
+                
+                </IndexedLineSet>
+                
+            </Shape>
+            <transform translation="5 9 -2">
+
+                <shape>
+                
+                <appearance>
+                
+                <material diffuseColor="#d12378"></material>
+                
+                </appearance>
+                
+                <text string="Не китайская, но стена">
+                
+                <fontstyle family="Helvetica sans-serif" style="bold"></fontstyle>
+                
+                </text>
+                
+                </shape>
+                
+            </transform>
+
+            <!-- kirp -->
+           
+                <transform translation="-5 0 0">
+                    <Shape>
+                    <appearance>
+                    
+                    <imagetexture url="brick_020_pre.jpg"></imagetexture>
+                    
+                    <texturetransform scale="1 1" rotation = '1.5708'>
+                    
+                    </texturetransform>
+                    
+                    </appearance>
+                    
+                    <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true"
+                    
+                    creaseAngle="0" solid="false"
+                    
+                    coordIndex="0 1 2 3 0 -1 "
+                    
+                    colorIndex="0 1 2 3 0 -1">
+                    
+                    <Coordinate point="5 0 0, 5 0 5, 5 5 5, 5 5 0"></Coordinate>
+                    
+                    </IndexedFaceSet>
+                    
+                    </Shape>
+                    
+                    </transform>
+           
+                
+                <transform translation="0 0 0">
+                
+                <Shape>
+                
+                <appearance>
+                
+                <imagetexture url="brick_020_pre.jpg"></imagetexture>
+                
+                <texturetransform scale="1 1">
+                
+                </texturetransform>
+                
+                </appearance>
+                
+                <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true"
+                
+                creaseAngle="0" solid="false"
+                
+                coordIndex="0 1 2 3 0 -1 "
+                
+                colorIndex="0 1 2 3 0 -1">
+                
+                <Coordinate point="0 0 0, 5 0 0, 5 5 0, 0 5 0"></Coordinate>
+                
+                </IndexedFaceSet>
+                
+                </Shape>
+                
+                </transform>
+                
+                
+                
+                <transform translation="0 0 0">
+                
+                <Shape>
+                
+                <appearance>
+                
+                <imagetexture url="brick_020_pre.jpg"></imagetexture>
+                
+                <texturetransform scale="1 1" rotation = '1.5708'>
+                
+                </texturetransform>
+                
+                </appearance>
+                
+                <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true"
+                
+                creaseAngle="0" solid="false"
+                
+                coordIndex="0 1 2 3 0 -1 "
+                
+                colorIndex="0 1 2 3 0 -1">
+                
+                <Coordinate point="0 0 0, 5 0 0, 5 0 5, 0 0 5"></Coordinate>
+                
+                </IndexedFaceSet>
+                
+                </Shape>
+                
+                </transform>
+                
+              
+                
+                <transform translation="0 0 0">
+                
+                <Shape>
+                
+                <appearance>
+                
+                <imagetexture url="brick_020_pre.jpg"></imagetexture>
+                
+                <texturetransform scale="1 1" rotation = '1.5708'>
+                
+                </texturetransform>
+                
+                </appearance>
+                
+                <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true"
+                
+                creaseAngle="0" solid="false"
+                
+                coordIndex="0 1 2 3 0 -1 "
+                
+                colorIndex="0 1 2 3 0 -1">
+                
+                <Coordinate point="5 0 0, 5 0 5, 5 5 5, 5 5 0"></Coordinate>
+                
+                </IndexedFaceSet>
+                
+                </Shape>
+                
+                </transform>
+                
+              
+                
+                <transform translation="0 0 0">
+                
+                <Shape>
+                
+                <appearance>
+                
+                <imagetexture url="brick_020_pre.jpg"></imagetexture>
+                
+                <texturetransform scale="1 1" rotation = '0'>
+                
+                </texturetransform>
+                
+                </appearance>
+                
+                <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true"
+                
+                creaseAngle="0" solid="false"
+                
+                coordIndex="0 1 2 3 0 -1 "
+                
+                colorIndex="0 1 2 3 0 -1">
+                
+                <Coordinate point="0 0 5, 5 0 5, 5 5 5, 0 5 5"></Coordinate>
+                
+                </IndexedFaceSet>
+                
+                </Shape>
+                
+                </transform>
+                
+               
+                
+                <transform rotation="0 0 1 0">
+                
+                <Shape>
+                
+                <appearance>
+                
+                <imagetexture url="brick_020_pre.jpg"></imagetexture>
+                <texturetransform scale="1 1" rotation = '0'>
+                </texturetransform>
+                </appearance>
+                <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true"
+                creaseAngle="0" solid="false"
+                coordIndex="0 1 2 3 0 -1 "
+                colorIndex="0 1 2 3 0 -1">
+                <Coordinate point="0 5 0, 0 5 5, 5 5 5, 5 5 0"></Coordinate>
+                </IndexedFaceSet>
+                </Shape>
+                </transform>
+                <!-- /kirp -->
+                
+
+                <!-- prmd -->
+                <Transform translation = "0 5 0">
+
+                    <Shape>
+                    
+                    <appearance>
+                    
+                    <imagetexture url="depositphotos_5022458-stock-photo-pyramid-stone-blocks.jpg"></imagetexture>
+                    
+                    <texturetransform scale="1 1" rotation = '0' translation='0,-1'>
+                    
+                    </texturetransform>
+                    
+                    </appearance>
+                    
+                    <IndexedTriangleSet index="0 1 2" solid="false">
+                    
+                    <Coordinate point="0 0 0, 5 0 0, 2.5 5 2.5"></Coordinate>
+                    
+                    <ColorRGBA color="0 .8 0 1, 0 1 1 1, 1 0 0 0"></ColorRGBA>
+                    
+                    </IndexedTriangleSet>
+                    
+                    </Shape>
+                    
+                    </Transform>
+
+                    <Transform translation = "0 5 0" >
+
+                        <Shape>
+                        
+                        <appearance>
+                        
+                        <imagetexture url="depositphotos_5022458-stock-photo-pyramid-stone-blocks.jpg"></imagetexture>
+                        
+                        <texturetransform scale="1 1" rotation = '1.57' translation='0,-1'>
+                        
+                        </texturetransform>
+                        
+                        </appearance>
+                        
+                        <IndexedTriangleSet index="0 1 2" solid="false">
+                        
+                        <Coordinate point="0 0 0, 0 0 5, 2.5 5 2.5"></Coordinate>
+                        
+                        <ColorRGBA color="0 .8 0 1, 0 1 1 1, 1 0 0 0"></ColorRGBA>
+                        
+                        </IndexedTriangleSet>
+                        
+                        </Shape>
+                        
+                        </Transform>
+
+                        <Transform translation = "0 5 0">
+
+                            <Shape>
+                            
+                            <appearance>
+                            
+                            <imagetexture url="depositphotos_5022458-stock-photo-pyramid-stone-blocks.jpg"></imagetexture>
+                            
+                            <texturetransform scale="1 1" rotation = '1.57' translation='0,-1'>
+                            
+                            </texturetransform>
+                            
+                            </appearance>
+                            
+                            <IndexedTriangleSet index="0 1 2" solid="false">
+                            
+                            <Coordinate point="5 0 5, 5 0 0, 2.5 5 2.5"></Coordinate>
+                            
+                            <ColorRGBA color="0 .8 0 1, 0 1 1 1, 1 0 0 0"></ColorRGBA>
+                            
+                            </IndexedTriangleSet>
+                            
+                            </Shape>
+                            
+                            </Transform>
+
+                            <Transform translation = "0 5 0">
+
+                                <Shape>
+                                
+                                <appearance>
+                                
+                                <imagetexture url="depositphotos_5022458-stock-photo-pyramid-stone-blocks.jpg"></imagetexture>
+                                
+                                <texturetransform scale="1 1" rotation = '0' translation='0,-1'>
+                                
+                                </texturetransform>
+                                
+                                </appearance>
+                                
+                                <IndexedTriangleSet index="0 1 2" solid="false">
+                                
+                                <Coordinate point="0 0 5, 5 0 5, 2.5 5 2.5"></Coordinate>
+                                
+                                <ColorRGBA color="0 .8 0 1, 0 1 1 1, 1 0 0 0"></ColorRGBA>
+                                
+                                </IndexedTriangleSet>
+                                
+                                </Shape>
+                                
+                                </Transform>
+                <!-- prmd -->
+                <!-- top -->
+                <Transform translation = "0 15 0.4" rotation = "1 0 0 1.57">
+
+                    <Shape>
+                     
+                    <IndexedTriangleStripSet index='0 1 2   -1' solid='false'>
+                    
+                    <Coordinate point='0 0 5, 5 0 5, 2.5 5 5,'></Coordinate>
+                   
+                    
+                    <ColorRGBA color='0 .2 0 .5, 1 0 1 .7, .5 0 1 .9, 1 .5 0 1,
+                    
+                    .8 0 1 1, 1 1 0 1, .6 .3 .1 1, 1 0 .5 1, 0 1 .5 1'></ColorRGBA>
+                    
+                    </IndexedTriangleStripSet>
+                    
+                    </Shape>
+                    
+                    </Transform>
+
+                    <Shape>
+
+                        <PointSet>
+                        
+                        <Color color=" 1 0 0, 0 1 0, 0 0 1,
+                        
+                        0.8 0.8 0.8, 0.4, 0.4 1,
+                        
+                        0.1 0.4 1, 1 1 0, 0 1 1"></Color>
+                        
+                        <Coordinate point="−2 6 0, 0 7 0, 0 8 2,
+                        
+                        0 7 4, −5 8 0, −5 9 0,
+                        
+                        −3 9.6 0, −1 7 0, 5 8 0"></Coordinate>
+                        
+                        </PointSet>
+                        
+                        </Shape>
+                    <!-- /top -->
+                    <transform translation="0 0 0" rotation = "0 0 1 1.57">
+
+                        <Shape>
+                        
+                        <appearance>
+                        
+                        <imagetexture url="c2dd6bf1d9103252f5a4c0c543e89b64.jpg"></imagetexture>
+                        
+                        <texturetransform scale="10 20" rotation = '1.57'>
+                        
+                        </texturetransform>
+                        
+                        </appearance>
+                        
+                        <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true"
+                        
+                        creaseAngle="0" solid="false"
+                        
+                        coordIndex="0 1 2 3 4 5 0 -1 "
+                        
+                        colorIndex="0 1 2 3 4 5 0 -1">
+                        
+                        <Coordinate point="0 0 0, 0 5 0, 5 2.5 0, 2.5 1.9 0, 3.75 1 0, 5 0 0"></Coordinate>
+                        
+                        </IndexedFaceSet>
+                        
+                        </Shape>
+                        
+                        </transform>
+                        
+<!-- XYZ -->
+
+<!-- <transform translation="3 6 2.5" rotation = "0 0 1 1.5708"> -->
+    <transform translation="10 0 2.5" rotation = "0 0 1 1.5708">
+    <Shape>
+    
+    <IndexedLineSet coordIndex="0 1 –1 0 2 -1 0 3 -1 0 4 -1 "
+    
+    colorPerVertex='true'>
+    
+    <Coordinate point="0 0 0, 3 0 0, 0 0 0, 0 0 3, 0 3 0"></Coordinate>
+    
+    <Color color="1 0 0, 0 1 0, 0 0 1"></Color>
+    
+    </IndexedLineSet>
+    
+    </Shape>
+    
+    </transform>
+    
+    <transform translation="6 0 2.5">
+    
+    <shape>
+    
+    <appearance>
+    
+    <material diffuseColor="#f00"></material>
+    
+    </appearance>
+    
+    <text string="X">
+    
+    <fontstyle family="Helvetica sans-serif" style="bold"></fontstyle>
+    
+    </text>
+    
+    </shape>
+    
+    </transform>
+    
+    <transform translation="10 0 5" rotation = "0 1 0 -1.5708">
+    
+    <shape>
+    
+    <appearance>
+    
+    <material diffuseColor="#4с4с4c"></material>
+    
+    </appearance>
+    
+    <text string="Z">
+    
+    <fontstyle family="Helvetica sans-serif" style="bold"></fontstyle>
+    
+    </text>
+    
+    </shape>
+    
+    </transform>
+    
+    <transform translation="9.3 2.5 2.5">
+    
+    <shape>
+    
+    <appearance>
+    
+    <material diffuseColor="green"></material>
+    
+    </appearance>
+    
+    <text string="Y">
+    
+    <fontstyle family="Helvetica sans-serif" style="bold"></fontstyle>
+    
+    </text>
+    
+    </shape>
+    
+    </transform>
+    
+    <!-- XYZ -->
+                        
+        
+<!--         <Viewpoint position="0 4 15"
+        orientation="0 0 0 0"
+        zNear="1" zFar="1000"centerOfRotation="0.00000 0.00000 0.00000"
+        fieldOfView="0.9"
+        description="defaultX3DViewpointNode">
+        </Viewpoint> -->
+        
+        </scene>
+        </x3d>
+        </body>
 </html>
