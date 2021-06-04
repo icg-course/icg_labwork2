@@ -1,13 +1,215 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>  
-    <meta charset="utf-8" />
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
-    <title>Лабораторная работа 2</title>
-    <link rel="stylesheet" href="https://www.x3dom.org/download/x3dom.css" />
-    <script src="https://www.x3dom.org/download/x3dom.js"></script>
-  </head>
-  <body>
-    <h1>Здесь только я. А должна быть твоя лаба!</h1>
-  </body> 
+﻿<html>
+<head>
+    <title>Lab2</title>
+    <script src="https://x3dom.org/download/dev/x3dom-full.debug.js"></script>
+    <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'></link>
+</head>
+<body>
+    <h1>R.S.Khalikov 4843</h1>
+    <x3d width='90em' height='40em'>
+        <scene>
+            <!--Pole-->
+            <transform translation="-3.9 -1 -5">
+                <Shape>
+                    <Appearance>
+                        <Material diffuseColor="green"></Material>
+                    </Appearance>
+                    <ElevationGrid xDimension="7" zDimension="6"
+                                   height=".2, .2, 0.4, 0.3, .1, .3, 0,
+     .1, 0.3, 0.25, 0.25, 0.3, .1, 0,
+     0.3, 0.25, 0, 0, 0.25, 0.3, 0,
+     0.3, 0.25, 0, 0, 0.25, 0.3, 0,
+     .1, 0.3, 0.25, 0.25, 0.3, .1, 0,
+     .15, .1, 0.3, 0.3, .1, .15, 0"
+                                   xSpacing="1.4" zSpacing="1.8" solid="false">
+                    </ElevationGrid>
+                </Shape>
+            </transform>
+            <!--Decor-->
+            <Transform translation="0.5 0.05 0.4" scale="0.4 0.2 0.5" rotation="1 0 0 3.14">
+                <Shape>
+                    <IndexedLineSet coordIndex="0 1 3 2 0 -1"
+                                    colorIndex="0 1 2 3 4 -1"
+                                    colorPerVertex="true">
+                        <Coordinate point="0 0 0, 1 0 1, -1 0 1, 0 0 2"></Coordinate>
+                        <Color color="0 0 1, 0 1 0, 1 1 1, 1 0 1, 1 1 1"></Color>
+                    </IndexedLineSet>
+                </Shape>
+            </Transform>
+            <!--Par-->
+            <Transform>
+                <Shape>
+                    <Appearance>
+                        <Material emissiveColor='1 1 1'></Material>
+                    </Appearance>
+                    <PointSet>
+                        <Coordinate point="-0.2 0.5 0.4,-0.2 0.6 0.35,-0.17 0.6 0.35,-0.18 0.5 0.35,-0.17 0.7 0.35,-0.17 0.65 0.35,-0.17 0.63 0.35,-0.17 0.55 0.35,-0.18 0.7 0.35"></Coordinate>
+                    </PointSet>
+                </Shape>
+            </Transform>
+            <!--Decor-->
+            <Transform translation="-0.2 0.05 0.8" scale="0.4 0.2 0.5" rotation="1 0 0 3.14">
+                <Shape>
+                    <IndexedLineSet coordIndex="0 1 3 2 0 -1"
+                                    colorIndex="0 1 2 3 4 -1"
+                                    colorPerVertex="true">
+                        <Coordinate point="0 0 0, 1 0 1, -1 0 1, 0 0 2"></Coordinate>
+                        <Color color="0 0 1, 0 1 0, 1 1 1, 1 0 1, 1 1 1"></Color>
+                    </IndexedLineSet>
+                </Shape>
+            </Transform>
+            <!--VerhZonta-->
+            <Transform translation="-2 0 -2" scale="9 7 7">
+                <Shape>
+                    <IndexedTriangleStripSet index='0 1 8 1 2 -1 2 3 8 3 -1 3 4 8 4 -1 4 5 8 5 -1 5 6 8 6 -1 6 7 8 7 -1 7 0 8 '
+                                             solid='false'>
+                        <Coordinate point="
+     -0.1 0.2 0.1,
+     0 0.2 0.15,
+     0.1 0.2 0.1,
+     0.15 0.2 0,
+     0.1 0.2 -0.1,
+     0 0.2 -0.15,
+     -0.1 0.2 -0.1,
+     -0.15 0.2 0,
+     0 0.3 0"></Coordinate>
+                        <Color color="1 0 0, 0 0 0, 1 0 0, 0 0 0, 1 0 0, 0 0 0, 1 0 0, 0 0 0, 1 0 0 "></Color>
+                    </IndexedTriangleStripSet>
+                </Shape>
+            </Transform>
+            <!--NizZonta-->
+            <Transform translation="-2 -1 -2">
+                <Shape>
+                    <Appearance>
+                        <Material diffuseColor='0.5 0.5 0.5'></Material>
+                    </Appearance>
+                    <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true" solid="false"
+                                    coordIndex="0 8 15 7 -1 7 15 14 6 -1 6 14 13 5 -1 5 13 12 4 -1 4 12 11 3 -1 3 11 10 2 -1 2 10 9 1 -
+     1 1 9 8 0 -1 ">
+                        <Coordinate point="
+     -0.1 0 0.1,
+     0 0 0.15,
+     0.1 0 0.1,
+     0.15 0 0,
+     0.1 0 -0.1,
+     0 0 -0.15,
+     -0.1 0 -0.1,
+     -0.15 0 0,
+     -0.1 3 0.1,
+     0 3 0.15,
+     0.1 3 0.1,
+     0.15 3 0,
+     0.1 3 -0.1,
+     0 3 -0.15,
+     -0.1 3 -0.1,
+     -0.15 3 0"></Coordinate>
+                    </IndexedFaceSet>
+                </Shape>
+            </Transform>
+            <!--Text-->
+            <transform RUS="Text" translation="0 2 0">
+                <shape>
+                    <appearance>
+                        <material diffuseColor='1 1 1'></material>
+                    </appearance>
+                    <text string="coffee time"></text>
+                </shape>
+            </transform>
+            <background color=".1 .1 .1"></background>
+            <!--Stol-->
+            <Transform RUS="stol" translation="0 0 0">
+                <shape>
+                    <appearance>
+                        <material diffuseColor='1 0.6 0.2'></material>
+                        <Imagetexture url='stol.png'></Imagetexture>
+                    </appearance>
+                    <box size="2 0.1 2"></box>
+                </shape>
+            </Transform>
+            <!--Nojki-->
+            <transform RUS="opora1" translation="0.6 -0.5 0.5">
+                <shape>
+                    <appearance>
+                        <material diffuseColor='0.5 0.2 0.1'></material>
+                    </appearance>
+                    <Cylinder radius="0.1" height="1"></Cylinder>
+                </shape>
+            </transform>
+            <transform RUS="opora2" translation="0.6 -0.5 -0.5">
+                <shape>
+                    <appearance>
+                        <material diffuseColor='0.5 0.2 0.1'></material>
+                    </appearance>
+                    <Cylinder radius="0.1" height="1"></Cylinder>
+                </shape>
+            </transform>
+            <transform RUS="opora3" translation="-0.6 -0.5 0.5">
+                <shape>
+                    <appearance>
+                        <material diffuseColor='0.5 0.2 0.1'></material>
+                    </appearance>
+                    <Cylinder radius="0.1" height="1"></Cylinder>
+                </shape>
+            </transform>
+            <transform RUS="opora4" translation="-0.6 -0.5 -0.5">
+                <shape>
+                    <appearance>
+                        <material diffuseColor='0.5 0.2 0.1'></material>
+                    </appearance>
+                    <Cylinder radius="0.1" height="1"></Cylinder>
+                </shape>
+            </transform>
+            <!--Lampa-->
+            <Transform RUS="sphere" translation="0.5 0.2 0">
+                <shape>
+                    <appearance>
+                        <material diffuseColor='0.2 0.1 0.13'></material>
+                    </appearance>
+                    <sphere radius="0.2"></sphere>
+                </shape>
+            </Transform>
+            <Transform RUS="sphere2" translation="0.5 0.4 0" scale="1.6 2 1.6">
+                <shape>
+                    <appearance>
+                        <material diffuseColor='0.2 0.1 0.13'></material>
+                    </appearance>
+                    <sphere radius="0.1"></sphere>
+                </shape>
+            </Transform>
+            <Transform RUS="lampa" translation="0.5 1 0">
+                <shape>
+                    <appearance>
+                        <material diffuseColor='1 1 0'></material>
+                    </appearance>
+                    <cone bottomRadius="0.4" height="0.35"></cone>
+                </shape>
+            </Transform>
+            <Transform RUS="cone" translation="0.5 0.8 0">
+                <shape>
+                    <appearance>
+                        <material diffuseColor='0.2 0.1 0.13'></material>
+                    </appearance>
+                    <cone bottomRadius="0.1" height="0.5"></cone>
+                </shape>
+            </Transform>
+                <!--Chashka-->
+                <transform RUS="cup" translation="-0.7 -0.55 0.35">
+                    <shape>
+                        <appearance>
+                            <material diffuseColor='0.5 0.3 0.3'></material>
+                        </appearance>
+                        <Cylinder radius="0.15" height="0.4"></Cylinder>
+                    </shape>
+                </transform>
+                <transform RUS="ruchka" translation="-0.5 -0.55 0.3" rotation="0 0 1 1.57">
+                    <shape>
+                        <appearance>
+                            <material diffuseColor='0.5 0.3 0.3'></material>
+                        </appearance>
+                        <Torus innerradius="0.01" outerradius="0.09"></Torus>
+                    </shape>
+                </transform>
+            </scene>
+    </x3d>
+</body>
 </html>
