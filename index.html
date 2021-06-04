@@ -1,13 +1,371 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>  
-    <meta charset="utf-8" />
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
-    <title>Лабораторная работа 2</title>
-    <link rel="stylesheet" href="https://www.x3dom.org/download/x3dom.css" />
-    <script src="https://www.x3dom.org/download/x3dom.js"></script>
-  </head>
-  <body>
-    <h1>Здесь только я. А должна быть твоя лаба!</h1>
-  </body> 
+<head>
+  <meta charset="utf-8" />
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+  <title>Лабораторная работа 1</title>
+  <script type='text/javascript'
+src='https://www.x3dom.org/download/dev/x3dom-full.js'> </script>
+<link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'
+/>
+</head>
+<h1>А.С. Наркевич 4842</h1>
+<body
+  style='width:100%; height:100%; border:0; margin:0; padding:0; background: url("1.jpg"); background-position: center;'>
+  <X3D width="100vw" height="100vh">
+    <Scene>
+      <!-- Планета -->
+        <Transform translation="0 30 0">
+          <Shape>
+            <Appearance>
+              <TextureTransform scale="1 1"></TextureTransform>
+              <ImageTexture url="4.jpg"></ImageTexture>
+            </Appearance>
+            <Sphere  radius="20"></Sphere>
+          </Shape>
+        </Transform>
+        
+      <!-- Ракета -->
+        <Transform>
+          <Shape>
+            <Appearance>
+              <TextureTransform scale="2 2"></TextureTransform>
+              <ImageTexture url="3.jpg"></ImageTexture>
+            </Appearance>
+            <Cone bottom="false" bottomRadius="1" height="2" solid="false"></Cone>
+          </Shape>
+        </Transform>
+
+        <Transform translation="0 -2.75 0">
+          <Shape>
+            <Appearance>
+              <TextureTransform scale="2 2"></TextureTransform>
+              <ImageTexture url="gg2.png"></ImageTexture>
+            </Appearance>
+            <Cylinder radius="1" height="3.5" solid="false"></Cylinder>
+          </Shape>
+        </Transform>
+
+        <Transform translation="0 -4.5 0">
+          <Transform rotation="1 0 0 1.57">
+            <Shape>
+              <Appearance>
+                <TextureTransform scale="5 5"></TextureTransform>
+                <ImageTexture url="3.jpg"></ImageTexture>
+              </Appearance>
+              <torus innerRadius="0.2" outerRadius="0.9"></torus>
+            </Shape>
+          </Transform>
+        </Transform>
+
+        <Transform translation="0 -7.5 0">
+          <Shape>
+            <Appearance>
+              <TextureTransform scale="3 2"></TextureTransform>
+              <ImageTexture url="gg2.png"></ImageTexture>
+            </Appearance>
+            <Cylinder radius="1" height="6" solid="false"></Cylinder>
+          </Shape>
+        </Transform>
+
+        <Transform translation="0 -10.5 0">
+          <Transform rotation="1 0 0 1.57">
+            <Shape>
+              <Appearance>
+                <TextureTransform scale="5 5"></TextureTransform>
+                <ImageTexture url="3.jpg"></ImageTexture>
+              </Appearance>
+              <torus innerRadius="0.2" outerRadius="0.9"></torus>
+            </Shape>
+          </Transform>
+        </Transform>
+
+        <Transform translation="0 -12 0">
+          <Shape>
+            <Appearance>
+              <TextureTransform scale="2 2"></TextureTransform>
+              <ImageTexture url="gg2.png"></ImageTexture>
+            </Appearance>
+            <Cylinder radius="1" height="3" solid="false"></Cylinder>
+          </Shape>
+        </Transform>
+
+        <Transform translation="0 -13 0">
+          <Shape>
+            <Appearance>
+              <TextureTransform scale="5 5"></TextureTransform>
+              <ImageTexture url="3.jpg"></ImageTexture>
+            </Appearance>
+            <Cone bottomRadius="1" height="2" solid="false"></Cone>
+          </Shape>
+        </Transform>
+
+        <Transform translation="0 -13.5 0">
+          <Shape>
+            <Appearance>
+              <TextureTransform scale="5 5"></TextureTransform>
+              <ImageTexture url="5.jpg"></ImageTexture>
+            </Appearance>
+            <Cone bottomRadius="0.7" height="6" solid="false"></Cone>
+          </Shape>
+        </Transform>
+        <!------------------------------------->
+        <Transform translation="1.5 -5.75 0">
+
+          <Transform translation="0 1.25 0">
+            <Shape>
+              <Appearance>
+                <TextureTransform scale="2 1"></TextureTransform>
+                <ImageTexture url="3.jpg"></ImageTexture>
+              </Appearance>
+              <Cone bottom="false" bottomRadius="0.5" height="2" solid="false"></Cone>
+            </Shape>
+          </Transform>
+
+          <Transform translation="0 -3.75 0">
+            <Shape>
+              <Appearance>
+                <TextureTransform scale="2 2"></TextureTransform>
+                <ImageTexture url="2.jpg"></ImageTexture>
+              </Appearance>
+              <Cylinder radius="0.5" height="8" solid="false"></Cylinder>
+            </Shape>
+          </Transform>
+
+          <Transform translation="0 -7 0">
+            <Shape>
+              <Appearance>
+                <TextureTransform scale="5 5"></TextureTransform>
+                <ImageTexture url="3.jpg"></ImageTexture>
+              </Appearance>
+              <Cone bottomRadius="0.5" height="2" solid="false"></Cone>
+            </Shape>
+          </Transform>
+          
+          <Transform translation="0 -7.5 0">
+            <Shape>
+              <Appearance>
+                <TextureTransform scale="2 2"></TextureTransform>
+                <ImageTexture url="5.jpg"></ImageTexture>
+              </Appearance>
+              <Cone bottomRadius="0.45" height="6.3" solid="false"></Cone>
+            </Shape>
+          </Transform>
+       </Transform>
+        <!----------------------->
+        <Transform translation="-1.5 -5.75 0">
+
+          <Transform translation="0 1.25 0">
+            <Shape>
+              <Appearance>
+                <TextureTransform scale="2 1"></TextureTransform>
+                <ImageTexture url="3.jpg"></ImageTexture>
+              </Appearance>
+              <Cone bottom="false" bottomRadius="0.5" height="2" solid="false"></Cone>
+            </Shape>
+          </Transform>
+
+          <Transform translation="0 -3.75 0">
+            <Shape>
+              <Appearance>
+                <TextureTransform scale="2 2"></TextureTransform>
+                <ImageTexture url="2.jpg"></ImageTexture>
+              </Appearance>
+              <Cylinder radius="0.5" height="8" solid="false"></Cylinder>
+            </Shape>
+          </Transform>
+
+          <Transform translation="0 -7 0">
+            <Shape>
+              <Appearance>
+                <TextureTransform scale="2 2"></TextureTransform>
+                <ImageTexture url="3.jpg"></ImageTexture>
+              </Appearance>
+              <Cone bottomRadius="0.5" height="2" solid="false"></Cone>
+            </Shape>
+          </Transform>
+
+          <Transform translation="0 -7.5 0">
+            <Shape>
+              <Appearance>
+                <TextureTransform scale="2 2"></TextureTransform>
+                <ImageTexture url="5.jpg"></ImageTexture>
+              </Appearance>
+              <Cone bottomRadius="0.45" height="6.3" solid="false"></Cone>
+            </Shape>
+          </Transform>
+        </Transform>
+
+        <Transform translation="4 2 4 " rotation="0 0 0 1.57 ">
+          <Shape>
+            <Appearance>
+              <Material diffuseColor="0.87843 1 1" specularColor="0.87843 1 1"></Material>
+            </Appearance>
+            <Box Size="6 2 0.1"></Box>
+          </Shape>
+
+          <!-- Текст -->
+          <Transform translation="-2.5 -0.3 0.5" >
+            <Shape>
+              <Appearance>
+                <Material diffuseColor="1 0.06 0"></Material>
+              </Appearance>
+              <Text maxExtent="5" string="Добро пожаловать домой" solid="false">
+                <FontStyle size="1" family="Helvetica"> </FontStyle>
+              </Text>
+            </Shape>
+          </Transform>
+        </Transform>
+      <!-- PointSet!, IndexedLineSet!, IndexedFaceSet!, IndexedTriangleSet!, IndexedTriangleStripSet!, ElevationGrid,Transform, Material, ImageTexture -->
+
+     <!-- Точки -->
+     <Transform Translation="0 -18 -2">
+        <Shape>
+          <PointSet>
+            <Color color=" 1 0 0, 1 0 0, 1 0 0,
+                           1 0 0, 1 0 0, 1 0 0,
+                           1 0 0, 1 0 0, 1 0 0"></Color>
+            <Coordinate point="0 0 5, 
+                              -1 0.5 2, -1 -0.5 -1,
+                              -2 1 2, −2 -1 4, 
+                              −3 1.5 3, -3 -1.5 1, 
+                              −4 2 0, -4 -2 2"></Coordinate>
+          </PointSet>
+        </Shape>
+      </Transform >
+
+    <!-- Линии -->
+    <Transform Translation="0 60 0">
+    <Shape>
+        <IndexedLineSet coordIndex="0 1 0 -1  0 2 0 -1  0 3 0 -1  0 4 0 -1"
+        colorPerVertex='true'>
+        <Coordinate point="0 0 0, -0.7 -11 -0.7, 0.7 -11 -0.7, -0.7 -11 0.7, 0.7 -11 0.7 "></Coordinate>
+        <Color color="0 1 0, 0 1 0, 0 0 1, 0 0 1, 0 1 0, 0 1 0, 0 1 0, 0 0 1"></Color>
+        </IndexedLineSet>
+      </Shape>
+    </Transform>
+
+    <!-- Шейпы -->
+    <transform translation="6 -13 0" rotation = "0 0 1 3.14">
+      <Shape>
+      <appearance>
+          <imagetexture url="Fire.jpg" ></imagetexture>
+          <texturetransform scale="1 1" rotation = '1.5708'></texturetransform>
+      </appearance>
+          <IndexedFaceSet ccw="true" colorPerVertex="true" convex="true"
+                          creaseAngle="0" solid="false"
+                          coordIndex="0 1 2 3 4 5 6 7 8 9 10 11 12 -1 ">
+          <Coordinate point="4 2 0, 3 4 0, 6 9 0, 6 10 0, 7 8 0, 8 9 0, 7 6 0, 8 7 0, 9 5 0, 8 3 0, 7 4 0, 6 2 0, 5 3 0"></Coordinate>
+          </IndexedFaceSet>
+        </Shape>
+    </transform>
+    <!-- Стрип треугольный -->
+    <!-- Огонь при вхождении в атмосферу 1 -->
+    <Transform translation = "-5 -7 -2.3" rotation = "1 0 0 0.2" >
+      <Shape>
+        <appearance>
+          <imagetexture url="Fire4.png" ></imagetexture>
+          <texturetransform scale="1 1" rotation = '1.5708'></texturetransform>
+      </appearance>
+        <IndexedTriangleStripSet index='0 1 2 3 4 5 6 -1' solid='false'>
+          <Coordinate point='5 11 0, 5 9 0, 4 8 0, 5 7 0, 3 5 0, 6 3 0, 1 1 0'></Coordinate>
+        </IndexedTriangleStripSet>
+      </Shape>
+    </Transform>
+     
+    <!-- Огонь при вхождении в атмосферу 2 -->
+    <Transform translation = "-4 -6 2.3" rotation = "1 0 0 -0.2" >
+      <Shape>
+        <appearance>
+          <imagetexture url="Fire3.png" ></imagetexture>
+          <texturetransform scale="1 1" rotation = '1.5708'></texturetransform>
+      </appearance>
+        <IndexedTriangleStripSet index='0 1 2 3 4 5 6 -1' solid='false'>
+          <Coordinate point='5 11 0, 5 9 0, 4 8 0, 5 7 0, 3 5 0, 6 3 0, 1 1 0'></Coordinate>
+        </IndexedTriangleStripSet>
+      </Shape>
+    </Transform>
+
+    <!-- Огонь при вхождении в атмосферу 3 -->
+    <Transform rotation="0 1 0 1.57">
+      <Transform translation = "-4 -6 1.9" rotation = "1 0 0 -0.2" >
+        <Shape>
+          <appearance>
+            <imagetexture url="Fire5.png" ></imagetexture>
+            <texturetransform scale="1 1" rotation = '0'></texturetransform>
+        </appearance>
+          <IndexedTriangleStripSet index='0 1 2 3 4 5 6 -1' solid='false'>
+            <Coordinate point='5 11 0, 5 9 0, 4 8 0, 5 7 0, 3 5 0, 6 3 0, 1 1 0'></Coordinate>
+          </IndexedTriangleStripSet>
+        </Shape>
+      </Transform>
+  </Transform>
+
+  <!-- Треугольный сет -->
+  <!-- Правители мира -->
+  <Transform translation = "-50 50 -2" scale="20 20">
+      <Shape>
+          <appearance>
+              <imagetexture url="il.png"></imagetexture>
+            <texturetransform scale="1 1" rotation = '0' translation='0,-1'>
+            </texturetransform>
+          </appearance>
+        <IndexedTriangleSet index="0 1 2" solid="false">
+          <Coordinate point="0 0 0, 5 0 0, 2.5 5 0"></Coordinate>
+        </IndexedTriangleSet>
+      </Shape>
+  </Transform>
+
+  <!-- НЛО -->
+
+  <!-- корабль -->
+  <transform translation="0 58 0"scale ="4 1 4">
+    <shape>
+      <appearance>
+        <Imagetexture url="Mnlo.jpg"></Imagetexture>
+      </appearance>
+      <sphere></sphere>
+    </shape>
+  </transform>
+
+  <!-- кабина -->
+  <transform translation="0 59 0">
+    <shape>
+      <appearance>
+        <Imagetexture url="gl.jpg"></Imagetexture>
+      </appearance>
+      <sphere radius="2"></sphere>
+    </shape>
+  </transform>
+
+  <!-- Сетка(Elevation) -->
+  <Transform translation = "2 49.5 -2" rotation = "0 1 0 -1.5708">
+      <Shape>
+      <appearance>
+        <imagetexture url="4.jpg"></imagetexture>
+        <texturetransform scale="1 1" rotation = '0' translation='0,-1'>
+        </texturetransform>
+      </appearance>
+        <ElevationGrid xDimension="5" zDimension="5"
+        height="0, 0, 0, 0, 0,
+        0, 1.5, 1, 1.4, 0,
+        0, 1, 5, 3, 0,
+        0, 1.2, 1.5, 1.1, 0,
+        0, 0, 0, 0, 0"
+        xSpacing="1" zSpacing="1" solid="false">
+        </ElevationGrid>
+      </Shape>
+    </Transform>
+   
+    <!-- Камера -->
+    <Viewpoint  position="0 0 45"
+                orientation="0 0 0 0"
+                zNear="1" zFar="1000"
+                centerOfRotation="0.00000 0.00000 0.00000"
+                fieldOfView="0.9">
+    </Viewpoint>
+
+    </Scene>
+  </X3D>
+</body>
 </html>
